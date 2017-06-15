@@ -8,9 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		15F0BD43EE744B44A8D1E47F /* Pods_JHRecruit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A301DF8192FAFBEF51F17C1 /* Pods_JHRecruit.framework */; };
+		F17ED7EA1EF2A5D20053A56E /* recruitDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F17ED7E91EF2A5D20053A56E /* recruitDataModel.m */; };
+		F17ED7F11EF2A5DC0053A56E /* recruitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F17ED7EC1EF2A5DC0053A56E /* recruitViewController.m */; };
+		F17ED7F21EF2A5DC0053A56E /* persionalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F17ED7EE1EF2A5DC0053A56E /* persionalViewController.m */; };
+		F17ED7F31EF2A5DC0053A56E /* companyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F17ED7F01EF2A5DC0053A56E /* companyViewController.m */; };
+		F17ED7F61EF2A5E60053A56E /* persionalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F17ED7F51EF2A5E60053A56E /* persionalTableViewCell.m */; };
+		F17ED7F91EF2A5F60053A56E /* settingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F17ED7F81EF2A5F60053A56E /* settingViewController.m */; };
+		F17ED7FC1EF2A6000053A56E /* liveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F17ED7FB1EF2A6000053A56E /* liveViewController.m */; };
+		F17ED7FF1EF2A60F0053A56E /* discoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F17ED7FE1EF2A60F0053A56E /* discoverViewController.m */; };
+		F17ED8021EF2A63D0053A56E /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F17ED8011EF2A63D0053A56E /* RootViewController.m */; };
+		F17ED8051EF2A66A0053A56E /* JHTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F17ED8041EF2A66A0053A56E /* JHTool.m */; };
 		F1BAEBBD1EF2A1F80069BABA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F1BAEBBC1EF2A1F80069BABA /* main.m */; };
 		F1BAEBC01EF2A1F80069BABA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1BAEBBF1EF2A1F80069BABA /* AppDelegate.m */; };
-		F1BAEBC31EF2A1F80069BABA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1BAEBC21EF2A1F80069BABA /* ViewController.m */; };
 		F1BAEBC61EF2A1F80069BABA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1BAEBC41EF2A1F80069BABA /* Main.storyboard */; };
 		F1BAEBC81EF2A1F80069BABA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1BAEBC71EF2A1F80069BABA /* Assets.xcassets */; };
 		F1BAEBCB1EF2A1F80069BABA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1BAEBC91EF2A1F80069BABA /* LaunchScreen.storyboard */; };
@@ -39,12 +48,30 @@
 /* Begin PBXFileReference section */
 		5A301DF8192FAFBEF51F17C1 /* Pods_JHRecruit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JHRecruit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		894607BB9038E6643970392F /* Pods-JHRecruit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JHRecruit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JHRecruit/Pods-JHRecruit.debug.xcconfig"; sourceTree = "<group>"; };
+		F17ED7E81EF2A5D20053A56E /* recruitDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = recruitDataModel.h; sourceTree = "<group>"; };
+		F17ED7E91EF2A5D20053A56E /* recruitDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = recruitDataModel.m; sourceTree = "<group>"; };
+		F17ED7EB1EF2A5DC0053A56E /* recruitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = recruitViewController.h; sourceTree = "<group>"; };
+		F17ED7EC1EF2A5DC0053A56E /* recruitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = recruitViewController.m; sourceTree = "<group>"; };
+		F17ED7ED1EF2A5DC0053A56E /* persionalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = persionalViewController.h; sourceTree = "<group>"; };
+		F17ED7EE1EF2A5DC0053A56E /* persionalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = persionalViewController.m; sourceTree = "<group>"; };
+		F17ED7EF1EF2A5DC0053A56E /* companyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = companyViewController.h; sourceTree = "<group>"; };
+		F17ED7F01EF2A5DC0053A56E /* companyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = companyViewController.m; sourceTree = "<group>"; };
+		F17ED7F41EF2A5E60053A56E /* persionalTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = persionalTableViewCell.h; sourceTree = "<group>"; };
+		F17ED7F51EF2A5E60053A56E /* persionalTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = persionalTableViewCell.m; sourceTree = "<group>"; };
+		F17ED7F71EF2A5F60053A56E /* settingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = settingViewController.h; sourceTree = "<group>"; };
+		F17ED7F81EF2A5F60053A56E /* settingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = settingViewController.m; sourceTree = "<group>"; };
+		F17ED7FA1EF2A6000053A56E /* liveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = liveViewController.h; sourceTree = "<group>"; };
+		F17ED7FB1EF2A6000053A56E /* liveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = liveViewController.m; sourceTree = "<group>"; };
+		F17ED7FD1EF2A60F0053A56E /* discoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = discoverViewController.h; sourceTree = "<group>"; };
+		F17ED7FE1EF2A60F0053A56E /* discoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = discoverViewController.m; sourceTree = "<group>"; };
+		F17ED8001EF2A63D0053A56E /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		F17ED8011EF2A63D0053A56E /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		F17ED8031EF2A66A0053A56E /* JHTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHTool.h; sourceTree = "<group>"; };
+		F17ED8041EF2A66A0053A56E /* JHTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHTool.m; sourceTree = "<group>"; };
 		F1BAEBB81EF2A1F80069BABA /* JHRecruit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JHRecruit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1BAEBBC1EF2A1F80069BABA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F1BAEBBE1EF2A1F80069BABA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F1BAEBBF1EF2A1F80069BABA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F1BAEBC11EF2A1F80069BABA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F1BAEBC21EF2A1F80069BABA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F1BAEBC51EF2A1F80069BABA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F1BAEBC71EF2A1F80069BABA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1BAEBCA1EF2A1F80069BABA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -102,6 +129,94 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F17ED7DF1EF2A55C0053A56E /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				F17ED8031EF2A66A0053A56E /* JHTool.h */,
+				F17ED8041EF2A66A0053A56E /* JHTool.m */,
+			);
+			name = Tool;
+			sourceTree = "<group>";
+		};
+		F17ED7E01EF2A56A0053A56E /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				F17ED7E41EF2A5980053A56E /* Recruit */,
+				F17ED7E31EF2A58D0053A56E /* Discover */,
+				F17ED7E21EF2A5870053A56E /* Live */,
+				F17ED7E11EF2A5800053A56E /* Setting */,
+			);
+			name = Class;
+			sourceTree = "<group>";
+		};
+		F17ED7E11EF2A5800053A56E /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				F17ED7F71EF2A5F60053A56E /* settingViewController.h */,
+				F17ED7F81EF2A5F60053A56E /* settingViewController.m */,
+			);
+			name = Setting;
+			sourceTree = "<group>";
+		};
+		F17ED7E21EF2A5870053A56E /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				F17ED7FA1EF2A6000053A56E /* liveViewController.h */,
+				F17ED7FB1EF2A6000053A56E /* liveViewController.m */,
+			);
+			name = Live;
+			sourceTree = "<group>";
+		};
+		F17ED7E31EF2A58D0053A56E /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				F17ED7FD1EF2A60F0053A56E /* discoverViewController.h */,
+				F17ED7FE1EF2A60F0053A56E /* discoverViewController.m */,
+			);
+			name = Discover;
+			sourceTree = "<group>";
+		};
+		F17ED7E41EF2A5980053A56E /* Recruit */ = {
+			isa = PBXGroup;
+			children = (
+				F17ED7E71EF2A5C00053A56E /* Model */,
+				F17ED7E61EF2A5AF0053A56E /* Controller */,
+				F17ED7E51EF2A5AA0053A56E /* View */,
+			);
+			name = Recruit;
+			sourceTree = "<group>";
+		};
+		F17ED7E51EF2A5AA0053A56E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F17ED7F41EF2A5E60053A56E /* persionalTableViewCell.h */,
+				F17ED7F51EF2A5E60053A56E /* persionalTableViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		F17ED7E61EF2A5AF0053A56E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F17ED7EB1EF2A5DC0053A56E /* recruitViewController.h */,
+				F17ED7EC1EF2A5DC0053A56E /* recruitViewController.m */,
+				F17ED7ED1EF2A5DC0053A56E /* persionalViewController.h */,
+				F17ED7EE1EF2A5DC0053A56E /* persionalViewController.m */,
+				F17ED7EF1EF2A5DC0053A56E /* companyViewController.h */,
+				F17ED7F01EF2A5DC0053A56E /* companyViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		F17ED7E71EF2A5C00053A56E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F17ED7E81EF2A5D20053A56E /* recruitDataModel.h */,
+				F17ED7E91EF2A5D20053A56E /* recruitDataModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		F1BAEBAF1EF2A1F80069BABA = {
 			isa = PBXGroup;
 			children = (
@@ -128,10 +243,12 @@
 		F1BAEBBA1EF2A1F80069BABA /* JHRecruit */ = {
 			isa = PBXGroup;
 			children = (
+				F17ED7DF1EF2A55C0053A56E /* Tool */,
+				F17ED7E01EF2A56A0053A56E /* Class */,
 				F1BAEBBE1EF2A1F80069BABA /* AppDelegate.h */,
 				F1BAEBBF1EF2A1F80069BABA /* AppDelegate.m */,
-				F1BAEBC11EF2A1F80069BABA /* ViewController.h */,
-				F1BAEBC21EF2A1F80069BABA /* ViewController.m */,
+				F17ED8001EF2A63D0053A56E /* RootViewController.h */,
+				F17ED8011EF2A63D0053A56E /* RootViewController.m */,
 				F1BAEBC41EF2A1F80069BABA /* Main.storyboard */,
 				F1BAEBC71EF2A1F80069BABA /* Assets.xcassets */,
 				F1BAEBC91EF2A1F80069BABA /* LaunchScreen.storyboard */,
@@ -355,9 +472,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1BAEBC31EF2A1F80069BABA /* ViewController.m in Sources */,
+				F17ED7F21EF2A5DC0053A56E /* persionalViewController.m in Sources */,
 				F1BAEBC01EF2A1F80069BABA /* AppDelegate.m in Sources */,
 				F1BAEBBD1EF2A1F80069BABA /* main.m in Sources */,
+				F17ED7FF1EF2A60F0053A56E /* discoverViewController.m in Sources */,
+				F17ED7EA1EF2A5D20053A56E /* recruitDataModel.m in Sources */,
+				F17ED7F61EF2A5E60053A56E /* persionalTableViewCell.m in Sources */,
+				F17ED7F31EF2A5DC0053A56E /* companyViewController.m in Sources */,
+				F17ED8021EF2A63D0053A56E /* RootViewController.m in Sources */,
+				F17ED7F11EF2A5DC0053A56E /* recruitViewController.m in Sources */,
+				F17ED7F91EF2A5F60053A56E /* settingViewController.m in Sources */,
+				F17ED7FC1EF2A6000053A56E /* liveViewController.m in Sources */,
+				F17ED8051EF2A66A0053A56E /* JHTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
