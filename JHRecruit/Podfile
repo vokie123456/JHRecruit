@@ -1,0 +1,8 @@
+use_frameworks!
+inhibit_all_warnings!
+target 'JHRecruit' do
+pod 'MyLayout'
+
+
+
+end
