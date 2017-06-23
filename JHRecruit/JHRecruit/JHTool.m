@@ -21,4 +21,13 @@
     return [UIFont fontWithName:@"STHeitiSC-Light" size:size];
 }
 
++(UIFont *)weightFont:(CGFloat)size
+{
+    return [UIFont fontWithName:@"STHeitiSC-Medium" size:size];
+}
+
++(UIColor*)thisAppBackgroundColor{
+    
+    return [JHTool color:229 widthGreen:226 widthBlue:226 alpha:0.5];
+}
 @end

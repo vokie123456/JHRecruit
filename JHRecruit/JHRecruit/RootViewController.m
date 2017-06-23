@@ -7,6 +7,7 @@
 //
 
 #import "RootViewController.h"
+#import "persionalViewController.h"
 
 @interface RootViewController ()
 
@@ -14,15 +15,17 @@
 
 @implementation RootViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
+    self.view.backgroundColor = [UIColor whiteColor];
+ 
     [self.tabBar setBackgroundImage:[UIImage new]];
     [self.tabBar setShadowImage:[UIImage new]];
-    
-    recruitViewController *recruit = [[recruitViewController alloc]init];
 
-    UINavigationController *nav1 = [[UINavigationController alloc]initWithRootViewController:recruit];
+//    recruitViewController *recruit = [[recruitViewController alloc]init];
+    persionalViewController *persional = [[persionalViewController alloc]init];
+    UINavigationController *nav1 = [[UINavigationController alloc]initWithRootViewController:persional];
     
     
     discoverViewController *discover = [[discoverViewController alloc]init];
@@ -82,5 +85,7 @@
     VC.tabBarItem.title = title;
     
 }
+
+
 
 @end

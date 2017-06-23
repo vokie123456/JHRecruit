@@ -9,6 +9,7 @@
 #import "recruitViewController.h"
 
 #import <MyLayout/MyLayout.h>
+#import "JHTool.h"
 
 
 @interface recruitViewController ()<UIScrollViewDelegate>
@@ -22,17 +23,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    self.navigationController.navigationBar.barTintColor = [JHTool color:18 widthGreen:150 widthBlue:219 alpha:1];
+//    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+    
+  
+
    
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationController.navigationBar.translucent = false;
     self.automaticallyAdjustsScrollViewInsets = false;
     
+    
     [self setLayout];
    
-    
 
+   
     
 }
+
+
 
 -(void)segmentClick{
     if (_segment.selectedSegmentIndex == 0) {
@@ -63,7 +72,7 @@
   
     _segment = [[UISegmentedControl alloc]initWithItems:@[@"个人",@"公司"]];
     _segment.frame = CGRectMake(0, 0, 200, 30);
-    _segment.tintColor = [UIColor greenColor];
+    _segment.tintColor = [UIColor whiteColor];
     _segment.selectedSegmentIndex = 0;
     [_segment addTarget:self action:@selector(segmentClick) forControlEvents:UIControlEventValueChanged];
     self.navigationItem.titleView = _segment;
@@ -86,16 +95,16 @@
     
     _persional = [[persionalViewController alloc]init];
     
-    _company = [[companyViewController alloc]init];
+   
     [self addChildViewController:_persional];
-    [self addChildViewController:_company];
+
     
     
     
     _persional.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
-    _company.view.frame = CGRectMake(self.view.frame.size.width, 0, self.view.frame.size.width, self.view.frame.size.height);
+  
     [_scroll addSubview:_persional.view];
-    [_scroll addSubview:_company.view];
+
     
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [btn setTitle:@"点击" forState:UIControlStateNormal];
@@ -116,9 +125,5 @@
     self.hidesBottomBarWhenPushed = false;
 }
 
--(void)setSegView{
-    
-    
-}
 
 @end

@@ -10,6 +10,7 @@
 #import "recruitDataModel.h"
 #import "persionalTableViewCell.h"
 #import "JHTool.h"
+#import "resumeViewController.h"
 @interface persionalViewController ()
 
 @property(nonatomic,strong) NSMutableArray *dataArray;
@@ -67,18 +68,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-     self.edgesForExtendedLayout = UIRectEdgeNone;
-    _tableView = [[UITableView alloc]init];
+    self.title = @"个人";
+    self.navigationController.navigationBar.barTintColor = [JHTool color:18 widthGreen:150 widthBlue:219 alpha:1];
+      self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+    
+    
+       _tableView = [[UITableView alloc]init];
     
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    _tableView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - self.tabBarController.tabBar.frame.size.height-self.navigationController.navigationBar.frame.size.height-[UIApplication sharedApplication].statusBarFrame.size.height);
+   
     
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.backgroundColor = [JHTool color:229 widthGreen:226 widthBlue:226 alpha:0.5];
     
     
-    [self.view addSubview:_tableView];
+    self.view = _tableView;
     
     //提高cell高度的精确度
     _tableView.estimatedRowHeight = 60;
@@ -117,12 +122,22 @@
     return UITableViewAutomaticDimension;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    self.hidesBottomBarWhenPushed = true;
+    resumeViewController *resume = [[resumeViewController alloc]init];
+    
+    [self.navigationController pushViewController:resume animated:true];
+   self.hidesBottomBarWhenPushed = false;
+}
+
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 
 @end

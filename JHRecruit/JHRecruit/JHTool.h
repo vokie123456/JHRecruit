@@ -14,4 +14,6 @@
 +(UIColor*)color:(int)Red widthGreen:(int)Green widthBlue:(int)Blue alpha:(CGFloat)aplha;
 
 +(UIFont*)font:(CGFloat)size;
++(UIColor*)thisAppBackgroundColor;
++(UIFont *)weightFont:(CGFloat)size;
 @end

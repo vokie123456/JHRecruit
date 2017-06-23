@@ -17,3 +17,4 @@
 @property(nonatomic,strong) NSString *wage;//工资
 
 @end
+

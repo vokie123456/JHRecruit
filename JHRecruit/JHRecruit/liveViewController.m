@@ -7,6 +7,7 @@
 //
 
 #import "liveViewController.h"
+#import <ZFPlayer/ZFPlayer.h>
 
 @interface liveViewController ()
 
@@ -16,8 +17,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
+        
+    
+   
+    }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

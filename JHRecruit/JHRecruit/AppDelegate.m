@@ -22,7 +22,7 @@
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
     RootViewController *root = [[RootViewController  alloc]init];
-    self.window.rootViewController = root;
+        self.window.rootViewController = root;
     
     [self.window makeKeyAndVisible];
     return YES;

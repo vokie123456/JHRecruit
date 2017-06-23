@@ -114,20 +114,20 @@
     [topContent addSubview:leftContent];
     
     UILabel *nameLable = [UILabel new];
-    nameLable.font = [UIFont fontWithName:fontName size:16];
+    nameLable.font = [UIFont fontWithName:fontName size:14];
     nameLable.text = @"姓名:";
     [nameLable sizeToFit];
     [leftContent addSubview:nameLable];
     
     UILabel *educationLable = [UILabel new];
-    educationLable.font = [UIFont fontWithName:fontName size:16];
+    educationLable.font = [UIFont fontWithName:fontName size:14];
     educationLable.text = @"学历:";
     [educationLable sizeToFit];
     [leftContent addSubview:educationLable];
     
     UILabel *targetLabel = [UILabel new];
     
-    targetLabel.font = [UIFont fontWithName:fontName size:16];
+    targetLabel.font = [UIFont fontWithName:fontName size:14];
     targetLabel.text = @"意向:";
     [targetLabel sizeToFit];
     [leftContent addSubview:targetLabel];
@@ -140,17 +140,18 @@
     [topContent addSubview:rightConteng];
     
     _nickName = [UILabel new];
-    _nickName.font = [UIFont fontWithName:fontName size:16];
+    _nickName.font = [UIFont fontWithName:fontName size:14];
     [rightConteng addSubview:_nickName];
     
     _education = [UILabel new];
-    _education.font = [UIFont fontWithName:fontName size:16];
+    _education.font = [UIFont fontWithName:fontName size:14];
 
     [rightConteng addSubview:_education];
     
     _target = [UILabel new];
-    _target.textColor = [UIColor greenColor];
-    _target.font = [UIFont fontWithName:fontName size:16];
+    _target.textColor = [JHTool color:18 widthGreen:150 widthBlue:219 alpha:1];
+
+    _target.font = [UIFont fontWithName:fontName size:14];
    
     [rightConteng addSubview:_target];
     
@@ -170,24 +171,24 @@
     
     UILabel *experienceLabel = [UILabel new];
     experienceLabel.text = @"工作经验:";
-    experienceLabel.font = [JHTool font:16];
+    experienceLabel.font = [JHTool font:14];
     [experienceLabel sizeToFit];
     [bottomLayout addSubview:experienceLabel];
     
     _experience = [UILabel new];
-    _experience.font = [JHTool font:16];
+    _experience.font = [JHTool font:14];
     _experience.leftPos.equalTo(experienceLabel.rightPos).offset(10);
     [bottomLayout addSubview:_experience];
     
     _wage = [UILabel new];
-    _wage.font = [JHTool font:16];
+    _wage.font = [JHTool font:14];
     _wage.textColor = [UIColor redColor];
     _wage.rightPos.equalTo(bottomLayout.rightPos).offset(10);
     [bottomLayout addSubview:_wage];
     
     UILabel *wageLabel = [UILabel new];
     wageLabel.text = @"理想薪酬:";
-    wageLabel.font = [JHTool font:16];
+    wageLabel.font = [JHTool font:14];
     [wageLabel sizeToFit];
     wageLabel.rightPos.equalTo(_wage.leftPos).offset(10);
     [bottomLayout addSubview:wageLabel];
