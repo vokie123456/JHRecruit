@@ -7,10 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "recruitViewController.h"
-#import "discoverViewController.h"
-#import "liveViewController.h"
-#import "settingViewController.h"
+
+
 
 @interface RootViewController : UITabBarController
 

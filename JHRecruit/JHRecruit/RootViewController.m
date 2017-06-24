@@ -8,7 +8,11 @@
 
 #import "RootViewController.h"
 #import "persionalViewController.h"
+#import "companyTableViewController.h"
+#import "liveViewController.h"
+#import "settingViewController.h"
 
+#import "JHTool.h"
 @interface RootViewController ()
 
 @end
@@ -26,14 +30,14 @@
 //    recruitViewController *recruit = [[recruitViewController alloc]init];
     persionalViewController *persional = [[persionalViewController alloc]init];
     UINavigationController *nav1 = [[UINavigationController alloc]initWithRootViewController:persional];
+    companyTableViewController *company = [[companyTableViewController alloc]init];
+    UINavigationController *nav2 = [[UINavigationController alloc]initWithRootViewController:company];
     
-    
-    discoverViewController *discover = [[discoverViewController alloc]init];
-    liveViewController *live = [[liveViewController alloc]init];
+      liveViewController *live = [[liveViewController alloc]init];
     
     settingViewController *setting = [[settingViewController alloc]init];
     
-    self.viewControllers = @[nav1,discover,live,setting];
+    self.viewControllers = @[nav1,nav2, live,setting];
     
     [self setTabBar];
     
@@ -50,12 +54,12 @@
     [self.viewControllers enumerateObjectsUsingBlock:^(__kindof UIViewController * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         switch (idx) {
             case 0:
-                [self setItem:obj andImgName:@"recruit" andSlectImgName:@"recruit_hl" andTitle:@"招聘"];
+                [self setItem:obj andImgName:@"persional" andSlectImgName:@"persional_hl" andTitle:@"个人"];
                 
                 break;
             case 1:
-                [self setItem:obj andImgName:@"discover" andSlectImgName:@"discover_hl" andTitle:@"发现"];
-                obj.view.backgroundColor = [UIColor purpleColor];
+                [self setItem:obj andImgName:@"company" andSlectImgName:@"company_hl" andTitle:@"公司"];
+                
                 break;
             case 2:
                 [self setItem:obj andImgName:@"live" andSlectImgName:@"live_hl" andTitle:@"直播"];
@@ -71,9 +75,9 @@
     }];
     
     //修改文字颜色
-    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[[UIColor blackColor] colorWithAlphaComponent:0.5], NSForegroundColorAttributeName, [UIFont systemFontOfSize:13], NSFontAttributeName, nil] forState:UIControlStateNormal];
+    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[[UIColor blackColor] colorWithAlphaComponent:0.5], NSForegroundColorAttributeName, [UIFont systemFontOfSize:12], NSFontAttributeName, nil] forState:UIControlStateNormal];
     
-    UIColor *titleHighlightedColor = [UIColor colorWithRed:84/255.0 green:1.0 blue:159/255.0 alpha:1];
+    UIColor *titleHighlightedColor = [JHTool color:18 widthGreen:150 widthBlue:219 alpha:1];
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys: titleHighlightedColor, NSForegroundColorAttributeName,[UIFont systemFontOfSize:13], NSFontAttributeName,
                                                        nil] forState:UIControlStateSelected];
 }

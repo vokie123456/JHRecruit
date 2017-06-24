@@ -28,6 +28,6 @@
 
 +(UIColor*)thisAppBackgroundColor{
     
-    return [JHTool color:229 widthGreen:226 widthBlue:226 alpha:0.5];
+    return [JHTool color:234 widthGreen:229 widthBlue:228 alpha:1];
 }
 @end

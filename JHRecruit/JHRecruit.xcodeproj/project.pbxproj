@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		15F0BD43EE744B44A8D1E47F /* Pods_JHRecruit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A301DF8192FAFBEF51F17C1 /* Pods_JHRecruit.framework */; };
+		F15313F01EFD638100A33C5C /* companyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F15313EF1EFD638100A33C5C /* companyModel.m */; };
 		F17ED7EA1EF2A5D20053A56E /* recruitDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F17ED7E91EF2A5D20053A56E /* recruitDataModel.m */; };
 		F17ED7F11EF2A5DC0053A56E /* recruitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F17ED7EC1EF2A5DC0053A56E /* recruitViewController.m */; };
 		F17ED7F21EF2A5DC0053A56E /* persionalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F17ED7EE1EF2A5DC0053A56E /* persionalViewController.m */; };
@@ -17,7 +18,6 @@
 		F17ED7FF1EF2A60F0053A56E /* discoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F17ED7FE1EF2A60F0053A56E /* discoverViewController.m */; };
 		F17ED8021EF2A63D0053A56E /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F17ED8011EF2A63D0053A56E /* RootViewController.m */; };
 		F17ED8051EF2A66A0053A56E /* JHTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F17ED8041EF2A66A0053A56E /* JHTool.m */; };
-		F1840EBE1EF3E5A100C7559C /* companyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F1840EBD1EF3E5A100C7559C /* companyTableViewCell.m */; };
 		F1840EC21EF3F68D00C7559C /* libc++abi.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F1840EC11EF3F68D00C7559C /* libc++abi.tbd */; };
 		F1840EC51EF426B000C7559C /* resumeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1840EC41EF426B000C7559C /* resumeViewController.m */; };
 		F1BAEBBD1EF2A1F80069BABA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F1BAEBBC1EF2A1F80069BABA /* main.m */; };
@@ -28,6 +28,9 @@
 		F1BAEBD61EF2A1F80069BABA /* JHRecruitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1BAEBD51EF2A1F80069BABA /* JHRecruitTests.m */; };
 		F1BAEBE11EF2A1F80069BABA /* JHRecruitUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1BAEBE01EF2A1F80069BABA /* JHRecruitUITests.m */; };
 		F1BAEBEF1EF2A26F0069BABA /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = F1BAEBEE1EF2A26F0069BABA /* Podfile */; };
+		F1FE80531EFE39500052C226 /* companyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F1FE80521EFE39500052C226 /* companyTableViewCell.m */; };
+		F1FE80561EFE39610052C226 /* companyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1FE80551EFE39610052C226 /* companyTableViewController.m */; };
+		F1FE80581EFE64440052C226 /* MyLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1FE80571EFE64440052C226 /* MyLayout.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,8 @@
 /* Begin PBXFileReference section */
 		5A301DF8192FAFBEF51F17C1 /* Pods_JHRecruit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JHRecruit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		894607BB9038E6643970392F /* Pods-JHRecruit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JHRecruit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JHRecruit/Pods-JHRecruit.debug.xcconfig"; sourceTree = "<group>"; };
+		F15313EE1EFD638100A33C5C /* companyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = companyModel.h; sourceTree = "<group>"; };
+		F15313EF1EFD638100A33C5C /* companyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = companyModel.m; sourceTree = "<group>"; };
 		F17ED7E81EF2A5D20053A56E /* recruitDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = recruitDataModel.h; sourceTree = "<group>"; };
 		F17ED7E91EF2A5D20053A56E /* recruitDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = recruitDataModel.m; sourceTree = "<group>"; };
 		F17ED7EB1EF2A5DC0053A56E /* recruitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = recruitViewController.h; sourceTree = "<group>"; };
@@ -68,8 +73,6 @@
 		F17ED8011EF2A63D0053A56E /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		F17ED8031EF2A66A0053A56E /* JHTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHTool.h; sourceTree = "<group>"; };
 		F17ED8041EF2A66A0053A56E /* JHTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHTool.m; sourceTree = "<group>"; };
-		F1840EBC1EF3E5A100C7559C /* companyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = companyTableViewCell.h; sourceTree = "<group>"; };
-		F1840EBD1EF3E5A100C7559C /* companyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = companyTableViewCell.m; sourceTree = "<group>"; };
 		F1840EBF1EF3F2C100C7559C /* ZFPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZFPlayer.framework; path = "Pods/../build/Debug-iphoneos/ZFPlayer/ZFPlayer.framework"; sourceTree = "<group>"; };
 		F1840EC11EF3F68D00C7559C /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
 		F1840EC31EF426B000C7559C /* resumeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = resumeViewController.h; sourceTree = "<group>"; };
@@ -89,6 +92,11 @@
 		F1BAEBE01EF2A1F80069BABA /* JHRecruitUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JHRecruitUITests.m; sourceTree = "<group>"; };
 		F1BAEBE21EF2A1F80069BABA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1BAEBEE1EF2A26F0069BABA /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F1FE80511EFE39500052C226 /* companyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = companyTableViewCell.h; sourceTree = "<group>"; };
+		F1FE80521EFE39500052C226 /* companyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = companyTableViewCell.m; sourceTree = "<group>"; };
+		F1FE80541EFE39610052C226 /* companyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = companyTableViewController.h; sourceTree = "<group>"; };
+		F1FE80551EFE39610052C226 /* companyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = companyTableViewController.m; sourceTree = "<group>"; };
+		F1FE80571EFE64440052C226 /* MyLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MyLayout.framework; path = "../../../Library/Developer/Xcode/DerivedData/JHRecruit-gmprkhhhwsdeofdcdzechmvyzpgp/Build/Products/Debug-iphonesimulator/MyLayout/MyLayout.framework"; sourceTree = "<group>"; };
 		F46C044397B5C1AC03CFFED6 /* Pods-JHRecruit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JHRecruit.release.xcconfig"; path = "Pods/Target Support Files/Pods-JHRecruit/Pods-JHRecruit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1FE80581EFE64440052C226 /* MyLayout.framework in Frameworks */,
 				F1840EC21EF3F68D00C7559C /* libc++abi.tbd in Frameworks */,
 				15F0BD43EE744B44A8D1E47F /* Pods_JHRecruit.framework in Frameworks */,
 			);
@@ -131,11 +140,39 @@
 		BB7A195740B516F1C1E43F92 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F1FE80571EFE64440052C226 /* MyLayout.framework */,
 				F1840EC11EF3F68D00C7559C /* libc++abi.tbd */,
 				F1840EBF1EF3F2C100C7559C /* ZFPlayer.framework */,
 				5A301DF8192FAFBEF51F17C1 /* Pods_JHRecruit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F15313E81EFD62C000A33C5C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F1FE80541EFE39610052C226 /* companyTableViewController.h */,
+				F1FE80551EFE39610052C226 /* companyTableViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		F15313E91EFD62C800A33C5C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F1FE80511EFE39500052C226 /* companyTableViewCell.h */,
+				F1FE80521EFE39500052C226 /* companyTableViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		F15313EA1EFD62CE00A33C5C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F15313EE1EFD638100A33C5C /* companyModel.h */,
+				F15313EF1EFD638100A33C5C /* companyModel.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		F17ED7DF1EF2A55C0053A56E /* Tool */ = {
@@ -151,7 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				F17ED7E41EF2A5980053A56E /* Recruit */,
-				F17ED7E31EF2A58D0053A56E /* Discover */,
+				F17ED7E31EF2A58D0053A56E /* company */,
 				F17ED7E21EF2A5870053A56E /* Live */,
 				F17ED7E11EF2A5800053A56E /* Setting */,
 			);
@@ -176,13 +213,16 @@
 			name = Live;
 			sourceTree = "<group>";
 		};
-		F17ED7E31EF2A58D0053A56E /* Discover */ = {
+		F17ED7E31EF2A58D0053A56E /* company */ = {
 			isa = PBXGroup;
 			children = (
+				F15313EA1EFD62CE00A33C5C /* Model */,
+				F15313E91EFD62C800A33C5C /* View */,
+				F15313E81EFD62C000A33C5C /* Controller */,
 				F17ED7FD1EF2A60F0053A56E /* discoverViewController.h */,
 				F17ED7FE1EF2A60F0053A56E /* discoverViewController.m */,
 			);
-			name = Discover;
+			name = company;
 			sourceTree = "<group>";
 		};
 		F17ED7E41EF2A5980053A56E /* Recruit */ = {
@@ -200,8 +240,6 @@
 			children = (
 				F17ED7F41EF2A5E60053A56E /* persionalTableViewCell.h */,
 				F17ED7F51EF2A5E60053A56E /* persionalTableViewCell.m */,
-				F1840EBC1EF3E5A100C7559C /* companyTableViewCell.h */,
-				F1840EBD1EF3E5A100C7559C /* companyTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -484,13 +522,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F17ED7F21EF2A5DC0053A56E /* persionalViewController.m in Sources */,
+				F15313F01EFD638100A33C5C /* companyModel.m in Sources */,
 				F1BAEBC01EF2A1F80069BABA /* AppDelegate.m in Sources */,
+				F1FE80531EFE39500052C226 /* companyTableViewCell.m in Sources */,
+				F1FE80561EFE39610052C226 /* companyTableViewController.m in Sources */,
 				F1BAEBBD1EF2A1F80069BABA /* main.m in Sources */,
 				F1840EC51EF426B000C7559C /* resumeViewController.m in Sources */,
 				F17ED7FF1EF2A60F0053A56E /* discoverViewController.m in Sources */,
 				F17ED7EA1EF2A5D20053A56E /* recruitDataModel.m in Sources */,
 				F17ED7F61EF2A5E60053A56E /* persionalTableViewCell.m in Sources */,
-				F1840EBE1EF3E5A100C7559C /* companyTableViewCell.m in Sources */,
 				F17ED8021EF2A63D0053A56E /* RootViewController.m in Sources */,
 				F17ED7F11EF2A5DC0053A56E /* recruitViewController.m in Sources */,
 				F17ED7F91EF2A5F60053A56E /* settingViewController.m in Sources */,
@@ -652,8 +692,10 @@
 				);
 				INFOPLIST_FILE = JHRecruit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = milan.JHRecruit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Debug;
 		};
@@ -669,8 +711,10 @@
 				);
 				INFOPLIST_FILE = JHRecruit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = milan.JHRecruit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Release;
 		};

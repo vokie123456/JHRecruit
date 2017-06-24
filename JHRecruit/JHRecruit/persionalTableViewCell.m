@@ -60,7 +60,7 @@
 }
 
 
-//如果你的最低支持是IOS8，那么你可以重载这个方法来动态的评估cell 的高度，autoLayout	内部就是通过这个方法来评估高度的，因此如果用MyLayout实现的话就不需要	调用基类的方法，而是调用根布局视图的sizeThatFits来评估获取动态的高度.
+//如果你的最低支持是IOS8，那么你可以重载这个方法来动态的评估cell 的高度，autoLayout	内部就是通过这个方法来评估高度的，因此如果用MyLayout实现的话就不需要调用基类的方法，而是调用根布局视图的sizeThatFits来评估获取动态的高度.
 
 -(CGSize)systemLayoutSizeFittingSize:(CGSize)targetSize withHorizontalFittingPriority:(UILayoutPriority)horizontalFittingPriority verticalFittingPriority:(UILayoutPriority)verticalFittingPriority{
     
@@ -80,7 +80,7 @@
 
     _rootLayout = [MyLinearLayout linearLayoutWithOrientation:MyOrientation_Vert];
     _rootLayout.padding = UIEdgeInsetsMake(10, 10, 0, 10);
-    _rootLayout.backgroundColor = [JHTool color:229 widthGreen:226 widthBlue:226 alpha:0.5];
+    _rootLayout.backgroundColor = [JHTool thisAppBackgroundColor];
     _rootLayout.cacheEstimatedRect = true;
     
     /*
@@ -91,6 +91,7 @@
     _rootLayout.widthSize.equalTo(self.contentView.widthSize);
     _rootLayout.wrapContentWidth = false;
     _rootLayout.wrapContentHeight = true;
+    
     [self.contentView addSubview:_rootLayout];
     
     MyLinearLayout *topContent = [MyLinearLayout linearLayoutWithOrientation:MyOrientation_Horz];
