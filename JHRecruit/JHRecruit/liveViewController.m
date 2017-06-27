@@ -7,7 +7,6 @@
 //
 
 #import "liveViewController.h"
-#import <ZFPlayer/ZFPlayer.h>
 
 @interface liveViewController ()
 

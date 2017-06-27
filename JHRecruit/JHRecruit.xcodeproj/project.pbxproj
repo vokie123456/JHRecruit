@@ -10,7 +10,6 @@
 		15F0BD43EE744B44A8D1E47F /* Pods_JHRecruit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A301DF8192FAFBEF51F17C1 /* Pods_JHRecruit.framework */; };
 		F15313F01EFD638100A33C5C /* companyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F15313EF1EFD638100A33C5C /* companyModel.m */; };
 		F17ED7EA1EF2A5D20053A56E /* recruitDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F17ED7E91EF2A5D20053A56E /* recruitDataModel.m */; };
-		F17ED7F11EF2A5DC0053A56E /* recruitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F17ED7EC1EF2A5DC0053A56E /* recruitViewController.m */; };
 		F17ED7F21EF2A5DC0053A56E /* persionalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F17ED7EE1EF2A5DC0053A56E /* persionalViewController.m */; };
 		F17ED7F61EF2A5E60053A56E /* persionalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F17ED7F51EF2A5E60053A56E /* persionalTableViewCell.m */; };
 		F17ED7F91EF2A5F60053A56E /* settingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F17ED7F81EF2A5F60053A56E /* settingViewController.m */; };
@@ -18,7 +17,6 @@
 		F17ED7FF1EF2A60F0053A56E /* discoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F17ED7FE1EF2A60F0053A56E /* discoverViewController.m */; };
 		F17ED8021EF2A63D0053A56E /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F17ED8011EF2A63D0053A56E /* RootViewController.m */; };
 		F17ED8051EF2A66A0053A56E /* JHTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F17ED8041EF2A66A0053A56E /* JHTool.m */; };
-		F1840EC21EF3F68D00C7559C /* libc++abi.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F1840EC11EF3F68D00C7559C /* libc++abi.tbd */; };
 		F1840EC51EF426B000C7559C /* resumeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1840EC41EF426B000C7559C /* resumeViewController.m */; };
 		F1BAEBBD1EF2A1F80069BABA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F1BAEBBC1EF2A1F80069BABA /* main.m */; };
 		F1BAEBC01EF2A1F80069BABA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1BAEBBF1EF2A1F80069BABA /* AppDelegate.m */; };
@@ -57,8 +55,6 @@
 		F15313EF1EFD638100A33C5C /* companyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = companyModel.m; sourceTree = "<group>"; };
 		F17ED7E81EF2A5D20053A56E /* recruitDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = recruitDataModel.h; sourceTree = "<group>"; };
 		F17ED7E91EF2A5D20053A56E /* recruitDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = recruitDataModel.m; sourceTree = "<group>"; };
-		F17ED7EB1EF2A5DC0053A56E /* recruitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = recruitViewController.h; sourceTree = "<group>"; };
-		F17ED7EC1EF2A5DC0053A56E /* recruitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = recruitViewController.m; sourceTree = "<group>"; };
 		F17ED7ED1EF2A5DC0053A56E /* persionalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = persionalViewController.h; sourceTree = "<group>"; };
 		F17ED7EE1EF2A5DC0053A56E /* persionalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = persionalViewController.m; sourceTree = "<group>"; };
 		F17ED7F41EF2A5E60053A56E /* persionalTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = persionalTableViewCell.h; sourceTree = "<group>"; };
@@ -106,7 +102,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1FE80581EFE64440052C226 /* MyLayout.framework in Frameworks */,
-				F1840EC21EF3F68D00C7559C /* libc++abi.tbd in Frameworks */,
 				15F0BD43EE744B44A8D1E47F /* Pods_JHRecruit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -247,8 +242,6 @@
 		F17ED7E61EF2A5AF0053A56E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				F17ED7EB1EF2A5DC0053A56E /* recruitViewController.h */,
-				F17ED7EC1EF2A5DC0053A56E /* recruitViewController.m */,
 				F17ED7ED1EF2A5DC0053A56E /* persionalViewController.h */,
 				F17ED7EE1EF2A5DC0053A56E /* persionalViewController.m */,
 				F1840EC31EF426B000C7559C /* resumeViewController.h */,
@@ -532,7 +525,6 @@
 				F17ED7EA1EF2A5D20053A56E /* recruitDataModel.m in Sources */,
 				F17ED7F61EF2A5E60053A56E /* persionalTableViewCell.m in Sources */,
 				F17ED8021EF2A63D0053A56E /* RootViewController.m in Sources */,
-				F17ED7F11EF2A5DC0053A56E /* recruitViewController.m in Sources */,
 				F17ED7F91EF2A5F60053A56E /* settingViewController.m in Sources */,
 				F17ED7FC1EF2A6000053A56E /* liveViewController.m in Sources */,
 				F17ED8051EF2A66A0053A56E /* JHTool.m in Sources */,
@@ -686,13 +678,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ARX66V9U7C;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos/ZFPlayer",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)/**";
 				INFOPLIST_FILE = JHRecruit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = milan.JHRecruit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
@@ -705,13 +694,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ARX66V9U7C;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos/ZFPlayer",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)/**";
 				INFOPLIST_FILE = JHRecruit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = milan.JHRecruit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";

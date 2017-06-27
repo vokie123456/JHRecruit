@@ -2,9 +2,9 @@ use_frameworks!
 inhibit_all_warnings!
 target 'JHRecruit' do
 pod 'MyLayout'
-pod 'ZFPlayer'
+
 pod 'LFLiveKit'
-pod 'SDCycleScrollView'
+
 
 
 

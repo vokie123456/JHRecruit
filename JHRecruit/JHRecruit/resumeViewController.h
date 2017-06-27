@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <MyLayout/MyLayout.h>
+#import "MyLayout.h"
 
 @interface resumeViewController : UIViewController
 

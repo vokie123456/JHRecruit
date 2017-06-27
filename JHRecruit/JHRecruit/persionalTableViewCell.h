@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <MyLayout/MyLayout.h>
+#import "MyLayout.h"
 #import "recruitDataModel.h"
 /**
     动态高度UITableViewCell
