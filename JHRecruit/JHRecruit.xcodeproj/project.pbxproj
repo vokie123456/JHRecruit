@@ -18,6 +18,7 @@
 		F17ED8021EF2A63D0053A56E /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F17ED8011EF2A63D0053A56E /* RootViewController.m */; };
 		F17ED8051EF2A66A0053A56E /* JHTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F17ED8041EF2A66A0053A56E /* JHTool.m */; };
 		F1840EC51EF426B000C7559C /* resumeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1840EC41EF426B000C7559C /* resumeViewController.m */; };
+		F19BC64B1F149601001553C3 /* JHPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F19BC64A1F149601001553C3 /* JHPlayerView.m */; };
 		F1BAEBBD1EF2A1F80069BABA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F1BAEBBC1EF2A1F80069BABA /* main.m */; };
 		F1BAEBC01EF2A1F80069BABA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1BAEBBF1EF2A1F80069BABA /* AppDelegate.m */; };
 		F1BAEBC61EF2A1F80069BABA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1BAEBC41EF2A1F80069BABA /* Main.storyboard */; };
@@ -73,6 +74,8 @@
 		F1840EC11EF3F68D00C7559C /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
 		F1840EC31EF426B000C7559C /* resumeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = resumeViewController.h; sourceTree = "<group>"; };
 		F1840EC41EF426B000C7559C /* resumeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = resumeViewController.m; sourceTree = "<group>"; };
+		F19BC6491F149601001553C3 /* JHPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHPlayerView.h; sourceTree = "<group>"; };
+		F19BC64A1F149601001553C3 /* JHPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHPlayerView.m; sourceTree = "<group>"; };
 		F1BAEBB81EF2A1F80069BABA /* JHRecruit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JHRecruit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1BAEBBC1EF2A1F80069BABA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F1BAEBBE1EF2A1F80069BABA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -175,6 +178,8 @@
 			children = (
 				F17ED8031EF2A66A0053A56E /* JHTool.h */,
 				F17ED8041EF2A66A0053A56E /* JHTool.m */,
+				F19BC6491F149601001553C3 /* JHPlayerView.h */,
+				F19BC64A1F149601001553C3 /* JHPlayerView.m */,
 			);
 			name = Tool;
 			sourceTree = "<group>";
@@ -489,7 +494,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		F1D2835791EC4197E62D0B0B /* [CP] Embed Pods Frameworks */ = {
@@ -517,6 +522,7 @@
 				F17ED7F21EF2A5DC0053A56E /* persionalViewController.m in Sources */,
 				F15313F01EFD638100A33C5C /* companyModel.m in Sources */,
 				F1BAEBC01EF2A1F80069BABA /* AppDelegate.m in Sources */,
+				F19BC64B1F149601001553C3 /* JHPlayerView.m in Sources */,
 				F1FE80531EFE39500052C226 /* companyTableViewCell.m in Sources */,
 				F1FE80561EFE39610052C226 /* companyTableViewController.m in Sources */,
 				F1BAEBBD1EF2A1F80069BABA /* main.m in Sources */,
@@ -681,7 +687,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)/**";
 				INFOPLIST_FILE = JHRecruit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "-all_load";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = milan.JHRecruit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
@@ -697,7 +703,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)/**";
 				INFOPLIST_FILE = JHRecruit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "-all_load";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = milan.JHRecruit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
