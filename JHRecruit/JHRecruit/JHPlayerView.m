@@ -20,11 +20,12 @@
         playView.frame = self.frame;
         playView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
         [self addSubview:playView];
-        [_ijkPlayer prepareToPlay];
-        if (type == recorded) {
+  
+        if (type == video) {
             _ijkPlayer.shouldAutoplay = false;
             [self setLayout];
         }
+    [_ijkPlayer prepareToPlay];
 
     }
     
@@ -97,7 +98,8 @@
 }
 
 -(void)startPlay:(UIButton *)btn
-{
+{   [self removeToolTimer];
+    [self addToolTimer];
     btn.selected = !btn.selected;
     
     if (btn.selected) {

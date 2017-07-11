@@ -7,7 +7,7 @@
 //
 
 #import "settingViewController.h"
-
+#import "JHPlayerView.h"
 @interface settingViewController ()
 
 @end

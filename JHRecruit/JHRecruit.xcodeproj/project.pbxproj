@@ -14,17 +14,21 @@
 		F17ED7F61EF2A5E60053A56E /* persionalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F17ED7F51EF2A5E60053A56E /* persionalTableViewCell.m */; };
 		F17ED7F91EF2A5F60053A56E /* settingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F17ED7F81EF2A5F60053A56E /* settingViewController.m */; };
 		F17ED7FC1EF2A6000053A56E /* liveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F17ED7FB1EF2A6000053A56E /* liveViewController.m */; };
-		F17ED7FF1EF2A60F0053A56E /* discoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F17ED7FE1EF2A60F0053A56E /* discoverViewController.m */; };
 		F17ED8021EF2A63D0053A56E /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F17ED8011EF2A63D0053A56E /* RootViewController.m */; };
 		F17ED8051EF2A66A0053A56E /* JHTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F17ED8041EF2A66A0053A56E /* JHTool.m */; };
 		F1840EC51EF426B000C7559C /* resumeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1840EC41EF426B000C7559C /* resumeViewController.m */; };
-		F19BC64B1F149601001553C3 /* JHPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F19BC64A1F149601001553C3 /* JHPlayerView.m */; };
 		F19BC6631F149879001553C3 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F19BC65D1F149879001553C3 /* IJKMediaFramework.framework */; };
 		F19BC6641F149879001553C3 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F19BC65E1F149879001553C3 /* libbz2.tbd */; };
 		F19BC6651F149879001553C3 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F19BC65F1F149879001553C3 /* libcrypto.a */; };
 		F19BC6661F149879001553C3 /* librtmp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F19BC6601F149879001553C3 /* librtmp.a */; };
 		F19BC6671F149879001553C3 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F19BC6611F149879001553C3 /* libssl.a */; };
 		F19BC6681F149879001553C3 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F19BC6621F149879001553C3 /* libz.tbd */; };
+		F19BC66A1F149B39001553C3 /* testMovie.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F19BC6691F149B39001553C3 /* testMovie.mp4 */; };
+		F19BC67A1F14AC18001553C3 /* JHPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F19BC6791F14AC18001553C3 /* JHPlayerView.m */; };
+		F19BC6821F14AE33001553C3 /* LiveModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F19BC67F1F14AE33001553C3 /* LiveModel.m */; };
+		F19BC6831F14AE33001553C3 /* liveCreater.m in Sources */ = {isa = PBXBuildFile; fileRef = F19BC6811F14AE33001553C3 /* liveCreater.m */; };
+		F19BC6861F14AE5F001553C3 /* liveTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F19BC6851F14AE5F001553C3 /* liveTableViewCell.m */; };
+		F19BC6891F14AE70001553C3 /* showingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F19BC6881F14AE70001553C3 /* showingViewController.m */; };
 		F1BAEBBD1EF2A1F80069BABA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F1BAEBBC1EF2A1F80069BABA /* main.m */; };
 		F1BAEBC01EF2A1F80069BABA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1BAEBBF1EF2A1F80069BABA /* AppDelegate.m */; };
 		F1BAEBC61EF2A1F80069BABA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1BAEBC41EF2A1F80069BABA /* Main.storyboard */; };
@@ -70,8 +74,6 @@
 		F17ED7F81EF2A5F60053A56E /* settingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = settingViewController.m; sourceTree = "<group>"; };
 		F17ED7FA1EF2A6000053A56E /* liveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = liveViewController.h; sourceTree = "<group>"; };
 		F17ED7FB1EF2A6000053A56E /* liveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = liveViewController.m; sourceTree = "<group>"; };
-		F17ED7FD1EF2A60F0053A56E /* discoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = discoverViewController.h; sourceTree = "<group>"; };
-		F17ED7FE1EF2A60F0053A56E /* discoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = discoverViewController.m; sourceTree = "<group>"; };
 		F17ED8001EF2A63D0053A56E /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		F17ED8011EF2A63D0053A56E /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		F17ED8031EF2A66A0053A56E /* JHTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHTool.h; sourceTree = "<group>"; };
@@ -80,14 +82,23 @@
 		F1840EC11EF3F68D00C7559C /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
 		F1840EC31EF426B000C7559C /* resumeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = resumeViewController.h; sourceTree = "<group>"; };
 		F1840EC41EF426B000C7559C /* resumeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = resumeViewController.m; sourceTree = "<group>"; };
-		F19BC6491F149601001553C3 /* JHPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHPlayerView.h; sourceTree = "<group>"; };
-		F19BC64A1F149601001553C3 /* JHPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHPlayerView.m; sourceTree = "<group>"; };
 		F19BC65D1F149879001553C3 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
 		F19BC65E1F149879001553C3 /* libbz2.tbd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.text-based-dylib-definition"; path = libbz2.tbd; sourceTree = "<group>"; };
 		F19BC65F1F149879001553C3 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
 		F19BC6601F149879001553C3 /* librtmp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = librtmp.a; sourceTree = "<group>"; };
 		F19BC6611F149879001553C3 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
 		F19BC6621F149879001553C3 /* libz.tbd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.text-based-dylib-definition"; path = libz.tbd; sourceTree = "<group>"; };
+		F19BC6691F149B39001553C3 /* testMovie.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = testMovie.mp4; sourceTree = "<group>"; };
+		F19BC6781F14AC18001553C3 /* JHPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHPlayerView.h; sourceTree = "<group>"; };
+		F19BC6791F14AC18001553C3 /* JHPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHPlayerView.m; sourceTree = "<group>"; };
+		F19BC67E1F14AE33001553C3 /* LiveModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveModel.h; sourceTree = "<group>"; };
+		F19BC67F1F14AE33001553C3 /* LiveModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveModel.m; sourceTree = "<group>"; };
+		F19BC6801F14AE33001553C3 /* liveCreater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = liveCreater.h; sourceTree = "<group>"; };
+		F19BC6811F14AE33001553C3 /* liveCreater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = liveCreater.m; sourceTree = "<group>"; };
+		F19BC6841F14AE5F001553C3 /* liveTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = liveTableViewCell.h; sourceTree = "<group>"; };
+		F19BC6851F14AE5F001553C3 /* liveTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = liveTableViewCell.m; sourceTree = "<group>"; };
+		F19BC6871F14AE70001553C3 /* showingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = showingViewController.h; sourceTree = "<group>"; };
+		F19BC6881F14AE70001553C3 /* showingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = showingViewController.m; sourceTree = "<group>"; };
 		F1BAEBB81EF2A1F80069BABA /* JHRecruit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JHRecruit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1BAEBBC1EF2A1F80069BABA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F1BAEBBE1EF2A1F80069BABA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -196,8 +207,8 @@
 			children = (
 				F17ED8031EF2A66A0053A56E /* JHTool.h */,
 				F17ED8041EF2A66A0053A56E /* JHTool.m */,
-				F19BC6491F149601001553C3 /* JHPlayerView.h */,
-				F19BC64A1F149601001553C3 /* JHPlayerView.m */,
+				F19BC6781F14AC18001553C3 /* JHPlayerView.h */,
+				F19BC6791F14AC18001553C3 /* JHPlayerView.m */,
 			);
 			name = Tool;
 			sourceTree = "<group>";
@@ -216,6 +227,7 @@
 		F17ED7E11EF2A5800053A56E /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				F19BC6691F149B39001553C3 /* testMovie.mp4 */,
 				F17ED7F71EF2A5F60053A56E /* settingViewController.h */,
 				F17ED7F81EF2A5F60053A56E /* settingViewController.m */,
 			);
@@ -225,8 +237,9 @@
 		F17ED7E21EF2A5870053A56E /* Live */ = {
 			isa = PBXGroup;
 			children = (
-				F17ED7FA1EF2A6000053A56E /* liveViewController.h */,
-				F17ED7FB1EF2A6000053A56E /* liveViewController.m */,
+				F19BC67D1F14AE1F001553C3 /* Model */,
+				F19BC67C1F14AE18001553C3 /* Controller */,
+				F19BC67B1F14AE11001553C3 /* View */,
 			);
 			name = Live;
 			sourceTree = "<group>";
@@ -237,8 +250,6 @@
 				F15313EA1EFD62CE00A33C5C /* Model */,
 				F15313E91EFD62C800A33C5C /* View */,
 				F15313E81EFD62C000A33C5C /* Controller */,
-				F17ED7FD1EF2A60F0053A56E /* discoverViewController.h */,
-				F17ED7FE1EF2A60F0053A56E /* discoverViewController.m */,
 			);
 			name = company;
 			sourceTree = "<group>";
@@ -293,6 +304,37 @@
 				F19BC6621F149879001553C3 /* libz.tbd */,
 			);
 			name = LIB;
+			sourceTree = "<group>";
+		};
+		F19BC67B1F14AE11001553C3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F19BC6841F14AE5F001553C3 /* liveTableViewCell.h */,
+				F19BC6851F14AE5F001553C3 /* liveTableViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		F19BC67C1F14AE18001553C3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F17ED7FA1EF2A6000053A56E /* liveViewController.h */,
+				F17ED7FB1EF2A6000053A56E /* liveViewController.m */,
+				F19BC6871F14AE70001553C3 /* showingViewController.h */,
+				F19BC6881F14AE70001553C3 /* showingViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		F19BC67D1F14AE1F001553C3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F19BC67E1F14AE33001553C3 /* LiveModel.h */,
+				F19BC67F1F14AE33001553C3 /* LiveModel.m */,
+				F19BC6801F14AE33001553C3 /* liveCreater.h */,
+				F19BC6811F14AE33001553C3 /* liveCreater.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		F1BAEBAF1EF2A1F80069BABA = {
@@ -477,6 +519,7 @@
 			files = (
 				F1BAEBCB1EF2A1F80069BABA /* LaunchScreen.storyboard in Resources */,
 				F1BAEBC81EF2A1F80069BABA /* Assets.xcassets in Resources */,
+				F19BC66A1F149B39001553C3 /* testMovie.mp4 in Resources */,
 				F1BAEBEF1EF2A26F0069BABA /* Podfile in Resources */,
 				F1BAEBC61EF2A1F80069BABA /* Main.storyboard in Resources */,
 			);
@@ -552,18 +595,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				F17ED7F21EF2A5DC0053A56E /* persionalViewController.m in Sources */,
+				F19BC6891F14AE70001553C3 /* showingViewController.m in Sources */,
+				F19BC6831F14AE33001553C3 /* liveCreater.m in Sources */,
 				F15313F01EFD638100A33C5C /* companyModel.m in Sources */,
 				F1BAEBC01EF2A1F80069BABA /* AppDelegate.m in Sources */,
-				F19BC64B1F149601001553C3 /* JHPlayerView.m in Sources */,
+				F19BC67A1F14AC18001553C3 /* JHPlayerView.m in Sources */,
 				F1FE80531EFE39500052C226 /* companyTableViewCell.m in Sources */,
 				F1FE80561EFE39610052C226 /* companyTableViewController.m in Sources */,
 				F1BAEBBD1EF2A1F80069BABA /* main.m in Sources */,
+				F19BC6821F14AE33001553C3 /* LiveModel.m in Sources */,
 				F1840EC51EF426B000C7559C /* resumeViewController.m in Sources */,
-				F17ED7FF1EF2A60F0053A56E /* discoverViewController.m in Sources */,
 				F17ED7EA1EF2A5D20053A56E /* recruitDataModel.m in Sources */,
 				F17ED7F61EF2A5E60053A56E /* persionalTableViewCell.m in Sources */,
-				F17ED8021EF2A63D0053A56E /* RootViewController.m in Sources */,
 				F17ED7F91EF2A5F60053A56E /* settingViewController.m in Sources */,
+				F17ED8021EF2A63D0053A56E /* RootViewController.m in Sources */,
+				F19BC6861F14AE5F001553C3 /* liveTableViewCell.m in Sources */,
 				F17ED7FC1EF2A6000053A56E /* liveViewController.m in Sources */,
 				F17ED8051EF2A66A0053A56E /* JHTool.m in Sources */,
 			);

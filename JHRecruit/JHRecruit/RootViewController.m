@@ -34,10 +34,10 @@
     UINavigationController *nav2 = [[UINavigationController alloc]initWithRootViewController:company];
     
       liveViewController *live = [[liveViewController alloc]init];
-    
+    UINavigationController *liveNav = [[UINavigationController alloc]initWithRootViewController:live];
     settingViewController *setting = [[settingViewController alloc]init];
     
-    self.viewControllers = @[nav1,nav2, live,setting];
+    self.viewControllers = @[nav1,nav2, liveNav,setting];
     
     [self setTabBar];
     
@@ -63,8 +63,8 @@
                 break;
             case 2:
                 [self setItem:obj andImgName:@"live" andSlectImgName:@"live_hl" andTitle:@"直播"];
-                obj.view.backgroundColor = [UIColor redColor];
-                break;
+            
+                                break;
             case 3:
                 [self setItem:obj andImgName:@"setting" andSlectImgName:@"setting_hl" andTitle:@"个人"];
                 obj.view.backgroundColor = [UIColor greenColor];

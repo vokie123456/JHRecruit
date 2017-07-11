@@ -45,8 +45,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+     self.title = @"公司";
     self.navigationController.navigationBar.barTintColor = [JHTool color:18 widthGreen:150 widthBlue:219 alpha:1];
-    
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     self.view.backgroundColor = [JHTool thisAppBackgroundColor];
     
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
