@@ -37,6 +37,7 @@
 		F1BAEBD61EF2A1F80069BABA /* JHRecruitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1BAEBD51EF2A1F80069BABA /* JHRecruitTests.m */; };
 		F1BAEBE11EF2A1F80069BABA /* JHRecruitUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1BAEBE01EF2A1F80069BABA /* JHRecruitUITests.m */; };
 		F1BAEBEF1EF2A26F0069BABA /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = F1BAEBEE1EF2A26F0069BABA /* Podfile */; };
+		F1CE3F221F17090C006714FD /* liveToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CE3F211F17090C006714FD /* liveToolView.m */; };
 		F1FE80531EFE39500052C226 /* companyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F1FE80521EFE39500052C226 /* companyTableViewCell.m */; };
 		F1FE80561EFE39610052C226 /* companyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1FE80551EFE39610052C226 /* companyTableViewController.m */; };
 		F1FE80581EFE64440052C226 /* MyLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1FE80571EFE64440052C226 /* MyLayout.framework */; };
@@ -114,6 +115,8 @@
 		F1BAEBE01EF2A1F80069BABA /* JHRecruitUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JHRecruitUITests.m; sourceTree = "<group>"; };
 		F1BAEBE21EF2A1F80069BABA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1BAEBEE1EF2A26F0069BABA /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F1CE3F201F17090C006714FD /* liveToolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = liveToolView.h; sourceTree = "<group>"; };
+		F1CE3F211F17090C006714FD /* liveToolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = liveToolView.m; sourceTree = "<group>"; };
 		F1FE80511EFE39500052C226 /* companyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = companyTableViewCell.h; sourceTree = "<group>"; };
 		F1FE80521EFE39500052C226 /* companyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = companyTableViewCell.m; sourceTree = "<group>"; };
 		F1FE80541EFE39610052C226 /* companyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = companyTableViewController.h; sourceTree = "<group>"; };
@@ -227,7 +230,8 @@
 		F17ED7E11EF2A5800053A56E /* Setting */ = {
 			isa = PBXGroup;
 			children = (
-				F19BC6691F149B39001553C3 /* testMovie.mp4 */,
+				F1CE3F201F17090C006714FD /* liveToolView.h */,
+				F1CE3F211F17090C006714FD /* liveToolView.m */,
 				F17ED7F71EF2A5F60053A56E /* settingViewController.h */,
 				F17ED7F81EF2A5F60053A56E /* settingViewController.m */,
 			);
@@ -367,6 +371,7 @@
 				F17ED7DF1EF2A55C0053A56E /* Tool */,
 				F17ED7E01EF2A56A0053A56E /* Class */,
 				F1BAEBBE1EF2A1F80069BABA /* AppDelegate.h */,
+				F19BC6691F149B39001553C3 /* testMovie.mp4 */,
 				F1BAEBBF1EF2A1F80069BABA /* AppDelegate.m */,
 				F17ED8001EF2A63D0053A56E /* RootViewController.h */,
 				F17ED8011EF2A63D0053A56E /* RootViewController.m */,
@@ -596,6 +601,7 @@
 			files = (
 				F17ED7F21EF2A5DC0053A56E /* persionalViewController.m in Sources */,
 				F19BC6891F14AE70001553C3 /* showingViewController.m in Sources */,
+				F1CE3F221F17090C006714FD /* liveToolView.m in Sources */,
 				F19BC6831F14AE33001553C3 /* liveCreater.m in Sources */,
 				F15313F01EFD638100A33C5C /* companyModel.m in Sources */,
 				F1BAEBC01EF2A1F80069BABA /* AppDelegate.m in Sources */,

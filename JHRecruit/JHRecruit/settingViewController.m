@@ -8,7 +8,12 @@
 
 #import "settingViewController.h"
 #import "JHPlayerView.h"
+#import "MyLayout.h"
+#import "liveToolView.h"
+#import "JHTool.h"
 @interface settingViewController ()
+@property(nonatomic,strong)UIButton *liveBtn;
+@property(nonatomic,strong)liveToolView *liveView;
 
 @end
 
@@ -16,12 +21,44 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    
+    _liveBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    _liveBtn.frame = CGRectMake(0, 0, 50, 50);
+    _liveBtn.center = self.view.center;
+    _liveBtn.backgroundColor = [UIColor redColor];
+    [_liveBtn setTitle:@"点击" forState:UIControlStateNormal];
+    [_liveBtn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_liveBtn];
+    
+    _liveView = [[liveToolView alloc]init];
+    _liveView.frame = self.view.frame;
+    _liveView.useFrame = true;
+    _liveView.hidden = true;
+    [self.view addSubview:_liveView];
+    
+    
+    
+    
+    
+    
+    
+   }
+
+-(void)btnClick
+{
+    _liveView.hidden = false;
+ 
+}
+
+-(void)hideView
+{
+   
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+   
 }
 
 /*

@@ -36,8 +36,9 @@
       liveViewController *live = [[liveViewController alloc]init];
     UINavigationController *liveNav = [[UINavigationController alloc]initWithRootViewController:live];
     settingViewController *setting = [[settingViewController alloc]init];
+    UINavigationController *settingNav = [[UINavigationController alloc]initWithRootViewController:setting];
     
-    self.viewControllers = @[nav1,nav2, liveNav,setting];
+    self.viewControllers = @[nav1,nav2, liveNav,settingNav];
     
     [self setTabBar];
     
