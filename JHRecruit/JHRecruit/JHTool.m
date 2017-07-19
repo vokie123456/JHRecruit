@@ -30,4 +30,8 @@
     
     return [JHTool color:234 widthGreen:229 widthBlue:228 alpha:1];
 }
++(UIColor*)thisAppTintColor
+{
+    return [JHTool color:0 widthGreen:234 widthBlue:212 alpha:1];
+}
 @end

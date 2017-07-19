@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "RootViewController.h"
-
+#import "MyLayout.h"
 @interface AppDelegate ()
 
 @end
@@ -19,10 +19,14 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    [MyDimeScale setUITemplateSize:CGSizeMake(414, 736)];
+    
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
+    
+    
     RootViewController *root = [[RootViewController  alloc]init];
-        self.window.rootViewController = root;
+    self.window.rootViewController = root;
     
     [self.window makeKeyAndVisible];
     return YES;

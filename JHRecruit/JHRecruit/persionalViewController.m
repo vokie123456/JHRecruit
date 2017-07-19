@@ -69,21 +69,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"个人";
-    self.navigationController.navigationBar.barTintColor = [JHTool color:18 widthGreen:150 widthBlue:219 alpha:1];
+    self.view.backgroundColor = [JHTool thisAppBackgroundColor];
+    self.navigationController.navigationBar.barTintColor = [JHTool thisAppTintColor];
       self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     
     
-       _tableView = [[UITableView alloc]init];
-    
-    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-   
-    
-    _tableView.delegate = self;
-    _tableView.dataSource = self;
-    _tableView.backgroundColor = [JHTool color:229 widthGreen:226 widthBlue:226 alpha:0.5];
-    
-    
-    self.view = _tableView;
+    UITableView *tableView = [[UITableView alloc]init];
+    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    tableView.delegate = self;
+    tableView.dataSource = self;
+    tableView.backgroundColor = [JHTool color:229 widthGreen:226 widthBlue:226 alpha:0.5];
+    tableView.contentInset = UIEdgeInsetsMake(0, 0, 10, 0);
+    self.view = tableView;
+    _tableView = tableView;
     
     //提高cell高度的精确度
     _tableView.estimatedRowHeight = 60;

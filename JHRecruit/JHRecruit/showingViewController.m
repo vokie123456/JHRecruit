@@ -14,10 +14,7 @@
 @end
 
 @implementation showingViewController
--(void)viewWillAppear:(BOOL)animated
-{
-    [self.navigationController setNavigationBarHidden:true animated:true ];
-}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -29,7 +26,7 @@
     [backBtn setBackgroundImage:[UIImage imageNamed:@"backIcon"] forState:UIControlStateNormal];
     backBtn.frame = CGRectMake(10, 10, 30, 30);
     [self.view addSubview:backBtn];
-    [backBtn addTarget:self action:@selector(popToView) forControlEvents:UIControlEventTouchUpInside];
+    [backBtn addTarget:self action:@selector(closeController) forControlEvents:UIControlEventTouchUpInside];
     
   
 }
@@ -40,12 +37,11 @@
   
 }
 
--(void)popToView
-{   [_playerView.ijkPlayer pause];
+-(void)closeController
+{
     [_playerView.ijkPlayer stop];
-    
-    [self.navigationController popViewControllerAnimated:true];
+    [_playerView.ijkPlayer shutdown];
+    [self dismissViewControllerAnimated:true completion:nil];
+
 }
-
-
 @end

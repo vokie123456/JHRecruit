@@ -28,7 +28,7 @@
     
     _liveBtn = [self createButtonWithImgName:@"liveTool" withTitle:@"视频直播"];
     _liveBtn.rightPos.equalTo(_rootView.rightPos).offset(10);
-    _liveBtn.bottomPos.equalTo(_rootView.bottomPos);
+    _liveBtn.bottomPos.equalTo(_rootView.bottomPos).offset(-200);
     [_rootView addSubview:_liveBtn];
     
     _voiceBtn = [self createButtonWithImgName:@"voiceTool" withTitle:@"语音直播"];
@@ -36,7 +36,27 @@
     _voiceBtn.bottomPos.equalTo(_liveBtn.topPos).offset(10);
     [_rootView addSubview:_voiceBtn];
     
+    _articleBtn = [self createButtonWithImgName:@"articleTool" withTitle:@"发布动态"];
+    _articleBtn.bottomPos.equalTo(_voiceBtn.topPos).offset(10);
+    _articleBtn.rightPos.equalTo(_liveBtn.rightPos);
+    [_rootView addSubview:_articleBtn];
     
+    _videoBtn = [self createButtonWithImgName:@"videoTool" withTitle:@"录制视频"];
+    _videoBtn.bottomPos.equalTo(_articleBtn.topPos).offset(10);
+    _videoBtn.rightPos.equalTo(_liveBtn.rightPos);
+    [_rootView addSubview:_videoBtn];
+    
+    
+    
+    _liveBtn.tag = 0;
+    _voiceBtn.tag = 1;
+    _articleBtn.tag = 2;
+    _videoBtn.tag = 3;
+    
+    [_liveBtn setTarget:self action:@selector(onClickTheBtn:)];
+    [_voiceBtn setTarget:self action:@selector(onClickTheBtn:)];
+    [_articleBtn setTarget:self action:@selector(onClickTheBtn:)];
+    [_videoBtn setTarget:self action:@selector(onClickTheBtn:)];
     
 }
 
@@ -66,11 +86,13 @@
 }
 -(void)dismissTheView
 {
-    _liveBtn.bottomPos.equalTo(_rootView.bottomPos).offset(-100);
-    [_rootView layoutAnimationWithDuration:0.35];
-    dispatch_time_t delayTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.32*NSEC_PER_SEC));
+    _liveBtn.bottomPos.equalTo(_rootView.bottomPos).offset(-200);
+    [_rootView layoutAnimationWithDuration:0.20];
+    dispatch_time_t delayTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.20*NSEC_PER_SEC));
     dispatch_after(delayTime, dispatch_get_main_queue(), ^{
-         self.hidden = true;
+        [self removeFromSuperview];
+        [self.delegate hideToolView];
+//        [[NSNotificationCenter defaultCenter]postNotificationName:@"hideToolView" object:nil];
     });
    
     
@@ -78,21 +100,24 @@
 }
 
 
--(void)setHidden:(BOOL)hidden
+-(void)popView
 {
-    [super setHidden:hidden];
-    
-    if (hidden) {
-       
+    dispatch_time_t delayTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1*NSEC_PER_SEC));
+    dispatch_after(delayTime, dispatch_get_main_queue(), ^{
+        [_rootView layoutAnimationWithDuration:0.20];
+        _liveBtn.bottomPos.equalTo(_rootView.bottomPos).offset(50);
+    });
+   
 
- 
+}
 
-    }else{
-        _liveBtn.bottomPos.equalTo(_rootView.bottomPos).offset(100);
-        [_rootView layoutAnimationWithDuration:0.35];
+-(void)onClickTheBtn:(MyLinearLayout *)btn
+{
 
-    }
+
+        [self.delegate clickTheBtn:btn.tag];
     
 }
+
 
 @end

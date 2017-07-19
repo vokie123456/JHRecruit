@@ -67,7 +67,7 @@
             
                                 break;
             case 3:
-                [self setItem:obj andImgName:@"setting" andSlectImgName:@"setting_hl" andTitle:@"个人"];
+                [self setItem:obj andImgName:@"setting" andSlectImgName:@"setting_hl" andTitle:@"我的"];
                 obj.view.backgroundColor = [UIColor greenColor];
                 
             default:

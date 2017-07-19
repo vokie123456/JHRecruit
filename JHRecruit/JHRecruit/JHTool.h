@@ -16,4 +16,5 @@
 +(UIFont*)font:(CGFloat)size;
 +(UIColor*)thisAppBackgroundColor;
 +(UIFont *)weightFont:(CGFloat)size;
++(UIColor*)thisAppTintColor;
 @end

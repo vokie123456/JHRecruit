@@ -21,16 +21,13 @@
 
 @implementation liveViewController
     
--(void)viewWillAppear:(BOOL)animated
-    {
-        [ self.navigationController setNavigationBarHidden:false animated:true ];
-    }
+
     
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self loadData];
     self.title = @"直播";
-    self.navigationController.navigationBar.barTintColor = [JHTool color:18 widthGreen:150 widthBlue:219 alpha:1];
+    self.navigationController.navigationBar.barTintColor = [JHTool thisAppTintColor];
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     _tableView = [[UITableView alloc]init];
     self.view = _tableView;
@@ -103,9 +100,8 @@
         LiveModel *model = _dataArray[indexPath.row];
         showingViewController *show = [[showingViewController alloc]init];
         show.streamAddress = model.stream_addr;
-        self.hidesBottomBarWhenPushed = true;
-        [self.navigationController pushViewController:show animated:true];
-        self.hidesBottomBarWhenPushed = false;
+        [self presentViewController:show animated:true completion:nil];
+       
         
     }
     @end

@@ -46,10 +46,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
      self.title = @"公司";
-    self.navigationController.navigationBar.barTintColor = [JHTool color:18 widthGreen:150 widthBlue:219 alpha:1];
+    self.navigationController.navigationBar.barTintColor = [JHTool thisAppTintColor];
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     self.view.backgroundColor = [JHTool thisAppBackgroundColor];
-    
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 10, 0);
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     //提高cell高度的精确度
     self.tableView.estimatedRowHeight = 60;
@@ -58,6 +58,7 @@
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     
     [self.tableView registerClass:[companyTableViewCell class] forCellReuseIdentifier:@"milan"];
+    
   }
 
 - (void)didReceiveMemoryWarning {
