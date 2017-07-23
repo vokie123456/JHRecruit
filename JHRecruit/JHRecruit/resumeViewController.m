@@ -158,7 +158,7 @@
         
         
         NSURL *fileUrl = [[NSBundle mainBundle] URLForResource:@"testMovie" withExtension:@"mp4"];
-        _playerView = [[JHPlayerView alloc]initWithUrl:fileUrl withPlayerType:video];
+        _playerView = [[JHPlayerView alloc]initWithUrl:fileUrl withPlayerType:JHVideo];
         _playerView.myHeight = 200;
         _playerView.myHorzMargin = 0;
         [movieLayout addSubview:_playerView];

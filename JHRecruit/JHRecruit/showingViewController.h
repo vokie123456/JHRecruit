@@ -10,4 +10,5 @@
 
 @interface showingViewController : UIViewController
 @property(nonatomic,strong)NSString *streamAddress;
+@property(nonatomic,strong)NSString *backgrondImg;
 @end

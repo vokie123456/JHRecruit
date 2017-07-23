@@ -39,7 +39,7 @@
     UIButton *liveBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     liveBtn.myRight = 5;
     liveBtn.myBottom = 50;
-    liveBtn.mySize = CGSizeMake(40, 40);
+    liveBtn.mySize = CGSizeMake(50, 50);
     [liveBtn setBackgroundImage:[UIImage imageNamed:@"toolIcon"] forState:UIControlStateNormal];
     [liveBtn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
     [frameLayout addSubview:liveBtn];
@@ -311,6 +311,7 @@
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return image;
+ 
 }
 
 -(void)btnClick

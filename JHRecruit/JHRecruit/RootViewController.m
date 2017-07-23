@@ -11,6 +11,7 @@
 #import "companyTableViewController.h"
 #import "liveViewController.h"
 #import "settingViewController.h"
+#import "JHTool.h"
 
 #import "JHTool.h"
 @interface RootViewController ()
@@ -78,7 +79,7 @@
     //修改文字颜色
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[[UIColor blackColor] colorWithAlphaComponent:0.5], NSForegroundColorAttributeName, [UIFont systemFontOfSize:12], NSFontAttributeName, nil] forState:UIControlStateNormal];
     
-    UIColor *titleHighlightedColor = [JHTool color:18 widthGreen:150 widthBlue:219 alpha:1];
+    UIColor *titleHighlightedColor = [JHTool thisAppTintColor];
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys: titleHighlightedColor, NSForegroundColorAttributeName,[UIFont systemFontOfSize:13], NSFontAttributeName,
                                                        nil] forState:UIControlStateSelected];
 }

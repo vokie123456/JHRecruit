@@ -92,7 +92,7 @@
     dispatch_after(delayTime, dispatch_get_main_queue(), ^{
         [self removeFromSuperview];
         [self.delegate hideToolView];
-//        [[NSNotificationCenter defaultCenter]postNotificationName:@"hideToolView" object:nil];
+
     });
    
     
@@ -107,8 +107,24 @@
         [_rootView layoutAnimationWithDuration:0.20];
         _liveBtn.bottomPos.equalTo(_rootView.bottomPos).offset(50);
     });
-   
-
+//    
+//    _liveBtn.endLayoutBlock = ^{
+//        [UIView animateWithDuration:0.38 // 动画时长
+//                              delay:0.0 // 动画延迟
+//             usingSpringWithDamping:0.50 // 类似弹簧振动效果 0~1
+//              initialSpringVelocity:1.0 // 初始速度
+//                            options:UIViewAnimationOptionCurveEaseInOut // 动画过渡效果
+//                         animations:^{
+//                             
+//                             _liveBtn.useFrame = true;
+//                             NSLog(@"%@",NSStringFromCGRect(_liveBtn.frame));
+//                             _liveBtn.frame = CGRectMake(100, 600, 114, 40);
+//                             
+//                         } completion:^(BOOL finished) {
+//                         }];
+//  
+//    };
+ 
 }
 
 -(void)onClickTheBtn:(MyLinearLayout *)btn
@@ -116,6 +132,7 @@
 
 
         [self.delegate clickTheBtn:btn.tag];
+   
     
 }
 

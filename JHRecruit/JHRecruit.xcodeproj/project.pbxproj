@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		15F0BD43EE744B44A8D1E47F /* Pods_JHRecruit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A301DF8192FAFBEF51F17C1 /* Pods_JHRecruit.framework */; };
+		F1271F311F2049A300959553 /* loginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1271F301F2049A300959553 /* loginViewController.m */; };
 		F15313F01EFD638100A33C5C /* companyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F15313EF1EFD638100A33C5C /* companyModel.m */; };
 		F17ED7EA1EF2A5D20053A56E /* recruitDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F17ED7E91EF2A5D20053A56E /* recruitDataModel.m */; };
 		F17ED7F21EF2A5DC0053A56E /* persionalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F17ED7EE1EF2A5DC0053A56E /* persionalViewController.m */; };
@@ -17,6 +18,7 @@
 		F17ED8021EF2A63D0053A56E /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F17ED8011EF2A63D0053A56E /* RootViewController.m */; };
 		F17ED8051EF2A66A0053A56E /* JHTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F17ED8041EF2A66A0053A56E /* JHTool.m */; };
 		F1840EC51EF426B000C7559C /* resumeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1840EC41EF426B000C7559C /* resumeViewController.m */; };
+		F19296241F21929200A67CB5 /* mainLiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F19296231F21929200A67CB5 /* mainLiveViewController.m */; };
 		F19BC6631F149879001553C3 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F19BC65D1F149879001553C3 /* IJKMediaFramework.framework */; };
 		F19BC6641F149879001553C3 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F19BC65E1F149879001553C3 /* libbz2.tbd */; };
 		F19BC6651F149879001553C3 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F19BC65F1F149879001553C3 /* libcrypto.a */; };
@@ -29,6 +31,7 @@
 		F19BC6831F14AE33001553C3 /* liveCreater.m in Sources */ = {isa = PBXBuildFile; fileRef = F19BC6811F14AE33001553C3 /* liveCreater.m */; };
 		F19BC6861F14AE5F001553C3 /* liveTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F19BC6851F14AE5F001553C3 /* liveTableViewCell.m */; };
 		F19BC6891F14AE70001553C3 /* showingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F19BC6881F14AE70001553C3 /* showingViewController.m */; };
+		F1A3877C1F222A1100505878 /* liveInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1A3877B1F222A1100505878 /* liveInfoViewController.m */; };
 		F1BAEBBD1EF2A1F80069BABA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F1BAEBBC1EF2A1F80069BABA /* main.m */; };
 		F1BAEBC01EF2A1F80069BABA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1BAEBBF1EF2A1F80069BABA /* AppDelegate.m */; };
 		F1BAEBC61EF2A1F80069BABA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1BAEBC41EF2A1F80069BABA /* Main.storyboard */; };
@@ -63,6 +66,9 @@
 /* Begin PBXFileReference section */
 		5A301DF8192FAFBEF51F17C1 /* Pods_JHRecruit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JHRecruit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		894607BB9038E6643970392F /* Pods-JHRecruit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JHRecruit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JHRecruit/Pods-JHRecruit.debug.xcconfig"; sourceTree = "<group>"; };
+		F1271F2F1F2049A300959553 /* loginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginViewController.h; sourceTree = "<group>"; };
+		F1271F301F2049A300959553 /* loginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginViewController.m; sourceTree = "<group>"; };
+		F1271F321F207B5100959553 /* JHPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JHPrefixHeader.pch; sourceTree = "<group>"; };
 		F15313EE1EFD638100A33C5C /* companyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = companyModel.h; sourceTree = "<group>"; };
 		F15313EF1EFD638100A33C5C /* companyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = companyModel.m; sourceTree = "<group>"; };
 		F17ED7E81EF2A5D20053A56E /* recruitDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = recruitDataModel.h; sourceTree = "<group>"; };
@@ -83,6 +89,8 @@
 		F1840EC11EF3F68D00C7559C /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
 		F1840EC31EF426B000C7559C /* resumeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = resumeViewController.h; sourceTree = "<group>"; };
 		F1840EC41EF426B000C7559C /* resumeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = resumeViewController.m; sourceTree = "<group>"; };
+		F19296221F21929200A67CB5 /* mainLiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mainLiveViewController.h; sourceTree = "<group>"; };
+		F19296231F21929200A67CB5 /* mainLiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mainLiveViewController.m; sourceTree = "<group>"; };
 		F19BC65D1F149879001553C3 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
 		F19BC65E1F149879001553C3 /* libbz2.tbd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.text-based-dylib-definition"; path = libbz2.tbd; sourceTree = "<group>"; };
 		F19BC65F1F149879001553C3 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
@@ -100,6 +108,8 @@
 		F19BC6851F14AE5F001553C3 /* liveTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = liveTableViewCell.m; sourceTree = "<group>"; };
 		F19BC6871F14AE70001553C3 /* showingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = showingViewController.h; sourceTree = "<group>"; };
 		F19BC6881F14AE70001553C3 /* showingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = showingViewController.m; sourceTree = "<group>"; };
+		F1A3877A1F222A1100505878 /* liveInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = liveInfoViewController.h; sourceTree = "<group>"; };
+		F1A3877B1F222A1100505878 /* liveInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = liveInfoViewController.m; sourceTree = "<group>"; };
 		F1BAEBB81EF2A1F80069BABA /* JHRecruit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JHRecruit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1BAEBBC1EF2A1F80069BABA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F1BAEBBE1EF2A1F80069BABA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -178,6 +188,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F1271F2E1F20498200959553 /* loginAndRegist */ = {
+			isa = PBXGroup;
+			children = (
+				F1271F2F1F2049A300959553 /* loginViewController.h */,
+				F1271F301F2049A300959553 /* loginViewController.m */,
+			);
+			name = loginAndRegist;
+			sourceTree = "<group>";
+		};
 		F15313E81EFD62C000A33C5C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +231,8 @@
 				F17ED8041EF2A66A0053A56E /* JHTool.m */,
 				F19BC6781F14AC18001553C3 /* JHPlayerView.h */,
 				F19BC6791F14AC18001553C3 /* JHPlayerView.m */,
+				F1CE3F201F17090C006714FD /* liveToolView.h */,
+				F1CE3F211F17090C006714FD /* liveToolView.m */,
 			);
 			name = Tool;
 			sourceTree = "<group>";
@@ -219,6 +240,8 @@
 		F17ED7E01EF2A56A0053A56E /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				F192961C1F218B7800A67CB5 /* startLiving */,
+				F1271F2E1F20498200959553 /* loginAndRegist */,
 				F17ED7E41EF2A5980053A56E /* Recruit */,
 				F17ED7E31EF2A58D0053A56E /* company */,
 				F17ED7E21EF2A5870053A56E /* Live */,
@@ -230,8 +253,6 @@
 		F17ED7E11EF2A5800053A56E /* Setting */ = {
 			isa = PBXGroup;
 			children = (
-				F1CE3F201F17090C006714FD /* liveToolView.h */,
-				F1CE3F211F17090C006714FD /* liveToolView.m */,
 				F17ED7F71EF2A5F60053A56E /* settingViewController.h */,
 				F17ED7F81EF2A5F60053A56E /* settingViewController.m */,
 			);
@@ -295,6 +316,33 @@
 				F17ED7E91EF2A5D20053A56E /* recruitDataModel.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		F192961C1F218B7800A67CB5 /* startLiving */ = {
+			isa = PBXGroup;
+			children = (
+				F19296211F21911D00A67CB5 /* Controller */,
+				F19296201F218FE800A67CB5 /* View */,
+			);
+			name = startLiving;
+			sourceTree = "<group>";
+		};
+		F19296201F218FE800A67CB5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		F19296211F21911D00A67CB5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F19296221F21929200A67CB5 /* mainLiveViewController.h */,
+				F19296231F21929200A67CB5 /* mainLiveViewController.m */,
+				F1A3877A1F222A1100505878 /* liveInfoViewController.h */,
+				F1A3877B1F222A1100505878 /* liveInfoViewController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		F19BC6501F1497B3001553C3 /* LIB */ = {
@@ -371,10 +419,11 @@
 				F17ED7DF1EF2A55C0053A56E /* Tool */,
 				F17ED7E01EF2A56A0053A56E /* Class */,
 				F1BAEBBE1EF2A1F80069BABA /* AppDelegate.h */,
-				F19BC6691F149B39001553C3 /* testMovie.mp4 */,
 				F1BAEBBF1EF2A1F80069BABA /* AppDelegate.m */,
+				F1271F321F207B5100959553 /* JHPrefixHeader.pch */,
 				F17ED8001EF2A63D0053A56E /* RootViewController.h */,
 				F17ED8011EF2A63D0053A56E /* RootViewController.m */,
+				F19BC6691F149B39001553C3 /* testMovie.mp4 */,
 				F1BAEBC71EF2A1F80069BABA /* Assets.xcassets */,
 				F1BAEBCC1EF2A1F80069BABA /* Info.plist */,
 				F1BAEBBB1EF2A1F80069BABA /* Supporting Files */,
@@ -604,8 +653,10 @@
 				F1CE3F221F17090C006714FD /* liveToolView.m in Sources */,
 				F19BC6831F14AE33001553C3 /* liveCreater.m in Sources */,
 				F15313F01EFD638100A33C5C /* companyModel.m in Sources */,
+				F19296241F21929200A67CB5 /* mainLiveViewController.m in Sources */,
 				F1BAEBC01EF2A1F80069BABA /* AppDelegate.m in Sources */,
 				F19BC67A1F14AC18001553C3 /* JHPlayerView.m in Sources */,
+				F1A3877C1F222A1100505878 /* liveInfoViewController.m in Sources */,
 				F1FE80531EFE39500052C226 /* companyTableViewCell.m in Sources */,
 				F1FE80561EFE39610052C226 /* companyTableViewController.m in Sources */,
 				F1BAEBBD1EF2A1F80069BABA /* main.m in Sources */,
@@ -615,6 +666,7 @@
 				F17ED7F61EF2A5E60053A56E /* persionalTableViewCell.m in Sources */,
 				F17ED7F91EF2A5F60053A56E /* settingViewController.m in Sources */,
 				F17ED8021EF2A63D0053A56E /* RootViewController.m in Sources */,
+				F1271F311F2049A300959553 /* loginViewController.m in Sources */,
 				F19BC6861F14AE5F001553C3 /* liveTableViewCell.m in Sources */,
 				F17ED7FC1EF2A6000053A56E /* liveViewController.m in Sources */,
 				F17ED8051EF2A66A0053A56E /* JHTool.m in Sources */,
@@ -772,6 +824,8 @@
 					"$(inherited)/**",
 					"$(PROJECT_DIR)/JHRecruit",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/milan/Desktop/JHRecruit/JHRecruit/JHRecruit/JHPrefixHeader.pch;
 				INFOPLIST_FILE = JHRecruit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -795,6 +849,8 @@
 					"$(inherited)/**",
 					"$(PROJECT_DIR)/JHRecruit",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/milan/Desktop/JHRecruit/JHRecruit/JHRecruit/JHPrefixHeader.pch;
 				INFOPLIST_FILE = JHRecruit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (

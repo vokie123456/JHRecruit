@@ -8,15 +8,19 @@
 
 #import "liveViewController.h"
 #import "JHPlayerView.h"
-#import "AFNetworking.h"
 #import "LiveModel.h"
 #import "MJExtension.h"
 #import "liveTableViewCell.h"
-#import "JHTool.h"
 #import "showingViewController.h"
-@interface liveViewController ()<UITableViewDelegate,UITableViewDataSource>
+#import "liveCreater.h"
+#import "liveToolView.h"
+#import "mainLiveViewController.h"
+
+@interface liveViewController ()<UITableViewDelegate,UITableViewDataSource,ToolViewDelegate>
     @property(nonatomic,strong)UITableView *tableView;
     @property(nonatomic,strong)NSMutableArray *dataArray;
+    @property(nonatomic,strong)UIButton *liveBtn;
+    @property(nonatomic,strong)liveToolView *liveView;
     @end
 
 @implementation liveViewController
@@ -25,12 +29,17 @@
     
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self loadData];
+    
     self.title = @"直播";
     self.navigationController.navigationBar.barTintColor = [JHTool thisAppTintColor];
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+    
+    MyFrameLayout *frameLayout = [[MyFrameLayout alloc]init];
+    self.view = frameLayout;
+    
     _tableView = [[UITableView alloc]init];
-    self.view = _tableView;
+    _tableView.myMargin = 0;
+    [frameLayout addSubview:_tableView];
     _tableView.delegate = self;
     _tableView.dataSource = self;
     //提高cell高度精确度
@@ -40,6 +49,21 @@
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     _tableView.backgroundColor = [JHTool thisAppBackgroundColor];
     [_tableView setContentInset:UIEdgeInsetsMake(0, 0, 10, 0)];
+    
+    UIButton *liveBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    liveBtn.myRight = 5;
+    liveBtn.myBottom = 50;
+    liveBtn.mySize = CGSizeMake(50, 50);
+    [liveBtn setBackgroundImage:[UIImage imageNamed:@"toolIcon"] forState:UIControlStateNormal];
+    [liveBtn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
+    [frameLayout addSubview:liveBtn];
+    self.liveBtn = liveBtn;
+    
+    _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [self loadData];
+    }];
+    [_tableView.mj_header beginRefreshing];
+    
     
     
     
@@ -63,6 +87,7 @@
         [manager GET:urlStr parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             _dataArray = [LiveModel mj_objectArrayWithKeyValuesArray:responseObject[@"lives"]];
             [_tableView reloadData];
+            [_tableView.mj_header endRefreshing];
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             NSLog(@"%@",error);
         }];
@@ -78,7 +103,7 @@
     
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
     {
-        NSLog(@"%ld",_dataArray.count);
+        
         return _dataArray.count;
     }
     
@@ -100,8 +125,40 @@
         LiveModel *model = _dataArray[indexPath.row];
         showingViewController *show = [[showingViewController alloc]init];
         show.streamAddress = model.stream_addr;
+        show.backgrondImg = model.creator.portrait;
         [self presentViewController:show animated:true completion:nil];
        
         
     }
+
+
+#pragma mark -- 悬浮窗口相关
+-(void)btnClick
+{
+    _liveView = [[liveToolView alloc]init];
+    _liveView.frame = [[UIScreen mainScreen] bounds];
+    [[[UIApplication sharedApplication] keyWindow] addSubview:_liveView];
+    [_liveView popView];
+    _liveView.delegate = self;
+    //悬浮按钮
+    _liveBtn.hidden = true;
+    
+    
+}
+-(void)clickTheBtn:(NSInteger)btnInteger
+{
+    if (btnInteger == 0) {
+        mainLiveViewController *main = [[mainLiveViewController alloc]init];
+        [self presentViewController:main animated:true completion:nil];
+           }
+    [_liveView dismissTheView];
+}
+
+
+-(void)hideToolView
+{
+    _liveBtn.hidden = false;
+    
+}
+
     @end

@@ -10,8 +10,8 @@
 #import <IJKMediaFramework/IJKMediaFramework.h>
 #import "MyLayout.h"
 typedef enum _playerType{
-    video = 0,
-    live
+    JHVideo = 0,
+    JHLive
 }playerType;
 
 @interface JHPlayerView : UIView

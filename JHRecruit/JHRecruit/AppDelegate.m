@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "RootViewController.h"
 #import "MyLayout.h"
+#import "loginViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -25,11 +26,14 @@
     
     
     
-    RootViewController *root = [[RootViewController  alloc]init];
-    self.window.rootViewController = root;
-    
+   
+     loginViewController *login = [[loginViewController alloc]init];
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:login];
+    self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
-    return YES;
+   
+        return YES;
+    
 }
 
 

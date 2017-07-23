@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface liveCreater : NSObject
-@property(nonatomic,copy)NSString *nick;
-@property(nonatomic,copy)NSString *portrait;
+@property(nonatomic,strong)NSString *nick;
+@property(nonatomic,strong)NSString *portrait;
 
 @end

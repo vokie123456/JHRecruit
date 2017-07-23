@@ -21,7 +21,7 @@
         playView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
         [self addSubview:playView];
   
-        if (type == video) {
+        if (type == JHVideo) {
             _ijkPlayer.shouldAutoplay = false;
             [self setLayout];
         }
