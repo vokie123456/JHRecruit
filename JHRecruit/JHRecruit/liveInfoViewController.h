@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "liveConfigDelegate.h"
 @interface liveInfoViewController : UIViewController
+@property (nonatomic , strong) id<liveConfigDelegate> delegate;
 
 @end

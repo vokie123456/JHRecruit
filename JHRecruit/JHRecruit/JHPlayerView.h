@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <IJKMediaFramework/IJKMediaFramework.h>
 #import "MyLayout.h"
+#import <IJKMediaFramework/IJKMediaFramework.h>
+
 typedef enum _playerType{
     JHVideo = 0,
     JHLive

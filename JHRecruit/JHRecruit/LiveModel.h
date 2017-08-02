@@ -15,7 +15,4 @@
 @property(nonatomic,copy)NSString *stream_addr;
 @property(nonatomic,assign) NSUInteger online_users;
 @property(nonatomic,copy)NSString *city;
-
-
-
 @end
