@@ -8,7 +8,7 @@
 
 #import "settingViewController.h"
 
-@interface settingViewController ()<ToolViewDelegate,UIScrollViewDelegate>
+@interface settingViewController ()<UIScrollViewDelegate>
 {
     UIImageView *_navImageView;
     MyLinearLayout *_rootView;
@@ -77,7 +77,12 @@
     self.navigationController.navigationBar.shadowImage = [UIImage new];
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
 
-    
+    __weak typeof(self) weakSelf = self;
+    [[NSNotificationCenter defaultCenter]addObserverForName:@"floatBtnShow" object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
+        weakSelf.liveBtn.hidden = false;
+        
+    }];
+
         
    
    }
@@ -319,39 +324,13 @@
     _liveView = [[liveToolView alloc]init];
     _liveView.frame = [[UIScreen mainScreen] bounds];
     [[[UIApplication sharedApplication] keyWindow] addSubview:_liveView];
-    [_liveView popView];
-    _liveView.delegate = self;
+    
+    
     //悬浮按钮
     _liveBtn.hidden = true;
 
  
 }
 
-
-
-
-#pragma mark -- 悬浮窗口的代理函数
--(void)clickTheBtn:(NSInteger)btnInteger
-{
-    switch (btnInteger) {
-        case 0:
-            NSLog(@"0000000000000000");
-            
-            break;
-        case 1:
-            NSLog(@"1111111111111111");
-            break;
-        default:
-            break;
-    }
-    [_liveView dismissTheView];
-}
-
-
--(void)hideToolView
-{
-    _liveBtn.hidden = false;
-    
-}
 
 @end

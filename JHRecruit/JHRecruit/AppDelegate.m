@@ -10,6 +10,7 @@
 #import "RootViewController.h"
 #import "MyLayout.h"
 #import "loginViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -27,7 +28,8 @@
     
     
    
-     loginViewController *login = [[loginViewController alloc]init];
+   loginViewController *login = [[loginViewController alloc]init];
+    //RootViewController *rootVC = [[RootViewController alloc]init];
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:login];
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];

@@ -8,43 +8,41 @@
 
 #import "liveToolView.h"
 #import "JHTool.h"
+#import "mainLiveViewController.h"
 @implementation liveToolView
 -(instancetype)init
 {
     self = [super init];
     if (self) {
         [self setLayout];
+       
     }
     return self;
+   
 }
+
 
 -(void)setLayout
 {
-    _rootView = [[MyRelativeLayout alloc]init];
-    _rootView.myMargin = 0;
-    _rootView.backgroundColor = [JHTool color:0 widthGreen:0 widthBlue:0 alpha:0.3];
-    [_rootView setTarget:self action:@selector(dismissTheView)];
-    [self addSubview:_rootView];
+    MyFrameLayout *rootView = [[MyFrameLayout alloc]init];
+    rootView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5];
+    [rootView setTarget:self action:@selector(hideMyView)];
+    rootView.myMargin = 0;
+    [self addSubview:rootView];
+    self.rootView = rootView;
     
     _liveBtn = [self createButtonWithImgName:@"liveTool" withTitle:@"视频直播"];
-    _liveBtn.rightPos.equalTo(_rootView.rightPos).offset(10);
-    _liveBtn.bottomPos.equalTo(_rootView.bottomPos).offset(-200);
-    [_rootView addSubview:_liveBtn];
+    
+    [rootView addSubview:_liveBtn];
     
     _voiceBtn = [self createButtonWithImgName:@"voiceTool" withTitle:@"语音直播"];
-    _voiceBtn.rightPos.equalTo(_liveBtn.rightPos);
-    _voiceBtn.bottomPos.equalTo(_liveBtn.topPos).offset(10);
-    [_rootView addSubview:_voiceBtn];
+    [rootView addSubview:_voiceBtn];
     
     _articleBtn = [self createButtonWithImgName:@"articleTool" withTitle:@"发布动态"];
-    _articleBtn.bottomPos.equalTo(_voiceBtn.topPos).offset(10);
-    _articleBtn.rightPos.equalTo(_liveBtn.rightPos);
-    [_rootView addSubview:_articleBtn];
+    [rootView addSubview:_articleBtn];
     
     _videoBtn = [self createButtonWithImgName:@"videoTool" withTitle:@"录制视频"];
-    _videoBtn.bottomPos.equalTo(_articleBtn.topPos).offset(10);
-    _videoBtn.rightPos.equalTo(_liveBtn.rightPos);
-    [_rootView addSubview:_videoBtn];
+    [rootView addSubview:_videoBtn];
     
     
     
@@ -64,6 +62,8 @@
 {
     MyLinearLayout *btn = [[MyLinearLayout alloc]initWithOrientation:MyOrientation_Horz];
     btn.wrapContentSize = true;
+    btn.myRight = 20;
+    btn.myBottom = -100;
     
     
     
@@ -84,57 +84,80 @@
     
     return btn;
 }
--(void)dismissTheView
-{
-    _liveBtn.bottomPos.equalTo(_rootView.bottomPos).offset(-200);
-    [_rootView layoutAnimationWithDuration:0.20];
-    dispatch_time_t delayTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.20*NSEC_PER_SEC));
-    dispatch_after(delayTime, dispatch_get_main_queue(), ^{
-        [self removeFromSuperview];
-        [self.delegate hideToolView];
 
-    });
-   
-    
-   
-}
 
 
 -(void)popView
+
 {
-    dispatch_time_t delayTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1*NSEC_PER_SEC));
-    dispatch_after(delayTime, dispatch_get_main_queue(), ^{
-        [_rootView layoutAnimationWithDuration:0.20];
-        _liveBtn.bottomPos.equalTo(_rootView.bottomPos).offset(50);
-    });
-//    
-//    _liveBtn.endLayoutBlock = ^{
-//        [UIView animateWithDuration:0.38 // 动画时长
-//                              delay:0.0 // 动画延迟
-//             usingSpringWithDamping:0.50 // 类似弹簧振动效果 0~1
-//              initialSpringVelocity:1.0 // 初始速度
-//                            options:UIViewAnimationOptionCurveEaseInOut // 动画过渡效果
-//                         animations:^{
-//                             
-//                             _liveBtn.useFrame = true;
-//                             NSLog(@"%@",NSStringFromCGRect(_liveBtn.frame));
-//                             _liveBtn.frame = CGRectMake(100, 600, 114, 40);
-//                             
-//                         } completion:^(BOOL finished) {
-//                         }];
-//  
-//    };
+   
+    _liveBtn.myBottom = 60;
+    _voiceBtn.myBottom = 120;
+    _articleBtn.myBottom = 180;
+    _videoBtn.myBottom = 240;
+    
+    
+    
+    _rootView.beginLayoutBlock = ^{
+        
+        [UIView beginAnimations:nil context:nil];
+        [UIView setAnimationDuration:0.3];
+        [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
+        
+    };
+    
+    _rootView.endLayoutBlock = ^{
+        
+        [UIView commitAnimations];
+    };
+
  
 }
-
--(void)onClickTheBtn:(MyLinearLayout *)btn
-{
-
-
-        [self.delegate clickTheBtn:btn.tag];
-   
+-(void)hideMyView{
+    _liveBtn.myBottom = -100;
+    _voiceBtn.myBottom = -100;
+    _articleBtn.myBottom = -100;
+    _videoBtn.myBottom = -100;
     
+    
+    __weak typeof(self) weakSelf = self;
+    _rootView.beginLayoutBlock = ^{
+        
+        [UIView beginAnimations:nil context:nil];
+        [UIView setAnimationDuration:0.25];
+        [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
+        [UIView setAnimationDelegate:weakSelf];
+        [UIView setAnimationDidStopSelector:@selector(animationDidStop:finished:context:)];
+        
+    };
+    
+    _rootView.endLayoutBlock = ^{
+        
+        [UIView commitAnimations];
+    };
+
+   
 }
 
+-(void)onClickTheBtn:(MyLinearLayout *)btn{
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"floatBtnShow" object:nil];
+   
+    if (btn.tag == 0) {
+        mainLiveViewController *mainLive = [[mainLiveViewController alloc]init];
+        [self.window.rootViewController presentViewController:mainLive animated:true completion:nil];
+        
+    }
+[self removeFromSuperview];    
+}
+
+-(void)didMoveToSuperview{
+    
+    [NSTimer scheduledTimerWithTimeInterval:0.30 target:self selector:@selector(popView) userInfo:nil repeats:nil];
+}
+
+-(void)animationDidStop:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context{
+ [self removeFromSuperview];
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"floatBtnShow" object:nil];
+}
 
 @end

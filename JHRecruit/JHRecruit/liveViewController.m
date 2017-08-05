@@ -16,7 +16,9 @@
 #import "liveToolView.h"
 #import "mainLiveViewController.h"
 
-@interface liveViewController ()<UITableViewDelegate,UITableViewDataSource,ToolViewDelegate>
+
+
+@interface liveViewController ()<UITableViewDelegate,UITableViewDataSource>
     @property(nonatomic,strong)UITableView *tableView;
     @property(nonatomic,strong)NSMutableArray *dataArray;
     @property(nonatomic,strong)UIButton *liveBtn;
@@ -64,8 +66,11 @@
     }];
     [_tableView.mj_header beginRefreshing];
     
-    
-    
+    __weak typeof(self) weakSelf = self;
+    [[NSNotificationCenter defaultCenter]addObserverForName:@"floatBtnShow" object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
+        weakSelf.liveBtn.hidden = false;
+        
+    }];
     
 }
     
@@ -132,33 +137,20 @@
     }
 
 
-#pragma mark -- 悬浮窗口相关
+
 -(void)btnClick
 {
     _liveView = [[liveToolView alloc]init];
     _liveView.frame = [[UIScreen mainScreen] bounds];
     [[[UIApplication sharedApplication] keyWindow] addSubview:_liveView];
-    [_liveView popView];
-    _liveView.delegate = self;
-    //悬浮按钮
+
+
+
+        //悬浮按钮
     _liveBtn.hidden = true;
     
     
 }
--(void)clickTheBtn:(NSInteger)btnInteger
-{
-    if (btnInteger == 0) {
-        mainLiveViewController *main = [[mainLiveViewController alloc]init];
-        [self presentViewController:main animated:true completion:nil];
-           }
-    [_liveView dismissTheView];
-}
 
-
--(void)hideToolView
-{
-    _liveBtn.hidden = false;
-    
-}
 
     @end

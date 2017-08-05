@@ -13,22 +13,31 @@
 #import "settingViewController.h"
 #import "JHTool.h"
 
+
+
 #import "JHTool.h"
 @interface RootViewController ()
 
 @end
 
 @implementation RootViewController
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.hidden= true;
+}
+
+
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+  
     self.view.backgroundColor = [UIColor whiteColor];
  
     [self.tabBar setBackgroundImage:[UIImage new]];
     [self.tabBar setShadowImage:[UIImage new]];
 
-//    recruitViewController *recruit = [[recruitViewController alloc]init];
+
     persionalViewController *persional = [[persionalViewController alloc]init];
     UINavigationController *nav1 = [[UINavigationController alloc]initWithRootViewController:persional];
     companyTableViewController *company = [[companyTableViewController alloc]init];
@@ -43,8 +52,12 @@
     
     [self setTabBar];
     
+   
+    
     
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

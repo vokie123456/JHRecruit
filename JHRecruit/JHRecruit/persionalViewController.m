@@ -26,9 +26,11 @@
     [super viewWillAppear:animated];
   // [self.navigationController setNavigationBarHidden:true animated:true];
    
-  
  
 
+}
+-(void)viewWillDisappear:(BOOL)animated{
+ 
 }
 
 -(NSMutableArray *)dataArray{
@@ -72,6 +74,11 @@
     self.view.backgroundColor = [JHTool thisAppBackgroundColor];
     self.navigationController.navigationBar.barTintColor = [JHTool thisAppTintColor];
       self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+    UIImage *backImg = [[UIImage imageNamed:@"backIcon"]resizableImageWithCapInsets:UIEdgeInsetsMake(0, 30, 0, 0)];
+    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:backImg forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    //隐藏返回按钮的文字
+    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(NSIntegerMin, NSIntegerMin) forBarMetrics:UIBarMetricsDefault];
+
     
     
     UITableView *tableView = [[UITableView alloc]init];
@@ -122,11 +129,13 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    self.hidesBottomBarWhenPushed = true;
+
     resumeViewController *resume = [[resumeViewController alloc]init];
-    
+    resume.hidesBottomBarWhenPushed = true;
+
     [self.navigationController pushViewController:resume animated:true];
-   self.hidesBottomBarWhenPushed = false;
+    
+  
 }
 
 

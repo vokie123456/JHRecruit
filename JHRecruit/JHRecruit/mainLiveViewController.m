@@ -29,6 +29,11 @@
     return _session;
 }
 
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    //请求音视频权限
+    [self requestAuthorization];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -39,10 +44,6 @@
     self.session.delegate = self;
     self.session.preView = self.view;
 
-    //请求音视频权限
-    [self requestAuthorization];
-   
-   
     
     liveInfoViewController *infoController = [[liveInfoViewController alloc]init];
     infoController.delegate = self;
@@ -101,6 +102,20 @@
 
 -(void)requestAuthorization
 {
+    if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"相机不可用！" message:nil preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [self dismissViewControllerAnimated:true completion:nil];
+        }];
+        
+        [alertController addAction:action];
+        
+        [self presentViewController:alertController animated:true completion:nil];
+
+        
+        
+    }
+    
     AVAuthorizationStatus audioState = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeAudio];
     AVAuthorizationStatus videoState = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
     

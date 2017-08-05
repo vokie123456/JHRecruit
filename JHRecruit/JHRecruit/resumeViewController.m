@@ -25,6 +25,9 @@
     @end
 
 @implementation resumeViewController
+-(void)viewDidAppear:(BOOL)animated{
+ 
+}
     
 -(void)loadView{
     /*
@@ -67,15 +70,12 @@
     [self addTheWorkExperience:contentLayout];
     [self addTheProjectExperience:contentLayout];
     
-    self.edgesForExtendedLayout = UIRectEdgeNone;
-    self.automaticallyAdjustsScrollViewInsets = false;
-    self.extendedLayoutIncludesOpaqueBars = NO;
-}
+   }
     
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"个人简历";
-    [self setNavBar];
+ 
     
     
 }
@@ -422,15 +422,6 @@
     
     
     
--(void)setNavBar
-    {
-        
-        UIImage *backImg = [[UIImage imageNamed:@"backIcon"]resizableImageWithCapInsets:UIEdgeInsetsMake(0, 30, 0, 0)];
-        [[UIBarButtonItem appearance] setBackButtonBackgroundImage:backImg forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-        //隐藏返回按钮的文字
-        [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(NSIntegerMin, NSIntegerMin) forBarMetrics:UIBarMetricsDefault];
-        
-    }
-    
+
     
     @end

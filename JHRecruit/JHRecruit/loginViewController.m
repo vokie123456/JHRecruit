@@ -106,15 +106,7 @@
         
     }];
     
-    [UIView animateWithDuration:0.8 animations:^{
-         self.loginBtn.transform = CGAffineTransformMakeScale(0.5, 0.5);
-        
-    } completion:^(BOOL finished) {
-        [UIView animateWithDuration:0.5 animations:^{
-            self.loginBtn.transform = CGAffineTransformMakeScale(1.0, 1.0);
-        }];
-
-    }];
+    
     
 //    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
 //    
@@ -156,8 +148,18 @@
 
 -(void)loginClick
 {
+    UIWindow *window = [[UIApplication sharedApplication]keyWindow];
+    UINavigationController *oldNav = (UINavigationController *)window.rootViewController;
+    
     RootViewController *root = [[RootViewController alloc]init];
-    [self.navigationController pushViewController:root animated:false];
+    [[UIApplication sharedApplication]keyWindow].rootViewController = root;
+    [oldNav popViewControllerAnimated:false];
+    oldNav.viewControllers = [NSArray new];
+    oldNav = nil;
+    
+    
+    
+
 }
 
 

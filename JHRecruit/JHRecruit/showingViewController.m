@@ -57,6 +57,10 @@
     [super didReceiveMemoryWarning];
   
 }
+-(BOOL)prefersStatusBarHidden{
+    
+    return true;
+}
 
 -(void)closeController
 {
