@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		15F0BD43EE744B44A8D1E47F /* Pods_JHRecruit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A301DF8192FAFBEF51F17C1 /* Pods_JHRecruit.framework */; };
 		F1271F311F2049A300959553 /* loginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1271F301F2049A300959553 /* loginViewController.m */; };
+		F14165CC1F3852AF00E66ABA /* informationInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F14165CB1F3852AF00E66ABA /* informationInputViewController.m */; };
+		F14E89101F3ABB5C00054379 /* JHPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F14E890F1F3ABB5C00054379 /* JHPickerView.m */; };
 		F14F78131F30B47500B7DD8D /* barrageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F14F78121F30B47500B7DD8D /* barrageViewController.m */; };
 		F15313F01EFD638100A33C5C /* companyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F15313EF1EFD638100A33C5C /* companyModel.m */; };
 		F169362A1F30A9BC00F81564 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F16936241F30A9BC00F81564 /* IJKMediaFramework.framework */; };
@@ -17,6 +19,9 @@
 		F169362D1F30A9BC00F81564 /* librtmp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F16936271F30A9BC00F81564 /* librtmp.a */; };
 		F169362E1F30A9BC00F81564 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F16936281F30A9BC00F81564 /* libssl.a */; };
 		F169362F1F30A9BC00F81564 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F16936291F30A9BC00F81564 /* libz.tbd */; };
+		F16B20621F3B3FA500C4BFFC /* educationList.plist in Resources */ = {isa = PBXBuildFile; fileRef = F16B20611F3B3FA500C4BFFC /* educationList.plist */; };
+		F16B20681F3B508600C4BFFC /* birthdayList.plist in Resources */ = {isa = PBXBuildFile; fileRef = F16B20671F3B508600C4BFFC /* birthdayList.plist */; };
+		F16B206A1F3B57C300C4BFFC /* workYearList.plist in Resources */ = {isa = PBXBuildFile; fileRef = F16B20691F3B57C300C4BFFC /* workYearList.plist */; };
 		F17ED7EA1EF2A5D20053A56E /* recruitDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F17ED7E91EF2A5D20053A56E /* recruitDataModel.m */; };
 		F17ED7F21EF2A5DC0053A56E /* persionalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F17ED7EE1EF2A5DC0053A56E /* persionalViewController.m */; };
 		F17ED7F61EF2A5E60053A56E /* persionalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F17ED7F51EF2A5E60053A56E /* persionalTableViewCell.m */; };
@@ -32,7 +37,10 @@
 		F19BC6831F14AE33001553C3 /* liveCreater.m in Sources */ = {isa = PBXBuildFile; fileRef = F19BC6811F14AE33001553C3 /* liveCreater.m */; };
 		F19BC6861F14AE5F001553C3 /* liveTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F19BC6851F14AE5F001553C3 /* liveTableViewCell.m */; };
 		F19BC6891F14AE70001553C3 /* showingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F19BC6881F14AE70001553C3 /* showingViewController.m */; };
+		F19BFD711F359E1300E7D753 /* registViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F19BFD701F359E1300E7D753 /* registViewController.m */; };
+		F19BFD741F35A1BB00E7D753 /* JHTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = F19BFD731F35A1BB00E7D753 /* JHTextField.m */; };
 		F1A3877C1F222A1100505878 /* liveInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1A3877B1F222A1100505878 /* liveInfoViewController.m */; };
+		F1A7C3371F373D9F00CA64A6 /* createResumeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1A7C3361F373D9F00CA64A6 /* createResumeViewController.m */; };
 		F1BAEBBD1EF2A1F80069BABA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F1BAEBBC1EF2A1F80069BABA /* main.m */; };
 		F1BAEBC01EF2A1F80069BABA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1BAEBBF1EF2A1F80069BABA /* AppDelegate.m */; };
 		F1BAEBC61EF2A1F80069BABA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1BAEBC41EF2A1F80069BABA /* Main.storyboard */; };
@@ -72,6 +80,10 @@
 		F1271F2F1F2049A300959553 /* loginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginViewController.h; sourceTree = "<group>"; };
 		F1271F301F2049A300959553 /* loginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginViewController.m; sourceTree = "<group>"; };
 		F1271F321F207B5100959553 /* JHPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JHPrefixHeader.pch; sourceTree = "<group>"; };
+		F14165CA1F3852AF00E66ABA /* informationInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = informationInputViewController.h; sourceTree = "<group>"; };
+		F14165CB1F3852AF00E66ABA /* informationInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = informationInputViewController.m; sourceTree = "<group>"; };
+		F14E890E1F3ABB5C00054379 /* JHPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHPickerView.h; sourceTree = "<group>"; };
+		F14E890F1F3ABB5C00054379 /* JHPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHPickerView.m; sourceTree = "<group>"; };
 		F14F78111F30B47500B7DD8D /* barrageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = barrageViewController.h; sourceTree = "<group>"; };
 		F14F78121F30B47500B7DD8D /* barrageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = barrageViewController.m; sourceTree = "<group>"; };
 		F15313EE1EFD638100A33C5C /* companyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = companyModel.h; sourceTree = "<group>"; };
@@ -83,6 +95,9 @@
 		F16936281F30A9BC00F81564 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = "lib&IJKFW/libssl.a"; sourceTree = "<group>"; };
 		F16936291F30A9BC00F81564 /* libz.tbd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = "lib&IJKFW/libz.tbd"; sourceTree = "<group>"; };
 		F16936311F30AE1C00F81564 /* liveConfigDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = liveConfigDelegate.h; sourceTree = "<group>"; };
+		F16B20611F3B3FA500C4BFFC /* educationList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = educationList.plist; sourceTree = "<group>"; };
+		F16B20671F3B508600C4BFFC /* birthdayList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = birthdayList.plist; sourceTree = "<group>"; };
+		F16B20691F3B57C300C4BFFC /* workYearList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = workYearList.plist; sourceTree = "<group>"; };
 		F17ED7E81EF2A5D20053A56E /* recruitDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = recruitDataModel.h; sourceTree = "<group>"; };
 		F17ED7E91EF2A5D20053A56E /* recruitDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = recruitDataModel.m; sourceTree = "<group>"; };
 		F17ED7ED1EF2A5DC0053A56E /* persionalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = persionalViewController.h; sourceTree = "<group>"; };
@@ -114,8 +129,14 @@
 		F19BC6851F14AE5F001553C3 /* liveTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = liveTableViewCell.m; sourceTree = "<group>"; };
 		F19BC6871F14AE70001553C3 /* showingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = showingViewController.h; sourceTree = "<group>"; };
 		F19BC6881F14AE70001553C3 /* showingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = showingViewController.m; sourceTree = "<group>"; };
+		F19BFD6F1F359E1300E7D753 /* registViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = registViewController.h; sourceTree = "<group>"; };
+		F19BFD701F359E1300E7D753 /* registViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = registViewController.m; sourceTree = "<group>"; };
+		F19BFD721F35A1BB00E7D753 /* JHTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHTextField.h; sourceTree = "<group>"; };
+		F19BFD731F35A1BB00E7D753 /* JHTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHTextField.m; sourceTree = "<group>"; };
 		F1A3877A1F222A1100505878 /* liveInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = liveInfoViewController.h; sourceTree = "<group>"; };
 		F1A3877B1F222A1100505878 /* liveInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = liveInfoViewController.m; sourceTree = "<group>"; };
+		F1A7C3351F373D9F00CA64A6 /* createResumeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = createResumeViewController.h; sourceTree = "<group>"; };
+		F1A7C3361F373D9F00CA64A6 /* createResumeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = createResumeViewController.m; sourceTree = "<group>"; };
 		F1BAEBB81EF2A1F80069BABA /* JHRecruit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JHRecruit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1BAEBBC1EF2A1F80069BABA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F1BAEBBE1EF2A1F80069BABA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -203,6 +224,12 @@
 			children = (
 				F1271F2F1F2049A300959553 /* loginViewController.h */,
 				F1271F301F2049A300959553 /* loginViewController.m */,
+				F19BFD6F1F359E1300E7D753 /* registViewController.h */,
+				F19BFD701F359E1300E7D753 /* registViewController.m */,
+				F1A7C3351F373D9F00CA64A6 /* createResumeViewController.h */,
+				F1A7C3361F373D9F00CA64A6 /* createResumeViewController.m */,
+				F14165CA1F3852AF00E66ABA /* informationInputViewController.h */,
+				F14165CB1F3852AF00E66ABA /* informationInputViewController.m */,
 			);
 			name = loginAndRegist;
 			sourceTree = "<group>";
@@ -243,6 +270,10 @@
 				F19BC6791F14AC18001553C3 /* JHPlayerView.m */,
 				F1CE3F201F17090C006714FD /* liveToolView.h */,
 				F1CE3F211F17090C006714FD /* liveToolView.m */,
+				F19BFD721F35A1BB00E7D753 /* JHTextField.h */,
+				F19BFD731F35A1BB00E7D753 /* JHTextField.m */,
+				F14E890E1F3ABB5C00054379 /* JHPickerView.h */,
+				F14E890F1F3ABB5C00054379 /* JHPickerView.m */,
 			);
 			name = Tool;
 			sourceTree = "<group>";
@@ -453,6 +484,9 @@
 				F1BAEBC41EF2A1F80069BABA /* Main.storyboard */,
 				F1BAEBC91EF2A1F80069BABA /* LaunchScreen.storyboard */,
 				F1BAEBBC1EF2A1F80069BABA /* main.m */,
+				F16B20691F3B57C300C4BFFC /* workYearList.plist */,
+				F16B20611F3B3FA500C4BFFC /* educationList.plist */,
+				F16B20671F3B508600C4BFFC /* birthdayList.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -597,7 +631,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1BAEBCB1EF2A1F80069BABA /* LaunchScreen.storyboard in Resources */,
+				F16B20681F3B508600C4BFFC /* birthdayList.plist in Resources */,
+				F16B20621F3B3FA500C4BFFC /* educationList.plist in Resources */,
 				F1BAEBC81EF2A1F80069BABA /* Assets.xcassets in Resources */,
+				F16B206A1F3B57C300C4BFFC /* workYearList.plist in Resources */,
 				F19BC66A1F149B39001553C3 /* testMovie.mp4 in Resources */,
 				F1BAEBEF1EF2A26F0069BABA /* Podfile in Resources */,
 				F1BAEBC61EF2A1F80069BABA /* Main.storyboard in Resources */,
@@ -674,11 +711,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				F17ED7F21EF2A5DC0053A56E /* persionalViewController.m in Sources */,
+				F19BFD741F35A1BB00E7D753 /* JHTextField.m in Sources */,
 				F19BC6891F14AE70001553C3 /* showingViewController.m in Sources */,
+				F19BFD711F359E1300E7D753 /* registViewController.m in Sources */,
 				F1CE3F221F17090C006714FD /* liveToolView.m in Sources */,
 				F19BC6831F14AE33001553C3 /* liveCreater.m in Sources */,
+				F14E89101F3ABB5C00054379 /* JHPickerView.m in Sources */,
 				F15313F01EFD638100A33C5C /* companyModel.m in Sources */,
+				F1A7C3371F373D9F00CA64A6 /* createResumeViewController.m in Sources */,
 				F1D068381F31A96900FF52E2 /* barrageModel.m in Sources */,
+				F14165CC1F3852AF00E66ABA /* informationInputViewController.m in Sources */,
 				F19296241F21929200A67CB5 /* mainLiveViewController.m in Sources */,
 				F1BAEBC01EF2A1F80069BABA /* AppDelegate.m in Sources */,
 				F19BC67A1F14AC18001553C3 /* JHPlayerView.m in Sources */,
@@ -846,6 +888,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 894607BB9038E6643970392F /* Pods-JHRecruit.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ARX66V9U7C;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -873,6 +916,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F46C044397B5C1AC03CFFED6 /* Pods-JHRecruit.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ARX66V9U7C;
 				FRAMEWORK_SEARCH_PATHS = (
