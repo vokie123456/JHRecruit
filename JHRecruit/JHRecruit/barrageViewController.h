@@ -12,7 +12,7 @@
 @interface barrageViewController : UIViewController
 @property (nonatomic , strong) MyLinearLayout *toolView;
 @property (nonatomic , strong) MyLinearLayout *inputView;
-@property (nonatomic , strong) id<liveConfigDelegate> delegate;
+@property (nonatomic , weak) id<liveConfigDelegate> delegate;
 @property (nonatomic , strong) SocketIOClient *socketClient;
 @property (nonatomic , strong) NSMutableArray *dataArray;
 @property (nonatomic , strong) UITextField *textField;

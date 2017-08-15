@@ -8,7 +8,7 @@
 
 #import "showingViewController.h"
 #import "JHPlayerView.h"
-#import <SDWebImage/UIImageView+WebCache.h>
+#import "SDWebImage/UIImageView+WebCache.h"
 
 @interface showingViewController ()
 @property(nonatomic,strong)JHPlayerView *playerView;

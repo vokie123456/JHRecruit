@@ -12,13 +12,13 @@
 		F14165CC1F3852AF00E66ABA /* informationInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F14165CB1F3852AF00E66ABA /* informationInputViewController.m */; };
 		F14E89101F3ABB5C00054379 /* JHPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F14E890F1F3ABB5C00054379 /* JHPickerView.m */; };
 		F14F78131F30B47500B7DD8D /* barrageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F14F78121F30B47500B7DD8D /* barrageViewController.m */; };
+		F1526D411F4325F500EEA011 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1526D3E1F4325F500EEA011 /* libcrypto.a */; };
+		F1526D421F4325F500EEA011 /* librtmp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1526D3F1F4325F500EEA011 /* librtmp.a */; };
+		F1526D431F4325F500EEA011 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1526D401F4325F500EEA011 /* libssl.a */; };
+		F1526D461F43261800EEA011 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F1526D441F43261800EEA011 /* libbz2.tbd */; };
+		F1526D471F43261800EEA011 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F1526D451F43261800EEA011 /* libz.tbd */; };
 		F15313F01EFD638100A33C5C /* companyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F15313EF1EFD638100A33C5C /* companyModel.m */; };
 		F169362A1F30A9BC00F81564 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F16936241F30A9BC00F81564 /* IJKMediaFramework.framework */; };
-		F169362B1F30A9BC00F81564 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F16936251F30A9BC00F81564 /* libbz2.tbd */; };
-		F169362C1F30A9BC00F81564 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F16936261F30A9BC00F81564 /* libcrypto.a */; };
-		F169362D1F30A9BC00F81564 /* librtmp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F16936271F30A9BC00F81564 /* librtmp.a */; };
-		F169362E1F30A9BC00F81564 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F16936281F30A9BC00F81564 /* libssl.a */; };
-		F169362F1F30A9BC00F81564 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F16936291F30A9BC00F81564 /* libz.tbd */; };
 		F16B20621F3B3FA500C4BFFC /* educationList.plist in Resources */ = {isa = PBXBuildFile; fileRef = F16B20611F3B3FA500C4BFFC /* educationList.plist */; };
 		F16B20681F3B508600C4BFFC /* birthdayList.plist in Resources */ = {isa = PBXBuildFile; fileRef = F16B20671F3B508600C4BFFC /* birthdayList.plist */; };
 		F16B206A1F3B57C300C4BFFC /* workYearList.plist in Resources */ = {isa = PBXBuildFile; fileRef = F16B20691F3B57C300C4BFFC /* workYearList.plist */; };
@@ -86,14 +86,14 @@
 		F14E890F1F3ABB5C00054379 /* JHPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHPickerView.m; sourceTree = "<group>"; };
 		F14F78111F30B47500B7DD8D /* barrageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = barrageViewController.h; sourceTree = "<group>"; };
 		F14F78121F30B47500B7DD8D /* barrageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = barrageViewController.m; sourceTree = "<group>"; };
+		F1526D3E1F4325F500EEA011 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = "lib&IJKFW/libcrypto.a"; sourceTree = "<group>"; };
+		F1526D3F1F4325F500EEA011 /* librtmp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librtmp.a; path = "lib&IJKFW/librtmp.a"; sourceTree = "<group>"; };
+		F1526D401F4325F500EEA011 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = "lib&IJKFW/libssl.a"; sourceTree = "<group>"; };
+		F1526D441F43261800EEA011 /* libbz2.tbd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = "lib&IJKFW/libbz2.tbd"; sourceTree = "<group>"; };
+		F1526D451F43261800EEA011 /* libz.tbd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = "lib&IJKFW/libz.tbd"; sourceTree = "<group>"; };
 		F15313EE1EFD638100A33C5C /* companyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = companyModel.h; sourceTree = "<group>"; };
 		F15313EF1EFD638100A33C5C /* companyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = companyModel.m; sourceTree = "<group>"; };
 		F16936241F30A9BC00F81564 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IJKMediaFramework.framework; path = "lib&IJKFW/IJKMediaFramework.framework"; sourceTree = "<group>"; };
-		F16936251F30A9BC00F81564 /* libbz2.tbd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = "lib&IJKFW/libbz2.tbd"; sourceTree = "<group>"; };
-		F16936261F30A9BC00F81564 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = "lib&IJKFW/libcrypto.a"; sourceTree = "<group>"; };
-		F16936271F30A9BC00F81564 /* librtmp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librtmp.a; path = "lib&IJKFW/librtmp.a"; sourceTree = "<group>"; };
-		F16936281F30A9BC00F81564 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = "lib&IJKFW/libssl.a"; sourceTree = "<group>"; };
-		F16936291F30A9BC00F81564 /* libz.tbd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = "lib&IJKFW/libz.tbd"; sourceTree = "<group>"; };
 		F16936311F30AE1C00F81564 /* liveConfigDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = liveConfigDelegate.h; sourceTree = "<group>"; };
 		F16B20611F3B3FA500C4BFFC /* educationList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = educationList.plist; sourceTree = "<group>"; };
 		F16B20671F3B508600C4BFFC /* birthdayList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = birthdayList.plist; sourceTree = "<group>"; };
@@ -171,14 +171,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1526D421F4325F500EEA011 /* librtmp.a in Frameworks */,
+				F1526D471F43261800EEA011 /* libz.tbd in Frameworks */,
+				F1526D461F43261800EEA011 /* libbz2.tbd in Frameworks */,
 				F169362A1F30A9BC00F81564 /* IJKMediaFramework.framework in Frameworks */,
-				F169362F1F30A9BC00F81564 /* libz.tbd in Frameworks */,
-				F169362C1F30A9BC00F81564 /* libcrypto.a in Frameworks */,
-				F169362E1F30A9BC00F81564 /* libssl.a in Frameworks */,
-				F169362D1F30A9BC00F81564 /* librtmp.a in Frameworks */,
+				F1526D431F4325F500EEA011 /* libssl.a in Frameworks */,
 				F1FE80581EFE64440052C226 /* MyLayout.framework in Frameworks */,
+				F1526D411F4325F500EEA011 /* libcrypto.a in Frameworks */,
 				15F0BD43EE744B44A8D1E47F /* Pods_JHRecruit.framework in Frameworks */,
-				F169362B1F30A9BC00F81564 /* libbz2.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,12 +395,12 @@
 		F19BC6501F1497B3001553C3 /* LIB */ = {
 			isa = PBXGroup;
 			children = (
+				F1526D441F43261800EEA011 /* libbz2.tbd */,
+				F1526D451F43261800EEA011 /* libz.tbd */,
+				F1526D3E1F4325F500EEA011 /* libcrypto.a */,
+				F1526D3F1F4325F500EEA011 /* librtmp.a */,
+				F1526D401F4325F500EEA011 /* libssl.a */,
 				F16936241F30A9BC00F81564 /* IJKMediaFramework.framework */,
-				F16936251F30A9BC00F81564 /* libbz2.tbd */,
-				F16936261F30A9BC00F81564 /* libcrypto.a */,
-				F16936271F30A9BC00F81564 /* librtmp.a */,
-				F16936281F30A9BC00F81564 /* libssl.a */,
-				F16936291F30A9BC00F81564 /* libz.tbd */,
 			);
 			name = LIB;
 			sourceTree = "<group>";

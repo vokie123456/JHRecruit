@@ -9,6 +9,7 @@
 #import "createResumeViewController.h"
 #import "informationInputViewController.h"
 #import "JHPickerView.h"
+#import "RootViewController.h"
 
 @interface createResumeViewController ()<InformationDelegate>
 
@@ -29,7 +30,6 @@
     MyLinearLayout *rootView = [MyLinearLayout linearLayoutWithOrientation:MyOrientation_Vert];
     rootView.myMargin = 0;
     rootView.gravity = MyGravity_Horz_Fill;
-    [rootView setTarget:self action:@selector(labelTest)];
     rootView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:rootView];
     self.rootView = rootView;
@@ -95,12 +95,38 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   }
-
--(void)labelTest{
-   
     
+    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc]initWithTitle:@"跳过" style:UIBarButtonItemStylePlain target:self action:@selector(navBarItemAction:)];
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc]initWithTitle:@"下一步" style:UIBarButtonItemStylePlain target:self action:@selector(navBarItemAction:)];
+    
+    leftItem.tintColor = [UIColor whiteColor];
+    rightItem.tintColor = [UIColor whiteColor];
+    leftItem.tag = 0;
+    rightItem.tag = 1;
+    
+    self.navigationItem.leftBarButtonItem = leftItem;
+    self.navigationItem.rightBarButtonItem = rightItem;
+    
+   }
+-(void)navBarItemAction:(UIBarButtonItem*)item{
+    if (item.tag == 0) {
+        
+        UIWindow *window = [[UIApplication sharedApplication]keyWindow];
+        UINavigationController *oldNav = (UINavigationController *)window.rootViewController;
+        
+        RootViewController *root = [[RootViewController alloc]init];
+        [[UIApplication sharedApplication]keyWindow].rootViewController = root;
+        oldNav.viewControllers = [NSArray new];
+        oldNav = nil;
+        
+        
+    }else{
+        
+        
+    }
+
 }
+
 
 -(void)layoutClickAction:(MyLinearLayout *)layout{
     

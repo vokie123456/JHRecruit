@@ -19,7 +19,7 @@
 @property (nonatomic , assign) int maxLength;
 @property (nonatomic , assign) int currentLength;
 @property (nonatomic , strong) UILabel *fontCount;
-@property (nonatomic , strong) id<InformationDelegate> delegate;
+@property (nonatomic , weak) id<InformationDelegate> delegate;
 @property (nonatomic , assign) NSUInteger layoutTag;
 
 @end

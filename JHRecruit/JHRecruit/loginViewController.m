@@ -182,7 +182,6 @@
     
     RootViewController *root = [[RootViewController alloc]init];
     [[UIApplication sharedApplication]keyWindow].rootViewController = root;
-    [oldNav popViewControllerAnimated:false];
     oldNav.viewControllers = [NSArray new];
     oldNav = nil;
     
