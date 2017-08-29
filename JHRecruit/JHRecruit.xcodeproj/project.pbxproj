@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		15F0BD43EE744B44A8D1E47F /* Pods_JHRecruit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A301DF8192FAFBEF51F17C1 /* Pods_JHRecruit.framework */; };
+		F12533331F4BD85700C4D901 /* companyDetalsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F12533321F4BD85700C4D901 /* companyDetalsController.m */; };
+		F125333B1F4C04DA00C4D901 /* companyDetailsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F125333A1F4C04DA00C4D901 /* companyDetailsCell.m */; };
+		F12533401F4C205F00C4D901 /* HeaderLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = F125333F1F4C205F00C4D901 /* HeaderLineView.m */; };
 		F1271F311F2049A300959553 /* loginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1271F301F2049A300959553 /* loginViewController.m */; };
 		F14165CC1F3852AF00E66ABA /* informationInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F14165CB1F3852AF00E66ABA /* informationInputViewController.m */; };
 		F14E89101F3ABB5C00054379 /* JHPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F14E890F1F3ABB5C00054379 /* JHPickerView.m */; };
@@ -17,11 +20,14 @@
 		F1526D431F4325F500EEA011 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1526D401F4325F500EEA011 /* libssl.a */; };
 		F1526D461F43261800EEA011 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F1526D441F43261800EEA011 /* libbz2.tbd */; };
 		F1526D471F43261800EEA011 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F1526D451F43261800EEA011 /* libz.tbd */; };
+		F1526D4F1F4331B300EEA011 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F1526D4E1F4331B300EEA011 /* UserManager.m */; };
 		F15313F01EFD638100A33C5C /* companyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F15313EF1EFD638100A33C5C /* companyModel.m */; };
 		F169362A1F30A9BC00F81564 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F16936241F30A9BC00F81564 /* IJKMediaFramework.framework */; };
 		F16B20621F3B3FA500C4BFFC /* educationList.plist in Resources */ = {isa = PBXBuildFile; fileRef = F16B20611F3B3FA500C4BFFC /* educationList.plist */; };
 		F16B20681F3B508600C4BFFC /* birthdayList.plist in Resources */ = {isa = PBXBuildFile; fileRef = F16B20671F3B508600C4BFFC /* birthdayList.plist */; };
 		F16B206A1F3B57C300C4BFFC /* workYearList.plist in Resources */ = {isa = PBXBuildFile; fileRef = F16B20691F3B57C300C4BFFC /* workYearList.plist */; };
+		F1708ABF1F5500440066DCC5 /* workPositionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F1708ABE1F5500440066DCC5 /* workPositionCell.m */; };
+		F1708AC31F550D8E0066DCC5 /* positionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F1708AC21F550D8E0066DCC5 /* positionModel.m */; };
 		F17ED7EA1EF2A5D20053A56E /* recruitDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F17ED7E91EF2A5D20053A56E /* recruitDataModel.m */; };
 		F17ED7F21EF2A5DC0053A56E /* persionalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F17ED7EE1EF2A5DC0053A56E /* persionalViewController.m */; };
 		F17ED7F61EF2A5E60053A56E /* persionalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F17ED7F51EF2A5E60053A56E /* persionalTableViewCell.m */; };
@@ -52,6 +58,7 @@
 		F1CE3F221F17090C006714FD /* liveToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CE3F211F17090C006714FD /* liveToolView.m */; };
 		F1D068341F31827A00FF52E2 /* barrageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D068331F31827A00FF52E2 /* barrageTableViewCell.m */; };
 		F1D068381F31A96900FF52E2 /* barrageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D068371F31A96900FF52E2 /* barrageModel.m */; };
+		F1E5995A1F52F81600590DEC /* companyStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E599591F52F81600590DEC /* companyStatusCell.m */; };
 		F1FE80531EFE39500052C226 /* companyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F1FE80521EFE39500052C226 /* companyTableViewCell.m */; };
 		F1FE80561EFE39610052C226 /* companyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1FE80551EFE39610052C226 /* companyTableViewController.m */; };
 		F1FE80581EFE64440052C226 /* MyLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1FE80571EFE64440052C226 /* MyLayout.framework */; };
@@ -77,6 +84,12 @@
 /* Begin PBXFileReference section */
 		5A301DF8192FAFBEF51F17C1 /* Pods_JHRecruit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JHRecruit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		894607BB9038E6643970392F /* Pods-JHRecruit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JHRecruit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JHRecruit/Pods-JHRecruit.debug.xcconfig"; sourceTree = "<group>"; };
+		F12533311F4BD85700C4D901 /* companyDetalsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = companyDetalsController.h; sourceTree = "<group>"; };
+		F12533321F4BD85700C4D901 /* companyDetalsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = companyDetalsController.m; sourceTree = "<group>"; };
+		F12533391F4C04DA00C4D901 /* companyDetailsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = companyDetailsCell.h; sourceTree = "<group>"; };
+		F125333A1F4C04DA00C4D901 /* companyDetailsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = companyDetailsCell.m; sourceTree = "<group>"; };
+		F125333E1F4C205F00C4D901 /* HeaderLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderLineView.h; sourceTree = "<group>"; };
+		F125333F1F4C205F00C4D901 /* HeaderLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderLineView.m; sourceTree = "<group>"; };
 		F1271F2F1F2049A300959553 /* loginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginViewController.h; sourceTree = "<group>"; };
 		F1271F301F2049A300959553 /* loginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginViewController.m; sourceTree = "<group>"; };
 		F1271F321F207B5100959553 /* JHPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JHPrefixHeader.pch; sourceTree = "<group>"; };
@@ -91,6 +104,8 @@
 		F1526D401F4325F500EEA011 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = "lib&IJKFW/libssl.a"; sourceTree = "<group>"; };
 		F1526D441F43261800EEA011 /* libbz2.tbd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = "lib&IJKFW/libbz2.tbd"; sourceTree = "<group>"; };
 		F1526D451F43261800EEA011 /* libz.tbd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = "lib&IJKFW/libz.tbd"; sourceTree = "<group>"; };
+		F1526D4D1F4331B300EEA011 /* UserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserManager.h; sourceTree = "<group>"; };
+		F1526D4E1F4331B300EEA011 /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
 		F15313EE1EFD638100A33C5C /* companyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = companyModel.h; sourceTree = "<group>"; };
 		F15313EF1EFD638100A33C5C /* companyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = companyModel.m; sourceTree = "<group>"; };
 		F16936241F30A9BC00F81564 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IJKMediaFramework.framework; path = "lib&IJKFW/IJKMediaFramework.framework"; sourceTree = "<group>"; };
@@ -98,6 +113,10 @@
 		F16B20611F3B3FA500C4BFFC /* educationList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = educationList.plist; sourceTree = "<group>"; };
 		F16B20671F3B508600C4BFFC /* birthdayList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = birthdayList.plist; sourceTree = "<group>"; };
 		F16B20691F3B57C300C4BFFC /* workYearList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = workYearList.plist; sourceTree = "<group>"; };
+		F1708ABD1F5500440066DCC5 /* workPositionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = workPositionCell.h; sourceTree = "<group>"; };
+		F1708ABE1F5500440066DCC5 /* workPositionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = workPositionCell.m; sourceTree = "<group>"; };
+		F1708AC11F550D8E0066DCC5 /* positionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = positionModel.h; sourceTree = "<group>"; };
+		F1708AC21F550D8E0066DCC5 /* positionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = positionModel.m; sourceTree = "<group>"; };
 		F17ED7E81EF2A5D20053A56E /* recruitDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = recruitDataModel.h; sourceTree = "<group>"; };
 		F17ED7E91EF2A5D20053A56E /* recruitDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = recruitDataModel.m; sourceTree = "<group>"; };
 		F17ED7ED1EF2A5DC0053A56E /* persionalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = persionalViewController.h; sourceTree = "<group>"; };
@@ -158,6 +177,8 @@
 		F1D068331F31827A00FF52E2 /* barrageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = barrageTableViewCell.m; sourceTree = "<group>"; };
 		F1D068361F31A96900FF52E2 /* barrageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = barrageModel.h; sourceTree = "<group>"; };
 		F1D068371F31A96900FF52E2 /* barrageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = barrageModel.m; sourceTree = "<group>"; };
+		F1E599581F52F81600590DEC /* companyStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = companyStatusCell.h; sourceTree = "<group>"; };
+		F1E599591F52F81600590DEC /* companyStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = companyStatusCell.m; sourceTree = "<group>"; };
 		F1FE80511EFE39500052C226 /* companyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = companyTableViewCell.h; sourceTree = "<group>"; };
 		F1FE80521EFE39500052C226 /* companyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = companyTableViewCell.m; sourceTree = "<group>"; };
 		F1FE80541EFE39610052C226 /* companyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = companyTableViewController.h; sourceTree = "<group>"; };
@@ -234,11 +255,48 @@
 			name = loginAndRegist;
 			sourceTree = "<group>";
 		};
+		F1526D481F432D4600EEA011 /* ColorAndFont */ = {
+			isa = PBXGroup;
+			children = (
+				F17ED8031EF2A66A0053A56E /* JHTool.h */,
+				F17ED8041EF2A66A0053A56E /* JHTool.m */,
+			);
+			name = ColorAndFont;
+			sourceTree = "<group>";
+		};
+		F1526D491F432D6100EEA011 /* AVPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				F19BC6781F14AC18001553C3 /* JHPlayerView.h */,
+				F19BC6791F14AC18001553C3 /* JHPlayerView.m */,
+			);
+			name = AVPlayer;
+			sourceTree = "<group>";
+		};
+		F1526D4B1F432D8600EEA011 /* 发起直播悬浮窗 */ = {
+			isa = PBXGroup;
+			children = (
+				F1CE3F201F17090C006714FD /* liveToolView.h */,
+				F1CE3F211F17090C006714FD /* liveToolView.m */,
+			);
+			name = "发起直播悬浮窗";
+			sourceTree = "<group>";
+		};
+		F1526D4C1F432DBC00EEA011 /* UserManager */ = {
+			isa = PBXGroup;
+			children = (
+				F1526D4D1F4331B300EEA011 /* UserManager.h */,
+				F1526D4E1F4331B300EEA011 /* UserManager.m */,
+			);
+			name = UserManager;
+			sourceTree = "<group>";
+		};
 		F15313E81EFD62C000A33C5C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				F1FE80541EFE39610052C226 /* companyTableViewController.h */,
 				F1FE80551EFE39610052C226 /* companyTableViewController.m */,
+				F1E94EA11F4EB39D00D430C7 /* 公司详情 */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -246,6 +304,7 @@
 		F15313E91EFD62C800A33C5C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F1800FB01F5263C9007B2669 /* 公司详情 */,
 				F1FE80511EFE39500052C226 /* companyTableViewCell.h */,
 				F1FE80521EFE39500052C226 /* companyTableViewCell.m */,
 			);
@@ -255,21 +314,29 @@
 		F15313EA1EFD62CE00A33C5C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F1708AC01F5500560066DCC5 /* 公司详情 */,
 				F15313EE1EFD638100A33C5C /* companyModel.h */,
 				F15313EF1EFD638100A33C5C /* companyModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
 		};
+		F1708AC01F5500560066DCC5 /* 公司详情 */ = {
+			isa = PBXGroup;
+			children = (
+				F1708AC11F550D8E0066DCC5 /* positionModel.h */,
+				F1708AC21F550D8E0066DCC5 /* positionModel.m */,
+			);
+			name = "公司详情";
+			sourceTree = "<group>";
+		};
 		F17ED7DF1EF2A55C0053A56E /* Tool */ = {
 			isa = PBXGroup;
 			children = (
-				F17ED8031EF2A66A0053A56E /* JHTool.h */,
-				F17ED8041EF2A66A0053A56E /* JHTool.m */,
-				F19BC6781F14AC18001553C3 /* JHPlayerView.h */,
-				F19BC6791F14AC18001553C3 /* JHPlayerView.m */,
-				F1CE3F201F17090C006714FD /* liveToolView.h */,
-				F1CE3F211F17090C006714FD /* liveToolView.m */,
+				F1526D4C1F432DBC00EEA011 /* UserManager */,
+				F1526D4B1F432D8600EEA011 /* 发起直播悬浮窗 */,
+				F1526D491F432D6100EEA011 /* AVPlayer */,
+				F1526D481F432D4600EEA011 /* ColorAndFont */,
 				F19BFD721F35A1BB00E7D753 /* JHTextField.h */,
 				F19BFD731F35A1BB00E7D753 /* JHTextField.m */,
 				F14E890E1F3ABB5C00054379 /* JHPickerView.h */,
@@ -357,6 +424,21 @@
 				F17ED7E91EF2A5D20053A56E /* recruitDataModel.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		F1800FB01F5263C9007B2669 /* 公司详情 */ = {
+			isa = PBXGroup;
+			children = (
+				F12533391F4C04DA00C4D901 /* companyDetailsCell.h */,
+				F125333A1F4C04DA00C4D901 /* companyDetailsCell.m */,
+				F125333E1F4C205F00C4D901 /* HeaderLineView.h */,
+				F125333F1F4C205F00C4D901 /* HeaderLineView.m */,
+				F1E599581F52F81600590DEC /* companyStatusCell.h */,
+				F1E599591F52F81600590DEC /* companyStatusCell.m */,
+				F1708ABD1F5500440066DCC5 /* workPositionCell.h */,
+				F1708ABE1F5500440066DCC5 /* workPositionCell.m */,
+			);
+			name = "公司详情";
 			sourceTree = "<group>";
 		};
 		F192961C1F218B7800A67CB5 /* startLiving */ = {
@@ -516,6 +598,15 @@
 				F1D068371F31A96900FF52E2 /* barrageModel.m */,
 			);
 			name = model;
+			sourceTree = "<group>";
+		};
+		F1E94EA11F4EB39D00D430C7 /* 公司详情 */ = {
+			isa = PBXGroup;
+			children = (
+				F12533311F4BD85700C4D901 /* companyDetalsController.h */,
+				F12533321F4BD85700C4D901 /* companyDetalsController.m */,
+			);
+			name = "公司详情";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -711,17 +802,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				F17ED7F21EF2A5DC0053A56E /* persionalViewController.m in Sources */,
+				F1E5995A1F52F81600590DEC /* companyStatusCell.m in Sources */,
 				F19BFD741F35A1BB00E7D753 /* JHTextField.m in Sources */,
 				F19BC6891F14AE70001553C3 /* showingViewController.m in Sources */,
 				F19BFD711F359E1300E7D753 /* registViewController.m in Sources */,
+				F1708ABF1F5500440066DCC5 /* workPositionCell.m in Sources */,
 				F1CE3F221F17090C006714FD /* liveToolView.m in Sources */,
 				F19BC6831F14AE33001553C3 /* liveCreater.m in Sources */,
 				F14E89101F3ABB5C00054379 /* JHPickerView.m in Sources */,
 				F15313F01EFD638100A33C5C /* companyModel.m in Sources */,
 				F1A7C3371F373D9F00CA64A6 /* createResumeViewController.m in Sources */,
+				F125333B1F4C04DA00C4D901 /* companyDetailsCell.m in Sources */,
 				F1D068381F31A96900FF52E2 /* barrageModel.m in Sources */,
 				F14165CC1F3852AF00E66ABA /* informationInputViewController.m in Sources */,
 				F19296241F21929200A67CB5 /* mainLiveViewController.m in Sources */,
+				F12533331F4BD85700C4D901 /* companyDetalsController.m in Sources */,
 				F1BAEBC01EF2A1F80069BABA /* AppDelegate.m in Sources */,
 				F19BC67A1F14AC18001553C3 /* JHPlayerView.m in Sources */,
 				F1D068341F31827A00FF52E2 /* barrageTableViewCell.m in Sources */,
@@ -731,11 +826,14 @@
 				F1BAEBBD1EF2A1F80069BABA /* main.m in Sources */,
 				F19BC6821F14AE33001553C3 /* LiveModel.m in Sources */,
 				F1840EC51EF426B000C7559C /* resumeViewController.m in Sources */,
+				F12533401F4C205F00C4D901 /* HeaderLineView.m in Sources */,
 				F17ED7EA1EF2A5D20053A56E /* recruitDataModel.m in Sources */,
 				F17ED7F61EF2A5E60053A56E /* persionalTableViewCell.m in Sources */,
+				F1708AC31F550D8E0066DCC5 /* positionModel.m in Sources */,
 				F17ED7F91EF2A5F60053A56E /* settingViewController.m in Sources */,
 				F17ED8021EF2A63D0053A56E /* RootViewController.m in Sources */,
 				F1271F311F2049A300959553 /* loginViewController.m in Sources */,
+				F1526D4F1F4331B300EEA011 /* UserManager.m in Sources */,
 				F19BC6861F14AE5F001553C3 /* liveTableViewCell.m in Sources */,
 				F17ED7FC1EF2A6000053A56E /* liveViewController.m in Sources */,
 				F14F78131F30B47500B7DD8D /* barrageViewController.m in Sources */,

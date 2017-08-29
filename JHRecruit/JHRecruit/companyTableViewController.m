@@ -10,6 +10,7 @@
 #import "MyLayout.h"
 #import "companyTableViewCell.h"
 #import "JHTool.h"
+#import "companyDetalsController.h"
 @interface companyTableViewController ()
 
 @property(nonatomic,strong) NSMutableArray *dataArray;
@@ -90,5 +91,11 @@
 {
     //高度自适应
     return UITableViewAutomaticDimension;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    companyDetalsController *detals = [[companyDetalsController alloc]init];
+    [detals setHidesBottomBarWhenPushed:true];
+    [self.navigationController pushViewController:detals animated:true];
+       [detals setHidesBottomBarWhenPushed:false];
 }
 @end
