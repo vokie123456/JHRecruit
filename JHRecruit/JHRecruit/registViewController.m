@@ -9,7 +9,13 @@
 #import "registViewController.h"
 #import "JHTextField.h"
 #import "createResumeViewController.h"
+#import "UserManager.h"
+#import "SVProgressHUD.h"
+
 @interface registViewController ()
+@property(nonatomic,strong)UITextField *userTextField;
+@property(nonatomic,strong)UITextField *pwTextField;
+@property(nonatomic,strong)UITextField *secondPW;
 
 @end
 
@@ -36,6 +42,8 @@
     userTextField.backgroundColor = [UIColor whiteColor];
     userTextField.placeholder = @"请输入账号..";
     [self.view addSubview:userTextField];
+    self.userTextField = userTextField;
+    
     
     JHTextField *pwTextField = [[JHTextField alloc]initWithLeftImg:@"passwordLogo" andCornerType:JHCorenerTypeNone];
     pwTextField.secureTextEntry = true;
@@ -43,6 +51,7 @@
     pwTextField.placeholder = @"请输入密码..";
     pwTextField.frame = CGRectMake(VIEW_WIDTH*0.1, userTextField.frame.origin.y+50, VIEW_WIDTH*0.8, 50);
     [self.view addSubview:pwTextField];
+    self.pwTextField = pwTextField;
     
     JHTextField *secondPW = [[JHTextField alloc]initWithLeftImg:@"passwordLogo" andCornerType:JHCorenerTypeBottom];
     secondPW.secureTextEntry = true;
@@ -50,6 +59,7 @@
     secondPW.placeholder = @"请确认密码..";
     secondPW.frame = CGRectMake(VIEW_WIDTH*0.1, pwTextField.frame.origin.y+50, VIEW_WIDTH*0.8, 50);
     [self.view addSubview:secondPW];
+    self.secondPW = secondPW;
     
     UIButton *registBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [registBtn setTitle:@"注册" forState:UIControlStateNormal];
@@ -83,8 +93,47 @@
     
 }
 -(void)registAccount{
-    createResumeViewController *resume = [[createResumeViewController alloc]init];
-    [self.navigationController pushViewController:resume animated:true];
+    self.view.userInteractionEnabled = false;
+    
+    if ([_userTextField.text isEqualToString:@""]||[_pwTextField.text isEqualToString:@""]||[_secondPW.text isEqualToString:@""]) {
+        [SVProgressHUD showInfoWithStatus:@"请确认信息完整!"];
+        [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
+        [SVProgressHUD dismissWithDelay:1.5 completion:^{
+            self.view.userInteractionEnabled = true;
+        }];
+        return;
+    }
+    
+    if (![_pwTextField.text isEqualToString:_secondPW.text]) {
+        [SVProgressHUD showInfoWithStatus:@"请确认两次输入的密码相等!"];
+        [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
+        [SVProgressHUD dismissWithDelay:1.5 completion:^{
+             self.view.userInteractionEnabled = true;
+        }];
+        return;
+    }
+    
+    [SVProgressHUD showWithStatus:@"loading"];
+    [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
+    
+    
+    UserManager *manager = [UserManager shareManager];
+    [manager postRegistInfoWithUid:_userTextField.text password:_pwTextField.text success:^{
+        [SVProgressHUD dismiss];
+        createResumeViewController *resume = [[createResumeViewController alloc]init];
+        [self.navigationController pushViewController:resume animated:true];
+        
+        
+    } fail:^{
+        [SVProgressHUD dismiss];
+        [SVProgressHUD showErrorWithStatus:@"用户已存在!"];
+        [SVProgressHUD dismissWithDelay:1.5 completion:^{
+            self.view.userInteractionEnabled = true;
+        }];
+    }];
+    
+    
+    
 }
 
 @end

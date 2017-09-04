@@ -25,13 +25,18 @@
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
+    BOOL islogin = [[NSUserDefaults standardUserDefaults]boolForKey:@"isLogin"];
     
-    
+    if (islogin) {
+        RootViewController *rootVC = [[RootViewController alloc]init];
+        UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:rootVC];
+        self.window.rootViewController = nav;
+    }else{
+        loginViewController *login = [[loginViewController alloc]init];
+        UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:login];
+        self.window.rootViewController = nav;
+    }
    
-   loginViewController *login = [[loginViewController alloc]init];
-    //RootViewController *rootVC = [[RootViewController alloc]init];
-    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:login];
-    self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
    
         return YES;

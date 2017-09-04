@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>面议</string>
+	<string>1k-2k</string>
+	<string>2k-3k</string>
+	<string>3k-4k</string>
+	<string>4k-5k</string>
+	<string>5k-6k</string>
+	<string>6k-7k</string>
+	<string>7k-8k</string>
+	<string>8k-9k</string>
+	<string>9k-10k</string>
+	<string>10k-11k</string>
+	<string>11k-12k</string>
+	<string>12k-13k</string>
+	<string>13k-14k</string>
+	<string>14k-15k</string>
+	<string>15k以上</string>
+</array>
+</plist>

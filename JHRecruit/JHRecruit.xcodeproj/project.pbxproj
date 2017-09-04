@@ -36,6 +36,7 @@
 		F17ED8021EF2A63D0053A56E /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F17ED8011EF2A63D0053A56E /* RootViewController.m */; };
 		F17ED8051EF2A66A0053A56E /* JHTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F17ED8041EF2A66A0053A56E /* JHTool.m */; };
 		F1840EC51EF426B000C7559C /* resumeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1840EC41EF426B000C7559C /* resumeViewController.m */; };
+		F18884AA1F5C31D200CE4709 /* workExperience.plist in Resources */ = {isa = PBXBuildFile; fileRef = F18884A91F5C31D200CE4709 /* workExperience.plist */; };
 		F19296241F21929200A67CB5 /* mainLiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F19296231F21929200A67CB5 /* mainLiveViewController.m */; };
 		F19BC66A1F149B39001553C3 /* testMovie.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F19BC6691F149B39001553C3 /* testMovie.mp4 */; };
 		F19BC67A1F14AC18001553C3 /* JHPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F19BC6791F14AC18001553C3 /* JHPlayerView.m */; };
@@ -47,6 +48,7 @@
 		F19BFD741F35A1BB00E7D753 /* JHTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = F19BFD731F35A1BB00E7D753 /* JHTextField.m */; };
 		F1A3877C1F222A1100505878 /* liveInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1A3877B1F222A1100505878 /* liveInfoViewController.m */; };
 		F1A7C3371F373D9F00CA64A6 /* createResumeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1A7C3361F373D9F00CA64A6 /* createResumeViewController.m */; };
+		F1AFD16E1F5D71B000D4FFB5 /* expertedWage.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1AFD16D1F5D71B000D4FFB5 /* expertedWage.plist */; };
 		F1BAEBBD1EF2A1F80069BABA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F1BAEBBC1EF2A1F80069BABA /* main.m */; };
 		F1BAEBC01EF2A1F80069BABA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1BAEBBF1EF2A1F80069BABA /* AppDelegate.m */; };
 		F1BAEBC61EF2A1F80069BABA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1BAEBC41EF2A1F80069BABA /* Main.storyboard */; };
@@ -135,6 +137,7 @@
 		F1840EC11EF3F68D00C7559C /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
 		F1840EC31EF426B000C7559C /* resumeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = resumeViewController.h; sourceTree = "<group>"; };
 		F1840EC41EF426B000C7559C /* resumeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = resumeViewController.m; sourceTree = "<group>"; };
+		F18884A91F5C31D200CE4709 /* workExperience.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = workExperience.plist; sourceTree = "<group>"; };
 		F19296221F21929200A67CB5 /* mainLiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mainLiveViewController.h; sourceTree = "<group>"; };
 		F19296231F21929200A67CB5 /* mainLiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mainLiveViewController.m; sourceTree = "<group>"; };
 		F19BC6691F149B39001553C3 /* testMovie.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = testMovie.mp4; sourceTree = "<group>"; };
@@ -156,6 +159,7 @@
 		F1A3877B1F222A1100505878 /* liveInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = liveInfoViewController.m; sourceTree = "<group>"; };
 		F1A7C3351F373D9F00CA64A6 /* createResumeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = createResumeViewController.h; sourceTree = "<group>"; };
 		F1A7C3361F373D9F00CA64A6 /* createResumeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = createResumeViewController.m; sourceTree = "<group>"; };
+		F1AFD16D1F5D71B000D4FFB5 /* expertedWage.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = expertedWage.plist; sourceTree = "<group>"; };
 		F1BAEBB81EF2A1F80069BABA /* JHRecruit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JHRecruit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1BAEBBC1EF2A1F80069BABA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F1BAEBBE1EF2A1F80069BABA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -569,6 +573,8 @@
 				F16B20691F3B57C300C4BFFC /* workYearList.plist */,
 				F16B20611F3B3FA500C4BFFC /* educationList.plist */,
 				F16B20671F3B508600C4BFFC /* birthdayList.plist */,
+				F18884A91F5C31D200CE4709 /* workExperience.plist */,
+				F1AFD16D1F5D71B000D4FFB5 /* expertedWage.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -724,9 +730,11 @@
 				F1BAEBCB1EF2A1F80069BABA /* LaunchScreen.storyboard in Resources */,
 				F16B20681F3B508600C4BFFC /* birthdayList.plist in Resources */,
 				F16B20621F3B3FA500C4BFFC /* educationList.plist in Resources */,
+				F18884AA1F5C31D200CE4709 /* workExperience.plist in Resources */,
 				F1BAEBC81EF2A1F80069BABA /* Assets.xcassets in Resources */,
 				F16B206A1F3B57C300C4BFFC /* workYearList.plist in Resources */,
 				F19BC66A1F149B39001553C3 /* testMovie.mp4 in Resources */,
+				F1AFD16E1F5D71B000D4FFB5 /* expertedWage.plist in Resources */,
 				F1BAEBEF1EF2A26F0069BABA /* Podfile in Resources */,
 				F1BAEBC61EF2A1F80069BABA /* Main.storyboard in Resources */,
 			);

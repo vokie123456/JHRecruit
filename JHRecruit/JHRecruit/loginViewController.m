@@ -10,6 +10,9 @@
 #import "RootViewController.h"
 #import "JHTextField.h"
 #import "registViewController.h"
+#import "SVProgressHUD.h"
+#import "UserManager.h"
+
 @interface loginViewController ()
 
 @property(nonatomic,strong)UITextField *userTextField;
@@ -177,6 +180,29 @@
 
 -(void)loginClick
 {
+    self.view.userInteractionEnabled = false;
+    [SVProgressHUD showWithStatus:@"logining"];
+    [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
+    
+    NSString *uid = _userTextField.text;
+    NSString *pwd = _passwordTextField.text;
+    __weak typeof(self) weakSelf = self;
+    UserManager *manger = [UserManager shareManager];
+    [manger postLoginInfoWithUid:uid password:pwd success:^{
+        [SVProgressHUD dismiss];
+        [weakSelf skipToRootController];
+        
+    } fail:^{
+        [SVProgressHUD dismiss];
+        [SVProgressHUD showErrorWithStatus:@"登录失败"];
+        [SVProgressHUD dismissWithDelay:1.5 completion:^{
+            weakSelf.view.userInteractionEnabled = true;
+        }];
+
+    }];
+
+}
+-(void)skipToRootController{
     UIWindow *window = [[UIApplication sharedApplication]keyWindow];
     UINavigationController *oldNav = (UINavigationController *)window.rootViewController;
     
@@ -184,10 +210,7 @@
     [[UIApplication sharedApplication]keyWindow].rootViewController = root;
     oldNav.viewControllers = [NSArray new];
     oldNav = nil;
-    
-
 }
-
 -(void)registNewAccount{
     registViewController *regist = [[registViewController alloc]init];
     [self.navigationController pushViewController:regist animated:true];

@@ -9,6 +9,7 @@ target 'JHRecruit' do
     pod 'MJRefresh'
     pod 'Socket.IO-Client-Swift'
     pod 'SDCycleScrollView'
+    pod 'SVProgressHUD'
 
 
 

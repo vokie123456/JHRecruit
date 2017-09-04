@@ -10,6 +10,8 @@
 #import "informationInputViewController.h"
 #import "JHPickerView.h"
 #import "RootViewController.h"
+#import "UserManager.h"
+#import "SVProgressHUD.h"
 
 @interface createResumeViewController ()<InformationDelegate>
 
@@ -20,6 +22,9 @@
 @property (nonatomic , strong) UILabel *birthdayLabel;
 @property (nonatomic , strong) UILabel *schoolLabel;
 @property (nonatomic , strong) UILabel *workLabel;
+@property (nonatomic , strong) UILabel *wageLabel;
+
+
 
 @end
 
@@ -34,7 +39,7 @@
     [self.view addSubview:rootView];
     self.rootView = rootView;
     
-    NSArray *titleArray = @[@"姓名",@"性别",@"学历",@"求职意向",@"出生日期",@"毕业院校",@"参加工作年份"];
+    NSArray *titleArray = @[@"姓名",@"性别",@"学历",@"求职意向",@"出生日期",@"毕业院校",@"工作经验",@"预期工资"];
     _nameLabel = [UILabel new];
     _sexLabel = [UILabel new];
     _educationLabel = [UILabel new];
@@ -42,7 +47,8 @@
     _birthdayLabel = [UILabel new];
     _schoolLabel = [UILabel new];
     _workLabel = [UILabel new];
-    NSArray *labelArray = @[_nameLabel,_sexLabel,_educationLabel,_targetLabel,_birthdayLabel,_schoolLabel,_workLabel];
+    _wageLabel = [UILabel new];
+    NSArray *labelArray = @[_nameLabel,_sexLabel,_educationLabel,_targetLabel,_birthdayLabel,_schoolLabel,_workLabel,_wageLabel];
     for (int i = 0; i<titleArray.count; i++) {
         MyLinearLayout *layout = [self createInfoLineWithTitle:titleArray[i] withLabel:labelArray[i]];
         layout.tag = i;
@@ -97,7 +103,7 @@
     [super viewDidLoad];
     
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc]initWithTitle:@"跳过" style:UIBarButtonItemStylePlain target:self action:@selector(navBarItemAction:)];
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc]initWithTitle:@"下一步" style:UIBarButtonItemStylePlain target:self action:@selector(navBarItemAction:)];
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc]initWithTitle:@"提交" style:UIBarButtonItemStylePlain target:self action:@selector(navBarItemAction:)];
     
     leftItem.tintColor = [UIColor whiteColor];
     rightItem.tintColor = [UIColor whiteColor];
@@ -121,6 +127,31 @@
         
         
     }else{
+        self.view.userInteractionEnabled = false;
+        [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
+        [SVProgressHUD showWithStatus:@"Loading"];
+        NSString *account = [[NSUserDefaults standardUserDefaults] valueForKey:@"userName"];
+
+        NSDictionary *infoDic = @{@"userName":account,@"name":_nameLabel.text,@"education":_educationLabel.text,@"target":_targetLabel.text,@"experience":_workLabel.text,@"wage":_wageLabel.text};
+        UserManager *manger = [UserManager shareManager];
+        [manger updateUserResumeWithDic:infoDic success:^{
+            [SVProgressHUD dismiss];
+            UIWindow *window = [[UIApplication sharedApplication]keyWindow];
+            UINavigationController *oldNav = (UINavigationController *)window.rootViewController;
+            
+            RootViewController *root = [[RootViewController alloc]init];
+            [[UIApplication sharedApplication]keyWindow].rootViewController = root;
+            oldNav.viewControllers = [NSArray new];
+            oldNav = nil;            
+            
+        } fail:^{
+            [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
+            [SVProgressHUD showErrorWithStatus:@"网络错误"];
+            [SVProgressHUD dismissWithDelay:1 completion:^{
+                self.view.userInteractionEnabled = true;
+            }];
+        }];
+        
         
         
     }
@@ -166,6 +197,9 @@
                 break;
             case 6:
                 [self selectTheYearOfWorking];
+                break;
+            case 7:
+                [self selectExpectedWage];
                 break;
             default:
                 break;
@@ -240,24 +274,29 @@
 
 -(void)selectTheYearOfWorking{
     
-    NSString *plistUrl = [[NSBundle mainBundle] pathForResource:@"workYearList" ofType:@"plist"];
+    NSString *plistUrl = [[NSBundle mainBundle] pathForResource:@"workExperience" ofType:@"plist"];
     NSArray *workYearArray = [[NSArray alloc]initWithContentsOfFile:plistUrl];
-    JHPickerView *pick = [JHPickerView showJHPickerViewToView:self.view titleArray:workYearArray[0] contentArray:workYearArray[1] confirmBlock:^(NSArray *contentArray) {
-        
-        if ([(NSString*)contentArray[0] isEqualToString:@"无工作经验"]) {
-             self.workLabel.text = @"无工作经验";
-        }else{
-            self.workLabel.text = [NSString stringWithFormat:@"%@-%@",contentArray[0],contentArray[1]];
-        }
+    JHPickerView *pick = [JHPickerView showJHPickerViewToView:self.view titleArray:nil contentArray:workYearArray confirmBlock:^(NSArray *contentArray) {
+    
+        self.workLabel.text = contentArray.firstObject;
+       
         
         
     } cancelBlock:nil];
     
     
     
-    [pick.pickerView selectRow:60 inComponent:0 animated:false];
+    [pick.pickerView selectRow:2 inComponent:0 animated:false];
 
 }
-
+-(void)selectExpectedWage{
+    NSString *plistUrl = [[NSBundle mainBundle]pathForResource:@"expertedWage" ofType:@"plist"];
+    NSArray *wageArray = [[NSArray alloc]initWithContentsOfFile:plistUrl];
+    
+    [JHPickerView showJHPickerViewToView:self.view titleArray:nil contentArray:wageArray confirmBlock:^(NSArray *contentArray) {
+        self.wageLabel.text = contentArray.firstObject;
+    } cancelBlock:nil];
+    
+}
 
 @end

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>无工作经验</string>
+	<string>1年</string>
+	<string>2年</string>
+	<string>3年</string>
+	<string>4年</string>
+	<string>5年以上</string>
+</array>
+</plist>
