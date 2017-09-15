@@ -10,6 +10,7 @@
 #import "RootViewController.h"
 #import "MyLayout.h"
 #import "loginViewController.h"
+#import "UserManager.h"
 
 @interface AppDelegate ()
 
@@ -25,12 +26,11 @@
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
-    BOOL islogin = [[NSUserDefaults standardUserDefaults]boolForKey:@"isLogin"];
     
-    if (islogin) {
+    if ([[UserManager shareManager]isLogined]) {
         RootViewController *rootVC = [[RootViewController alloc]init];
-        UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:rootVC];
-        self.window.rootViewController = nav;
+        
+        self.window.rootViewController = rootVC;
     }else{
         loginViewController *login = [[loginViewController alloc]init];
         UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:login];

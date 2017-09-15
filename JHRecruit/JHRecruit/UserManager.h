@@ -21,6 +21,6 @@ typedef void(^failBlock)(void);
 
 -(void)updateUserResumeWithDic:(NSDictionary*)dic success:(successBlock)successBlock fail:(failBlock)failBlock;
 
--(void)saveUserInfo;
+-(void)saveUserInfoWithUserNme:(NSString*)uid;
 -(BOOL)isLogined;
 @end

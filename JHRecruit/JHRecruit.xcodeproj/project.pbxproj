@@ -60,6 +60,8 @@
 		F1CE3F221F17090C006714FD /* liveToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CE3F211F17090C006714FD /* liveToolView.m */; };
 		F1D068341F31827A00FF52E2 /* barrageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D068331F31827A00FF52E2 /* barrageTableViewCell.m */; };
 		F1D068381F31A96900FF52E2 /* barrageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D068371F31A96900FF52E2 /* barrageModel.m */; };
+		F1E151BB1F691F6600BCE2DE /* positionDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E151BA1F691F6600BCE2DE /* positionDetailController.m */; };
+		F1E151BE1F69467200BCE2DE /* itemView.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E151BD1F69467200BCE2DE /* itemView.m */; };
 		F1E5995A1F52F81600590DEC /* companyStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E599591F52F81600590DEC /* companyStatusCell.m */; };
 		F1FE80531EFE39500052C226 /* companyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F1FE80521EFE39500052C226 /* companyTableViewCell.m */; };
 		F1FE80561EFE39610052C226 /* companyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1FE80551EFE39610052C226 /* companyTableViewController.m */; };
@@ -181,6 +183,10 @@
 		F1D068331F31827A00FF52E2 /* barrageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = barrageTableViewCell.m; sourceTree = "<group>"; };
 		F1D068361F31A96900FF52E2 /* barrageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = barrageModel.h; sourceTree = "<group>"; };
 		F1D068371F31A96900FF52E2 /* barrageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = barrageModel.m; sourceTree = "<group>"; };
+		F1E151B91F691F6600BCE2DE /* positionDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = positionDetailController.h; sourceTree = "<group>"; };
+		F1E151BA1F691F6600BCE2DE /* positionDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = positionDetailController.m; sourceTree = "<group>"; };
+		F1E151BC1F69467200BCE2DE /* itemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = itemView.h; sourceTree = "<group>"; };
+		F1E151BD1F69467200BCE2DE /* itemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = itemView.m; sourceTree = "<group>"; };
 		F1E599581F52F81600590DEC /* companyStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = companyStatusCell.h; sourceTree = "<group>"; };
 		F1E599591F52F81600590DEC /* companyStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = companyStatusCell.m; sourceTree = "<group>"; };
 		F1FE80511EFE39500052C226 /* companyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = companyTableViewCell.h; sourceTree = "<group>"; };
@@ -301,6 +307,7 @@
 				F1FE80541EFE39610052C226 /* companyTableViewController.h */,
 				F1FE80551EFE39610052C226 /* companyTableViewController.m */,
 				F1E94EA11F4EB39D00D430C7 /* 公司详情 */,
+				F1E151B81F691A6600BCE2DE /* 职位介绍 */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -345,6 +352,8 @@
 				F19BFD731F35A1BB00E7D753 /* JHTextField.m */,
 				F14E890E1F3ABB5C00054379 /* JHPickerView.h */,
 				F14E890F1F3ABB5C00054379 /* JHPickerView.m */,
+				F1E151BC1F69467200BCE2DE /* itemView.h */,
+				F1E151BD1F69467200BCE2DE /* itemView.m */,
 			);
 			name = Tool;
 			sourceTree = "<group>";
@@ -606,6 +615,15 @@
 			name = model;
 			sourceTree = "<group>";
 		};
+		F1E151B81F691A6600BCE2DE /* 职位介绍 */ = {
+			isa = PBXGroup;
+			children = (
+				F1E151B91F691F6600BCE2DE /* positionDetailController.h */,
+				F1E151BA1F691F6600BCE2DE /* positionDetailController.m */,
+			);
+			name = "职位介绍";
+			sourceTree = "<group>";
+		};
 		F1E94EA11F4EB39D00D430C7 /* 公司详情 */ = {
 			isa = PBXGroup;
 			children = (
@@ -680,7 +698,7 @@
 		F1BAEBB01EF2A1F80069BABA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = milan;
 				TargetAttributes = {
 					F1BAEBB71EF2A1F80069BABA = {
@@ -812,6 +830,7 @@
 				F17ED7F21EF2A5DC0053A56E /* persionalViewController.m in Sources */,
 				F1E5995A1F52F81600590DEC /* companyStatusCell.m in Sources */,
 				F19BFD741F35A1BB00E7D753 /* JHTextField.m in Sources */,
+				F1E151BB1F691F6600BCE2DE /* positionDetailController.m in Sources */,
 				F19BC6891F14AE70001553C3 /* showingViewController.m in Sources */,
 				F19BFD711F359E1300E7D753 /* registViewController.m in Sources */,
 				F1708ABF1F5500440066DCC5 /* workPositionCell.m in Sources */,
@@ -829,6 +848,7 @@
 				F19BC67A1F14AC18001553C3 /* JHPlayerView.m in Sources */,
 				F1D068341F31827A00FF52E2 /* barrageTableViewCell.m in Sources */,
 				F1A3877C1F222A1100505878 /* liveInfoViewController.m in Sources */,
+				F1E151BE1F69467200BCE2DE /* itemView.m in Sources */,
 				F1FE80531EFE39500052C226 /* companyTableViewCell.m in Sources */,
 				F1FE80561EFE39610052C226 /* companyTableViewController.m in Sources */,
 				F1BAEBBD1EF2A1F80069BABA /* main.m in Sources */,
@@ -910,7 +930,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -918,7 +940,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -941,7 +967,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -958,7 +984,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -966,7 +994,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -983,7 +1015,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -1012,7 +1044,7 @@
 					"$(PROJECT_DIR)/JHRecruit/lib&IJKFW",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = milan.JHRecruit;
+				PRODUCT_BUNDLE_IDENTIFIER = milan.snakeGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
@@ -1040,7 +1072,7 @@
 					"$(PROJECT_DIR)/JHRecruit/lib&IJKFW",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = milan.JHRecruit;
+				PRODUCT_BUNDLE_IDENTIFIER = milan.snakeGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};

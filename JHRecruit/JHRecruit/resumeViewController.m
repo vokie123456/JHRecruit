@@ -11,14 +11,15 @@
 #import <IJKMediaFramework/IJKMediaFramework.h>
 #import "JHPlayerView.h"
 #import "MyLayout.h"
+#import "itemView.h"
 @interface resumeViewController ()
     
     @property(nonatomic, strong)MyFrameLayout *frameLayout;
     @property(nonatomic, strong)UIImageView *headerImg;
     @property(nonatomic, strong)UILabel *nickName;
-    @property(nonatomic, strong)UIButton *experience;
-    @property(nonatomic, strong)UIButton *education;
-    @property(nonatomic, strong)UIButton *wage;
+    @property(nonatomic, strong)itemView *experienceItem;
+    @property(nonatomic, strong)itemView *educationItem;
+    @property(nonatomic, strong)itemView *wageItem;
     @property(nonatomic, strong)JHPlayerView *playerView;
     
     
@@ -86,16 +87,12 @@
     
 }
     
--(void)viewWillAppear:(BOOL)animated
-    {
-        
-    }
+-(void)viewWillDisappear:(BOOL)animated{
+    [_playerView.ijkPlayer shutdown];
+
+}
     
--(void)viewDidDisappear:(BOOL)animated
-    {
-        
-        [_playerView.ijkPlayer shutdown];
-    }
+
 #pragma mark - 布局模块
 -(void)addTheHeaderLayout:(MyLinearLayout *)contentLayout
     {
@@ -124,16 +121,19 @@
         infoLayout.wrapContentSize = true;
         infoLayout.leftPos.equalTo(_nickName.leftPos);
         infoLayout.topPos.equalTo(_nickName.bottomPos).offset(10);
+        infoLayout.subviewHSpace = 10;
         [relative addSubview:infoLayout];
         
-        _education = [self createInfoBtnWithImgName:@"educationIcon" withTitle:@"本科"];
-        [infoLayout addSubview:_education];
+        _educationItem = [[itemView alloc]initWithImg:[UIImage imageNamed:@"educationIcon"] withTitle:@"本科"];
+        [infoLayout addSubview:_educationItem];
         
-        _experience = [self createInfoBtnWithImgName:@"experienceIcon" withTitle:@"3-4年"];
-        [infoLayout addSubview:_experience];
+        _experienceItem = [[itemView alloc]initWithImg:[UIImage imageNamed:@"experienceIcon"] withTitle:@"1-2年"];
+        [infoLayout addSubview:_experienceItem];
         
-        _wage = [self createInfoBtnWithImgName:@"wageIcon" withTitle:@"2-3K"];
-        [infoLayout addSubview:_wage];
+        _wageItem = [[itemView alloc]initWithImg:[UIImage imageNamed:@"wageIcon"] withTitle:@"3-4K"];
+        [infoLayout addSubview:_wageItem];
+        
+        
         
         
         UILabel *state = [UILabel new];
@@ -183,7 +183,7 @@
         
         UILabel *expectation = [UILabel new];
         expectation.text = @"IOS工程师";
-        expectation.font = [JHTool weightFont:14];
+        expectation.font = [JHTool font:14];
         [expectation sizeToFit];
         [infoLayout addSubview:expectation];
         
@@ -364,21 +364,26 @@
     }
     
     
--(UIButton *)createInfoBtnWithImgName:(NSString *)imgName withTitle:(NSString *)title
+-(MyLinearLayout *)createInfoBtnWithImgName:(NSString *)imgName withTitle:(NSString *)title
     {
-        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [btn setTitle:title forState:UIControlStateNormal];
-        btn.titleLabel.font = [JHTool font:14];
-        [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [btn setImage:[UIImage imageNamed:imgName] forState:UIControlStateNormal];
-        btn.titleEdgeInsets = UIEdgeInsetsMake(0, 5, 0, 0);
+        MyLinearLayout *itemLayout = [MyLinearLayout linearLayoutWithOrientation:MyOrientation_Horz];
+        itemLayout.wrapContentSize = true;
         
-        btn.myRight = 10;
+        UIImageView *imgView = [UIImageView new];
+        imgView.image = [UIImage imageNamed:imgName];
+        imgView.mySize = CGSizeMake(20, 20);
+        [itemLayout addSubview:imgView];
         
-        [btn sizeToFit];
-        btn.widthSize.equalTo(btn.widthSize).add(5);
+        UILabel *titleLable = [UILabel new];
+        titleLable.text = title;
+        titleLable.font = [JHTool font:14];
+        [titleLable sizeToFit];
+        titleLable.myLeft = 5;
+        [itemLayout addSubview:titleLable];
         
-        return btn;
+        
+        return itemLayout;
+
         
     }
     
@@ -400,7 +405,7 @@
         
         UIImageView *logo = [UIImageView new];
         logo.image = [UIImage imageNamed:imgName];
-        [logo sizeToFit];
+        logo.mySize = CGSizeMake(20, 20);
         [titleLayout addSubview:logo];
         
         UILabel *titleLbel = [UILabel new];

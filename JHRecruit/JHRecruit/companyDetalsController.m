@@ -13,6 +13,7 @@
 #import "companyStatusCell.h"
 #import "positionModel.h"
 #import "workPositionCell.h"
+#import "positionDetailController.h"
 
 @interface companyDetalsController ()<HeaderLineDelegate,UITableViewDataSource,UITableViewDelegate>
 @property(nonatomic,strong)UIScrollView *scroll;
@@ -193,6 +194,10 @@
         _isShowLabel = !_isShowLabel;
         cell.isShowLabel = _isShowLabel;
         [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    }else{
+        positionDetailController *positionController = [[positionDetailController alloc]init];
+        
+        [self.navigationController pushViewController:positionController animated:true];
     }
 }
 

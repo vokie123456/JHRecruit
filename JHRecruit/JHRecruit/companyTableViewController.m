@@ -49,6 +49,9 @@
      self.title = @"公司";
     self.navigationController.navigationBar.barTintColor = [JHTool thisAppTintColor];
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    
+    
     self.view.backgroundColor = [JHTool thisAppBackgroundColor];
     self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 10, 0);
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -96,6 +99,6 @@
     companyDetalsController *detals = [[companyDetalsController alloc]init];
     [detals setHidesBottomBarWhenPushed:true];
     [self.navigationController pushViewController:detals animated:true];
-       [detals setHidesBottomBarWhenPushed:false];
+    
 }
 @end

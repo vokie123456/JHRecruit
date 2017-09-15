@@ -75,9 +75,9 @@ static id manager = nil;
     [self.AFManager POST:@"http://www.jh520.top/login.php" parameters:@{@"userName":uid,@"passWord":pwd} progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *dic = responseObject;
         if ([dic[@"code"] intValue] == 1) {
+            [self saveUserInfoWithUserNme:uid];
             !self.successBlock?:self.successBlock();//三目运算符
-            [self.userDefault setObject:uid forKey:@"userName"];
-            [self.userDefault setBool:true forKey:@"isLogin"];
+            
             
         }else{
             !_failBlock?:_failBlock();
@@ -99,8 +99,7 @@ static id manager = nil;
         NSDictionary *dic = responseObject;
         if ([dic[@"code"] intValue] == 1) {
             !_successBlock?:_successBlock();
-            [self.userDefault setObject:uid forKey:@"userName"];
-            [self.userDefault setBool:true forKey:@"isLogin"];
+            [self saveUserInfoWithUserNme:uid];
             
         }else{
             !_failBlock?:_failBlock();
@@ -136,4 +135,14 @@ static id manager = nil;
 }
 
 
+-(void)saveUserInfoWithUserNme:(NSString*)uid{
+    [self.userDefault setObject:uid forKey:@"userName"];
+    [self.userDefault setBool:true forKey:@"isLogin"];
+    
+}
+
+-(BOOL)isLogined{
+    BOOL logined = [self.userDefault boolForKey:@"isLogin"];
+    return logined;
+}
 @end

@@ -107,14 +107,19 @@
     [super viewDidLoad];
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     self.navigationController.navigationBar.barTintColor = [JHTool thisAppTintColor];
-    UIImage *backImg = [[UIImage imageNamed:@"backIcon"]resizableImageWithCapInsets:UIEdgeInsetsMake(0, 30, 0, 0)];
-    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:backImg forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-    //隐藏返回按钮的文字
-    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(NSIntegerMin, NSIntegerMin) forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"" style:UIBarButtonItemStylePlain target:self action:nil];
+    
+  
+    
 
     
     
 
+}
+-(void)popView{
+    
+    [self.navigationController popViewControllerAnimated:true];
 }
 -(void)viewWillAppear:(BOOL)animated
 {
