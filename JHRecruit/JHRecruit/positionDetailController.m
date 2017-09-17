@@ -9,6 +9,7 @@
 #import "positionDetailController.h"
 #import "itemView.h"
 #import "companyDetailsCell.h"
+#import "interViewQuestionController.h"
 
 @interface positionDetailController ()
 
@@ -53,6 +54,7 @@
     interViewBtn.myBottom = 20;
     interViewBtn.myCenterX = 0;
     interViewBtn.layer.cornerRadius = 30;
+    [interViewBtn addTarget:self action:@selector(tranformToInterViewController) forControlEvents:UIControlEventTouchUpInside];
     [frameLayout addSubview:interViewBtn];
     
     MyLinearLayout *contentLayout = [MyLinearLayout linearLayoutWithOrientation:MyOrientation_Vert];
@@ -68,7 +70,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.title = @"职位详情";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -165,26 +167,60 @@
     [positionLayout addSubview:dutyTitle];
     
    
+    NSString *dutyContent = @"1.负责IOS版本SDK开发、版本迭代、优化升级等相关工作;\n2.撰写SDK接入FAQ、产品维护文档，用户帮助文档等;\n3.负责完成游戏的出包等相关工作";
     
     
     _dutyLabel = [UILabel new];
     _dutyLabel.myHorzMargin = 0;
     _dutyLabel.wrapContentHeight = true;
     _dutyLabel.myTop = 10;
-   //调整行间距
-    NSMutableAttributedString *attString = [[NSMutableAttributedString alloc]initWithString:@"1.负责IOS版本SDK开发、版本迭代、优化升级等相关工作;\n2.撰写SDK接入FAQ、产品维护文档，用户帮助文档等;\n3.负责完成游戏的出包等相关工作"];
-    NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc]init];
-    [style setLineSpacing:10];
-  
-    [attString addAttribute:NSParagraphStyleAttributeName value:style range:  NSMakeRange(0, attString.length)];
-    _dutyLabel.attributedText = attString;
+    _dutyLabel.attributedText = [self changeTheLineSpace:dutyContent];
     _dutyLabel.font = [JHTool font:14];
     _dutyLabel.textColor = [UIColor lightGrayColor];
     [positionLayout addSubview:_dutyLabel];
     
+    UILabel *demandTitle = [UILabel new];
+    demandTitle.text = @"职位要求:";
+    demandTitle.font = [JHTool font:14];
+    demandTitle.textColor = [UIColor lightGrayColor];
+    demandTitle.myTop = 20;
+    [demandTitle sizeToFit];
+    [positionLayout addSubview:demandTitle];
+    
+    
+    NSString *demandContent = @"1.有良好的Object-基础，熟悉IOS SDK，有IOS开发经验的优先考虑\n2.熟悉IOS开发平台及框架原理，IOS应用实现机制\n3.学习能力强，有高度责任心和执行力，愿意提高自身综合能力";
+    _demandLabel = [UILabel new];
+    _demandLabel.font = [JHTool font:14];
+    _demandLabel.myTop = 10;
+    _demandLabel.attributedText = [self changeTheLineSpace:demandContent];
+    _demandLabel.textColor = [UIColor lightGrayColor];
+    _demandLabel.myHorzMargin = 0;
+    _demandLabel.wrapContentHeight = true;
+    [positionLayout addSubview:_demandLabel];
+    
+    
     
     
   
+}
+
+-(void)tranformToInterViewController{
+    interViewQuestionController *questionController = [[interViewQuestionController alloc]init];
+    questionController.questionContent = @"fhdskfhksdhfkhdskfhksdhfdbcvjbcxjvbkdjnkjrfnvkjhdskjnvkdnvsdhnkvndskcvnksdjckdsjcksdj";
+    UINavigationController *nav= [[UINavigationController alloc]initWithRootViewController:questionController];
+    [self presentViewController:nav animated:true completion:nil];
+}
+
+
+//更改行距
+-(NSMutableAttributedString*)changeTheLineSpace:(NSString *)textContent{
+    NSMutableAttributedString *attString = [[NSMutableAttributedString alloc]initWithString:textContent];
+    NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc]init];
+    [style setLineSpacing:10];
+    [attString addAttribute:NSParagraphStyleAttributeName value:style range:NSMakeRange(0, attString.length)];
+    
+    
+    return attString;
 }
 
 @end

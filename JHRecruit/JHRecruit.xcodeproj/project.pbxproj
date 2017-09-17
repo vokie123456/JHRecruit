@@ -22,6 +22,9 @@
 		F1526D471F43261800EEA011 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F1526D451F43261800EEA011 /* libz.tbd */; };
 		F1526D4F1F4331B300EEA011 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F1526D4E1F4331B300EEA011 /* UserManager.m */; };
 		F15313F01EFD638100A33C5C /* companyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F15313EF1EFD638100A33C5C /* companyModel.m */; };
+		F15504831F6CD299007A141B /* interViewQuestionController.m in Sources */ = {isa = PBXBuildFile; fileRef = F15504821F6CD299007A141B /* interViewQuestionController.m */; };
+		F15504871F6D23C4007A141B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1BAEBBF1EF2A1F80069BABA /* AppDelegate.m */; };
+		F155048A1F6D24B2007A141B /* CountdownView.m in Sources */ = {isa = PBXBuildFile; fileRef = F15504881F6D24B1007A141B /* CountdownView.m */; };
 		F169362A1F30A9BC00F81564 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F16936241F30A9BC00F81564 /* IJKMediaFramework.framework */; };
 		F16B20621F3B3FA500C4BFFC /* educationList.plist in Resources */ = {isa = PBXBuildFile; fileRef = F16B20611F3B3FA500C4BFFC /* educationList.plist */; };
 		F16B20681F3B508600C4BFFC /* birthdayList.plist in Resources */ = {isa = PBXBuildFile; fileRef = F16B20671F3B508600C4BFFC /* birthdayList.plist */; };
@@ -112,6 +115,10 @@
 		F1526D4E1F4331B300EEA011 /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
 		F15313EE1EFD638100A33C5C /* companyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = companyModel.h; sourceTree = "<group>"; };
 		F15313EF1EFD638100A33C5C /* companyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = companyModel.m; sourceTree = "<group>"; };
+		F15504811F6CD299007A141B /* interViewQuestionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = interViewQuestionController.h; sourceTree = "<group>"; };
+		F15504821F6CD299007A141B /* interViewQuestionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = interViewQuestionController.m; sourceTree = "<group>"; };
+		F15504881F6D24B1007A141B /* CountdownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountdownView.m; sourceTree = "<group>"; };
+		F15504891F6D24B1007A141B /* CountdownView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountdownView.h; sourceTree = "<group>"; };
 		F16936241F30A9BC00F81564 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IJKMediaFramework.framework; path = "lib&IJKFW/IJKMediaFramework.framework"; sourceTree = "<group>"; };
 		F16936311F30AE1C00F81564 /* liveConfigDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = liveConfigDelegate.h; sourceTree = "<group>"; };
 		F16B20611F3B3FA500C4BFFC /* educationList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = educationList.plist; sourceTree = "<group>"; };
@@ -306,6 +313,7 @@
 			children = (
 				F1FE80541EFE39610052C226 /* companyTableViewController.h */,
 				F1FE80551EFE39610052C226 /* companyTableViewController.m */,
+				F15504801F6CD24E007A141B /* 面试题目 */,
 				F1E94EA11F4EB39D00D430C7 /* 公司详情 */,
 				F1E151B81F691A6600BCE2DE /* 职位介绍 */,
 			);
@@ -332,6 +340,15 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		F15504801F6CD24E007A141B /* 面试题目 */ = {
+			isa = PBXGroup;
+			children = (
+				F15504811F6CD299007A141B /* interViewQuestionController.h */,
+				F15504821F6CD299007A141B /* interViewQuestionController.m */,
+			);
+			name = "面试题目";
+			sourceTree = "<group>";
+		};
 		F1708AC01F5500560066DCC5 /* 公司详情 */ = {
 			isa = PBXGroup;
 			children = (
@@ -354,6 +371,8 @@
 				F14E890F1F3ABB5C00054379 /* JHPickerView.m */,
 				F1E151BC1F69467200BCE2DE /* itemView.h */,
 				F1E151BD1F69467200BCE2DE /* itemView.m */,
+				F15504891F6D24B1007A141B /* CountdownView.h */,
+				F15504881F6D24B1007A141B /* CountdownView.m */,
 			);
 			name = Tool;
 			sourceTree = "<group>";
@@ -828,6 +847,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F17ED7F21EF2A5DC0053A56E /* persionalViewController.m in Sources */,
+				F15504831F6CD299007A141B /* interViewQuestionController.m in Sources */,
 				F1E5995A1F52F81600590DEC /* companyStatusCell.m in Sources */,
 				F19BFD741F35A1BB00E7D753 /* JHTextField.m in Sources */,
 				F1E151BB1F691F6600BCE2DE /* positionDetailController.m in Sources */,
@@ -866,6 +886,7 @@
 				F17ED7FC1EF2A6000053A56E /* liveViewController.m in Sources */,
 				F14F78131F30B47500B7DD8D /* barrageViewController.m in Sources */,
 				F17ED8051EF2A66A0053A56E /* JHTool.m in Sources */,
+				F155048A1F6D24B2007A141B /* CountdownView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -881,6 +902,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F15504871F6D23C4007A141B /* AppDelegate.m in Sources */,
 				F1BAEBE11EF2A1F80069BABA /* JHRecruitUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -73,7 +73,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"公司详情";
-    
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"" style:UIBarButtonItemStylePlain target:self action:nil];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.estimatedRowHeight = 60;
     [self createTableHeaderView];
