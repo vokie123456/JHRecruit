@@ -71,10 +71,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"蓝色土耳其";
-    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:[[UIColor whiteColor] colorWithAlphaComponent:0]};
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
-    self.navigationController.navigationBar.shadowImage = [UIImage new];
+//    self.navigationItem.title = @"蓝色土耳其";
+//    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:[[UIColor whiteColor] colorWithAlphaComponent:0]};
+    
+    self.navigationController.navigationBar.barTintColor = [JHTool thisAppTintColor];
+    
+//    [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+//    self.navigationController.navigationBar.shadowImage = [UIImage new];
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
 
     __weak typeof(self) weakSelf = self;
@@ -99,17 +102,17 @@
     headerIcon.image = [UIImage imageNamed:@"img1"];
     headerIcon.layer.borderColor = [JHTool color:225 widthGreen:255 widthBlue:255 alpha:1].CGColor;
     headerIcon.layer.borderWidth = 2;
-    headerIcon.mySize = CGSizeMake(60, 60);
-    headerIcon.layer.cornerRadius =  30;
+    headerIcon.mySize = CGSizeMake(80, 80);
+    headerIcon.layer.cornerRadius =  40;
     headerIcon.clipsToBounds = true;
-    headerIcon.myCenterY = 20;
+    headerIcon.myCenterY = 0;
     headerIcon.myLeft = 40;
     [headerLayout addSubview:headerIcon];
     self.headerIcon = headerIcon;
     
     UILabel *nickName = [UILabel new];
     nickName.text = @"蓝色土耳其";
-    nickName.font = [JHTool font:15];
+    nickName.font = [JHTool font:18];
     [nickName sizeToFit];
     nickName.textColor = [UIColor whiteColor];
     nickName.leftPos.equalTo(headerIcon.rightPos).offset(10);
@@ -130,9 +133,9 @@
     
     UIImageView *nextImg = [UIImageView new];
     nextImg.image = [UIImage imageNamed:@"nextIcon"];
-    [nextImg sizeToFit];
+    nextImg.mySize = CGSizeMake(40, 40);
     nextImg.rightPos.equalTo(headerLayout.rightPos).offset(10);
-    nextImg.myCenterY = 20;
+    nextImg.myCenterY = 0;
     [headerLayout addSubview:nextImg];
     
     
@@ -281,29 +284,29 @@
     return layout;
     
 }
--(void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
-    
-    //获取导航栏的背景图片
-    _navImageView = self.navigationController.navigationBar.subviews.firstObject;
-        CGFloat minAlphaOffset = 0;
-        CGFloat maxAlphaOffset = 100;
-        CGFloat offset = scrollView.contentOffset.y;
-        CGFloat alpha = (offset - minAlphaOffset)/(maxAlphaOffset - minAlphaOffset);
-   
-    if (scrollView.contentOffset.y < 5) {
-       [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
-         self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:[[UIColor whiteColor] colorWithAlphaComponent:0]};
-    }else
-    {
-        [self.navigationController.navigationBar setBackgroundImage:[self imageWithColor: [[JHTool thisAppTintColor]colorWithAlphaComponent:alpha]] forBarMetrics:UIBarMetricsDefault];
-          self.navigationItem.title = @"蓝色土耳其";
-        self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:[[UIColor whiteColor] colorWithAlphaComponent:alpha]};
-    }
-    
-
-    
-   }
+//-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+//{
+//
+//    //获取导航栏的背景图片
+//    _navImageView = self.navigationController.navigationBar.subviews.firstObject;
+//        CGFloat minAlphaOffset = 0;
+//        CGFloat maxAlphaOffset = 100;
+//        CGFloat offset = scrollView.contentOffset.y;
+//        CGFloat alpha = (offset - minAlphaOffset)/(maxAlphaOffset - minAlphaOffset);
+//
+//    if (scrollView.contentOffset.y < 5) {
+//       [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+//         self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:[[UIColor whiteColor] colorWithAlphaComponent:0]};
+//    }else
+//    {
+//        [self.navigationController.navigationBar setBackgroundImage:[self imageWithColor: [[JHTool thisAppTintColor]colorWithAlphaComponent:alpha]] forBarMetrics:UIBarMetricsDefault];
+//          self.navigationItem.title = @"蓝色土耳其";
+//        self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:[[UIColor whiteColor] colorWithAlphaComponent:alpha]};
+//    }
+//
+//
+//
+//   }
 
 
 -(UIImage *)imageWithColor:(UIColor *)color
