@@ -15,17 +15,11 @@
 		F14165CC1F3852AF00E66ABA /* informationInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F14165CB1F3852AF00E66ABA /* informationInputViewController.m */; };
 		F14E89101F3ABB5C00054379 /* JHPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F14E890F1F3ABB5C00054379 /* JHPickerView.m */; };
 		F14F78131F30B47500B7DD8D /* barrageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F14F78121F30B47500B7DD8D /* barrageViewController.m */; };
-		F1526D411F4325F500EEA011 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1526D3E1F4325F500EEA011 /* libcrypto.a */; };
-		F1526D421F4325F500EEA011 /* librtmp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1526D3F1F4325F500EEA011 /* librtmp.a */; };
-		F1526D431F4325F500EEA011 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1526D401F4325F500EEA011 /* libssl.a */; };
-		F1526D461F43261800EEA011 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F1526D441F43261800EEA011 /* libbz2.tbd */; };
-		F1526D471F43261800EEA011 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F1526D451F43261800EEA011 /* libz.tbd */; };
 		F1526D4F1F4331B300EEA011 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F1526D4E1F4331B300EEA011 /* UserManager.m */; };
 		F15313F01EFD638100A33C5C /* companyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F15313EF1EFD638100A33C5C /* companyModel.m */; };
 		F15504831F6CD299007A141B /* interViewQuestionController.m in Sources */ = {isa = PBXBuildFile; fileRef = F15504821F6CD299007A141B /* interViewQuestionController.m */; };
 		F15504871F6D23C4007A141B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1BAEBBF1EF2A1F80069BABA /* AppDelegate.m */; };
 		F155048A1F6D24B2007A141B /* CountdownView.m in Sources */ = {isa = PBXBuildFile; fileRef = F15504881F6D24B1007A141B /* CountdownView.m */; };
-		F169362A1F30A9BC00F81564 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F16936241F30A9BC00F81564 /* IJKMediaFramework.framework */; };
 		F16B20621F3B3FA500C4BFFC /* educationList.plist in Resources */ = {isa = PBXBuildFile; fileRef = F16B20611F3B3FA500C4BFFC /* educationList.plist */; };
 		F16B20681F3B508600C4BFFC /* birthdayList.plist in Resources */ = {isa = PBXBuildFile; fileRef = F16B20671F3B508600C4BFFC /* birthdayList.plist */; };
 		F16B206A1F3B57C300C4BFFC /* workYearList.plist in Resources */ = {isa = PBXBuildFile; fileRef = F16B20691F3B57C300C4BFFC /* workYearList.plist */; };
@@ -60,6 +54,12 @@
 		F1BAEBD61EF2A1F80069BABA /* JHRecruitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1BAEBD51EF2A1F80069BABA /* JHRecruitTests.m */; };
 		F1BAEBE11EF2A1F80069BABA /* JHRecruitUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1BAEBE01EF2A1F80069BABA /* JHRecruitUITests.m */; };
 		F1BAEBEF1EF2A26F0069BABA /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = F1BAEBEE1EF2A26F0069BABA /* Podfile */; };
+		F1CCA04D1F89FF09001F7687 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1CCA0471F89FF09001F7687 /* libcrypto.a */; };
+		F1CCA04E1F89FF09001F7687 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1CCA0481F89FF09001F7687 /* IJKMediaFramework.framework */; };
+		F1CCA04F1F89FF0A001F7687 /* librtmp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1CCA0491F89FF09001F7687 /* librtmp.a */; };
+		F1CCA0501F89FF0A001F7687 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1CCA04A1F89FF09001F7687 /* libssl.a */; };
+		F1CCA0511F89FF0A001F7687 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F1CCA04B1F89FF09001F7687 /* libz.tbd */; };
+		F1CCA0521F89FF0A001F7687 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F1CCA04C1F89FF09001F7687 /* libbz2.tbd */; };
 		F1CE3F221F17090C006714FD /* liveToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CE3F211F17090C006714FD /* liveToolView.m */; };
 		F1D068341F31827A00FF52E2 /* barrageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D068331F31827A00FF52E2 /* barrageTableViewCell.m */; };
 		F1D068381F31A96900FF52E2 /* barrageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D068371F31A96900FF52E2 /* barrageModel.m */; };
@@ -108,11 +108,6 @@
 		F14E890F1F3ABB5C00054379 /* JHPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHPickerView.m; sourceTree = "<group>"; };
 		F14F78111F30B47500B7DD8D /* barrageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = barrageViewController.h; sourceTree = "<group>"; };
 		F14F78121F30B47500B7DD8D /* barrageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = barrageViewController.m; sourceTree = "<group>"; };
-		F1526D3E1F4325F500EEA011 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = "lib&IJKFW/libcrypto.a"; sourceTree = "<group>"; };
-		F1526D3F1F4325F500EEA011 /* librtmp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librtmp.a; path = "lib&IJKFW/librtmp.a"; sourceTree = "<group>"; };
-		F1526D401F4325F500EEA011 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = "lib&IJKFW/libssl.a"; sourceTree = "<group>"; };
-		F1526D441F43261800EEA011 /* libbz2.tbd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = "lib&IJKFW/libbz2.tbd"; sourceTree = "<group>"; };
-		F1526D451F43261800EEA011 /* libz.tbd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = "lib&IJKFW/libz.tbd"; sourceTree = "<group>"; };
 		F1526D4D1F4331B300EEA011 /* UserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserManager.h; sourceTree = "<group>"; };
 		F1526D4E1F4331B300EEA011 /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
 		F15313EE1EFD638100A33C5C /* companyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = companyModel.h; sourceTree = "<group>"; };
@@ -121,7 +116,6 @@
 		F15504821F6CD299007A141B /* interViewQuestionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = interViewQuestionController.m; sourceTree = "<group>"; };
 		F15504881F6D24B1007A141B /* CountdownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountdownView.m; sourceTree = "<group>"; };
 		F15504891F6D24B1007A141B /* CountdownView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountdownView.h; sourceTree = "<group>"; };
-		F16936241F30A9BC00F81564 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IJKMediaFramework.framework; path = "lib&IJKFW/IJKMediaFramework.framework"; sourceTree = "<group>"; };
 		F16936311F30AE1C00F81564 /* liveConfigDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = liveConfigDelegate.h; sourceTree = "<group>"; };
 		F16B20611F3B3FA500C4BFFC /* educationList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = educationList.plist; sourceTree = "<group>"; };
 		F16B20671F3B508600C4BFFC /* birthdayList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = birthdayList.plist; sourceTree = "<group>"; };
@@ -186,6 +180,12 @@
 		F1BAEBE01EF2A1F80069BABA /* JHRecruitUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JHRecruitUITests.m; sourceTree = "<group>"; };
 		F1BAEBE21EF2A1F80069BABA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1BAEBEE1EF2A26F0069BABA /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F1CCA0471F89FF09001F7687 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
+		F1CCA0481F89FF09001F7687 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
+		F1CCA0491F89FF09001F7687 /* librtmp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = librtmp.a; sourceTree = "<group>"; };
+		F1CCA04A1F89FF09001F7687 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
+		F1CCA04B1F89FF09001F7687 /* libz.tbd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.text-based-dylib-definition"; path = libz.tbd; sourceTree = "<group>"; };
+		F1CCA04C1F89FF09001F7687 /* libbz2.tbd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.text-based-dylib-definition"; path = libbz2.tbd; sourceTree = "<group>"; };
 		F1CE3F201F17090C006714FD /* liveToolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = liveToolView.h; sourceTree = "<group>"; };
 		F1CE3F211F17090C006714FD /* liveToolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = liveToolView.m; sourceTree = "<group>"; };
 		F1D068321F31827A00FF52E2 /* barrageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = barrageTableViewCell.h; sourceTree = "<group>"; };
@@ -211,14 +211,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1526D421F4325F500EEA011 /* librtmp.a in Frameworks */,
-				F1526D471F43261800EEA011 /* libz.tbd in Frameworks */,
-				F1526D461F43261800EEA011 /* libbz2.tbd in Frameworks */,
-				F169362A1F30A9BC00F81564 /* IJKMediaFramework.framework in Frameworks */,
-				F1526D431F4325F500EEA011 /* libssl.a in Frameworks */,
+				F1CCA04F1F89FF0A001F7687 /* librtmp.a in Frameworks */,
 				F1FE80581EFE64440052C226 /* MyLayout.framework in Frameworks */,
-				F1526D411F4325F500EEA011 /* libcrypto.a in Frameworks */,
+				F1CCA0511F89FF0A001F7687 /* libz.tbd in Frameworks */,
+				F1CCA0501F89FF0A001F7687 /* libssl.a in Frameworks */,
 				15F0BD43EE744B44A8D1E47F /* Pods_JHRecruit.framework in Frameworks */,
+				F1CCA04D1F89FF09001F7687 /* libcrypto.a in Frameworks */,
+				F1CCA04E1F89FF09001F7687 /* IJKMediaFramework.framework in Frameworks */,
+				F1CCA0521F89FF0A001F7687 /* libbz2.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,19 +516,6 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
-		F19BC6501F1497B3001553C3 /* LIB */ = {
-			isa = PBXGroup;
-			children = (
-				F1526D441F43261800EEA011 /* libbz2.tbd */,
-				F1526D451F43261800EEA011 /* libz.tbd */,
-				F1526D3E1F4325F500EEA011 /* libcrypto.a */,
-				F1526D3F1F4325F500EEA011 /* librtmp.a */,
-				F1526D401F4325F500EEA011 /* libssl.a */,
-				F16936241F30A9BC00F81564 /* IJKMediaFramework.framework */,
-			);
-			name = LIB;
-			sourceTree = "<group>";
-		};
 		F19BC67B1F14AE11001553C3 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -586,7 +573,7 @@
 		F1BAEBBA1EF2A1F80069BABA /* JHRecruit */ = {
 			isa = PBXGroup;
 			children = (
-				F19BC6501F1497B3001553C3 /* LIB */,
+				F1CCA0461F89FEF1001F7687 /* LIB */,
 				F17ED7DF1EF2A55C0053A56E /* Tool */,
 				F17ED7E01EF2A56A0053A56E /* Class */,
 				F1BAEBBE1EF2A1F80069BABA /* AppDelegate.h */,
@@ -633,6 +620,19 @@
 				F1BAEBE21EF2A1F80069BABA /* Info.plist */,
 			);
 			path = JHRecruitUITests;
+			sourceTree = "<group>";
+		};
+		F1CCA0461F89FEF1001F7687 /* LIB */ = {
+			isa = PBXGroup;
+			children = (
+				F1CCA0481F89FF09001F7687 /* IJKMediaFramework.framework */,
+				F1CCA04C1F89FF09001F7687 /* libbz2.tbd */,
+				F1CCA0471F89FF09001F7687 /* libcrypto.a */,
+				F1CCA0491F89FF09001F7687 /* librtmp.a */,
+				F1CCA04A1F89FF09001F7687 /* libssl.a */,
+				F1CCA04B1F89FF09001F7687 /* libz.tbd */,
+			);
+			path = LIB;
 			sourceTree = "<group>";
 		};
 		F1D068351F31A91B00FF52E2 /* model */ = {
@@ -1069,15 +1069,16 @@
 					"$(inherited)/**",
 					"$(PROJECT_DIR)/JHRecruit",
 					"$(PROJECT_DIR)/JHRecruit/lib&IJKFW",
+					"$(PROJECT_DIR)/JHRecruit/LIB",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/milan/Desktop/JHRecruit/JHRecruit/JHRecruit/JHPrefixHeader.pch;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/JHRecruit/JHPrefixHeader.pch";
 				INFOPLIST_FILE = JHRecruit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/JHRecruit",
-					"$(PROJECT_DIR)/JHRecruit/lib&IJKFW",
+					"$(PROJECT_DIR)/JHRecruit/LIB",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = milan.MyARKit;
@@ -1097,15 +1098,16 @@
 					"$(inherited)/**",
 					"$(PROJECT_DIR)/JHRecruit",
 					"$(PROJECT_DIR)/JHRecruit/lib&IJKFW",
+					"$(PROJECT_DIR)/JHRecruit/LIB",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/milan/Desktop/JHRecruit/JHRecruit/JHRecruit/JHPrefixHeader.pch;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/JHRecruit/JHPrefixHeader.pch";
 				INFOPLIST_FILE = JHRecruit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/JHRecruit",
-					"$(PROJECT_DIR)/JHRecruit/lib&IJKFW",
+					"$(PROJECT_DIR)/JHRecruit/LIB",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = milan.MyARKit;
