@@ -71,6 +71,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"职位详情";
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"" style:UIBarButtonItemStylePlain target:self action:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -206,9 +207,9 @@
 
 -(void)tranformToInterViewController{
     interViewQuestionController *questionController = [[interViewQuestionController alloc]init];
-    questionController.questionContent = @"fhdskfhksdhfkhdskfhksdhfdbcvjbcxjvbkdjnkjrfnvkjhdskjnvkdnvsdhnkvndskcvnksdjckdsjcksdj";
-    UINavigationController *nav= [[UINavigationController alloc]initWithRootViewController:questionController];
-    [self presentViewController:nav animated:true completion:nil];
+    questionController.questionContent = @"1.请问您对我们公司的印象是怎么样的?\n2.你对这个职位有什么期望？";
+    
+    [self.navigationController pushViewController:questionController animated:true];
 }
 
 

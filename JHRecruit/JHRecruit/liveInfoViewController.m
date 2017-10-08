@@ -31,8 +31,10 @@
 {
     
     MyFrameLayout *frameLayout = [[MyFrameLayout alloc]init];
-    frameLayout.frame = self.view.frame;
-    [self.view addSubview:frameLayout];
+  
+    self.view = frameLayout;
+    
+  
     
     UIButton *beautyBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [beautyBtn setBackgroundImage:[UIImage imageNamed:@"beautyIcon"] forState:UIControlStateNormal];
@@ -70,7 +72,8 @@
     
     UITextField *titleTextField = [UITextField new];
     titleTextField.myTop = 200;
-    titleTextField.mySize = CGSizeMake(VIEW_WIDTH, 40);
+    titleTextField.myHorzMargin = 0;
+    titleTextField.myHeight = 40;
     titleTextField.backgroundColor = [UIColor whiteColor];
     [frameLayout addSubview:titleTextField];
     self.titleTextField = titleTextField;
@@ -102,6 +105,10 @@
 -(BOOL)prefersStatusBarHidden
 {
     return true;
+}
+
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:true];
 }
 
 #pragma mark - 通过按钮方法触发代理

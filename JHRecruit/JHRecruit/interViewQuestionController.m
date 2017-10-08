@@ -9,8 +9,10 @@
 #import "interViewQuestionController.h"
 #import "CountdownView.h"
 
-@interface interViewQuestionController ()
+
+@interface interViewQuestionController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 @property(nonatomic,strong)UILabel *questionLabel;
+@property(nonatomic,strong)UIImagePickerController *imagePicker;
 
 @end
 
@@ -20,15 +22,12 @@
     [super viewDidLoad];
     self.title = @"面试题目";
     self.view.backgroundColor = [UIColor whiteColor];
-    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
-    self.navigationController.navigationBar.barTintColor = [JHTool thisAppTintColor];
     self.navigationController.navigationBar.translucent = false;
-    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(cancleInterView)];
+    
     
     
     CGRect textSize = [_questionContent boundingRectWithSize:CGSizeMake(self.view.frame.size.width-30, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:18]} context:nil];
-    NSLog(@"%@",NSStringFromCGRect(textSize));
+    
     
     _questionLabel = [UILabel new];
     _questionLabel.frame = CGRectMake(20, 40, textSize.size.width, textSize.size.height);
@@ -47,7 +46,7 @@
     [startInterViewBtn addTarget:self action:@selector(startInterView) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:startInterViewBtn];
     
-    
+    _imagePicker = [[UIImagePickerController alloc]init];
     
     
 }
@@ -56,10 +55,12 @@
     [self dismissViewControllerAnimated:true completion:nil];
 }
 -(void)startInterView{
-    CountdownView *countView = [[CountdownView alloc]initWithSeconds:3 animationFinish:nil];
-    countView.roundColor = [JHTool thisAppTintColor];
-    countView.backgroundColor = [UIColor lightGrayColor];
-    [[[UIApplication sharedApplication]keyWindow] addSubview:countView];
+//    CountdownView *countView = [[CountdownView alloc]initWithSeconds:3 animationFinish:nil];
+//    countView.roundColor = [JHTool thisAppTintColor];
+//    countView.backgroundColor = [UIColor lightGrayColor];
+//    [[[UIApplication sharedApplication]keyWindow] addSubview:countView];
+    
+    [self checkAvailableAndSetImagePicker];
     
 }
 - (void)didReceiveMemoryWarning {
@@ -67,6 +68,33 @@
     // Dispose of any resources that can be recreated.
 }
 
+//检测设备是否可用
+-(void)checkAvailableAndSetImagePicker{
+    if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"相机不可用!" message:nil preferredStyle:UIAlertControllerStyleAlert];
+        [alertController addAction:[UIAlertAction actionWithTitle:@"关闭" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            
+        }]];
+        [self presentViewController:alertController animated:true completion:nil];
+        return;
+    }
+    
+    _imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    _imagePicker.videoQuality = UIImagePickerControllerQualityTypeMedium;
+    _imagePicker.mediaTypes = @[(NSString*)kUTTypeMovie];
+    _imagePicker.delegate = self;
+    [self presentViewController:_imagePicker animated:true completion:nil];
+    
+}
+
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
+    NSLog(@"%@",info[UIImagePickerControllerMediaURL]);
+    [_imagePicker dismissViewControllerAnimated:true completion:nil];
+    
+}
+-(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
+     [_imagePicker dismissViewControllerAnimated:true completion:nil];
+}
 
 
 @end

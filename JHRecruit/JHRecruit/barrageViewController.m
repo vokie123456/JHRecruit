@@ -18,10 +18,14 @@
     
     [super loadView];
     MyFrameLayout *frameLayout = [[MyFrameLayout alloc]init];
-//    frameLayout.myMargin = 0;
-//    [frameLayout setTarget:self action:@selector(hideKeyBoard)];
-//    [self.view addSubview:frameLayout];
+
     self.view = frameLayout;
+    
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(hideKeyBoard)];
+    
+    tapGesture.numberOfTapsRequired = 1;
+    [frameLayout addGestureRecognizer:tapGesture];
+    
     
     MyLinearLayout *toolView = [MyLinearLayout linearLayoutWithOrientation:MyOrientation_Horz];
     toolView.wrapContentHeight = true;

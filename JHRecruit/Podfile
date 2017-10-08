@@ -1,7 +1,7 @@
 use_frameworks!
 inhibit_all_warnings!
 target 'JHRecruit' do
-    pod 'MyLayout'
+    pod 'MyLayout', '~> 1.4.3'
     pod 'LFLiveKit'
     pod 'AFNetworking'
     pod 'MJExtension'

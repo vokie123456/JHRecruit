@@ -21,8 +21,8 @@
 -(void)loadView
 {
     [super loadView];
-  self.automaticallyAdjustsScrollViewInsets = false;
-        MyFrameLayout *frameLayout = [[MyFrameLayout alloc]init];
+  
+    MyFrameLayout *frameLayout = [[MyFrameLayout alloc]init];
     frameLayout.backgroundColor = [JHTool thisAppBackgroundColor];
     self.view = frameLayout;
     

@@ -100,6 +100,8 @@
 		F1271F2F1F2049A300959553 /* loginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginViewController.h; sourceTree = "<group>"; };
 		F1271F301F2049A300959553 /* loginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginViewController.m; sourceTree = "<group>"; };
 		F1271F321F207B5100959553 /* JHPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JHPrefixHeader.pch; sourceTree = "<group>"; };
+		F12DFE781F6E4D4A00A03221 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		F12DFE791F6E4D4A00A03221 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		F14165CA1F3852AF00E66ABA /* informationInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = informationInputViewController.h; sourceTree = "<group>"; };
 		F14165CB1F3852AF00E66ABA /* informationInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = informationInputViewController.m; sourceTree = "<group>"; };
 		F14E890E1F3ABB5C00054379 /* JHPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHPickerView.h; sourceTree = "<group>"; };
@@ -272,6 +274,13 @@
 			name = loginAndRegist;
 			sourceTree = "<group>";
 		};
+		F12DFE711F6E31DA00A03221 /* 面试视频 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "面试视频";
+			sourceTree = "<group>";
+		};
 		F1526D481F432D4600EEA011 /* ColorAndFont */ = {
 			isa = PBXGroup;
 			children = (
@@ -315,6 +324,7 @@
 				F1FE80551EFE39610052C226 /* companyTableViewController.m */,
 				F15504801F6CD24E007A141B /* 面试题目 */,
 				F1E94EA11F4EB39D00D430C7 /* 公司详情 */,
+				F12DFE711F6E31DA00A03221 /* 面试视频 */,
 				F1E151B81F691A6600BCE2DE /* 职位介绍 */,
 			);
 			name = Controller;
@@ -927,6 +937,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F1BAEBC51EF2A1F80069BABA /* Base */,
+				F12DFE781F6E4D4A00A03221 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -935,6 +946,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F1BAEBCA1EF2A1F80069BABA /* Base */,
+				F12DFE791F6E4D4A00A03221 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -946,6 +958,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1000,6 +1013,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1066,7 +1080,7 @@
 					"$(PROJECT_DIR)/JHRecruit/lib&IJKFW",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = milan.snakeGame;
+				PRODUCT_BUNDLE_IDENTIFIER = milan.MyARKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
@@ -1094,7 +1108,7 @@
 					"$(PROJECT_DIR)/JHRecruit/lib&IJKFW",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = milan.snakeGame;
+				PRODUCT_BUNDLE_IDENTIFIER = milan.MyARKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};

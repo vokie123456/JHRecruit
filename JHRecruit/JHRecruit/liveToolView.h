@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "MyLayout.h"
 
+
 @interface liveToolView : UIView
+
 @property (nonatomic , strong) MyFrameLayout *rootView;
 @property(nonatomic,strong)MyLinearLayout *liveBtn;
 @property(nonatomic,strong)MyLinearLayout *voiceBtn;
@@ -18,6 +20,7 @@
 
 
 -(void)popView;
+
 
 
 @end

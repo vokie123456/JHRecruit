@@ -15,6 +15,7 @@
 @property(nonatomic,strong)LFLiveSession *session;
 @property(nonatomic,strong)liveInfoViewController *infoController;
 @property(nonatomic,strong)barrageViewController *barrageController;
+@property(nonatomic,strong)UILabel *stateLabel;
 
 @end
 
@@ -47,15 +48,22 @@
     
     liveInfoViewController *infoController = [[liveInfoViewController alloc]init];
     infoController.delegate = self;
+    infoController.view.frame = self.view.frame;
     [self addChildViewController:infoController];
     [self.view addSubview:infoController.view];
      self.infoController = infoController;
     
     [self setBeautyView];
     
-    NSURL *url = [NSURL URLWithString:@"http://192.168.1.111:3000"];
+    NSURL *url = [NSURL URLWithString:@"http://120.24.238.2:3000"];
     self.socketClient = [[SocketIOClient alloc]initWithSocketURL:url config:@{@"log":@true, @"compress":@true}];
      [self.socketClient connect];
+    _stateLabel = [UILabel new];
+    _stateLabel.text = @"未连接";
+    _stateLabel.frame = CGRectMake(VIEW_WIDTH/2-50, 20, 100, 40);
+    _stateLabel.textAlignment = NSTextAlignmentCenter;
+    _stateLabel.textColor = [UIColor redColor];
+    [self.view addSubview:_stateLabel];
     
     
     
@@ -161,13 +169,33 @@
 
 -(void)liveSession:(LFLiveSession *)session liveStateDidChange:(LFLiveState)state
 {
+    /*
+     /// 准备
+     LFLiveReady = 0,
+     /// 连接中
+     LFLivePending = 1,
+     /// 已连接
+     LFLiveStart = 2,
+     /// 已断开
+     LFLiveStop = 3,
+     /// 连接出错
+     LFLiveError = 4,
+     ///  正在刷新
+     LFLiveRefresh = 5
+     */
     switch (state) {
+        case LFLivePending:
+            _stateLabel.text = @"正在连接";
+            break;
         case LFLiveStart:
-            NSLog(@"连接成功，开始直播");
+            _stateLabel.text = @"连接成功";
+            break;
+        case LFLiveStop:
+            _stateLabel.text = @"连接中断";
             break;
         case LFLiveError:
-            NSLog(@"连接出错");
-        
+            _stateLabel.text = @"连接出错";
+            break;
         default:
             break;
     }
