@@ -11,5 +11,6 @@
 @interface barrageTableViewCell : UITableViewCell
 @property (nonatomic , strong) MyBaseLayout *rootView;
 @property (nonatomic , strong) UILabel *contentLabel;
+
 @property (nonatomic , strong) barrageModel *model;
 @end
