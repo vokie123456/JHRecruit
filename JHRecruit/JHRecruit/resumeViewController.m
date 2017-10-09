@@ -153,6 +153,7 @@
 -(void)addTheRecruitMovie:(MyLinearLayout *)contentLayout
     {
         MyLinearLayout *movieLayout = [self createInfoContentLayoutWithImgName:@"movieIcon" withTitle:@"视频简介"];
+        movieLayout.backgroundImage = [UIImage imageNamed:@"movieBgImg"];
         [contentLayout addSubview:movieLayout];
         
         
