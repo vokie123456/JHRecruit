@@ -152,7 +152,7 @@
 
 -(void)didMoveToSuperview{
     
-    [NSTimer scheduledTimerWithTimeInterval:0.30 target:self selector:@selector(popView) userInfo:nil repeats:nil];
+    [NSTimer scheduledTimerWithTimeInterval:0.10 target:self selector:@selector(popView) userInfo:nil repeats:nil];
 }
 
 -(void)animationDidStop:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context{

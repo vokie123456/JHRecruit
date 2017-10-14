@@ -27,16 +27,18 @@
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
     
-    if ([[UserManager shareManager]isLogined]) {
-        RootViewController *rootVC = [[RootViewController alloc]init];
-        
-        self.window.rootViewController = rootVC;
-    }else{
-        loginViewController *login = [[loginViewController alloc]init];
-        UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:login];
-        self.window.rootViewController = nav;
-    }
-   
+//    if ([[UserManager shareManager]isLogined]) {
+//        RootViewController *rootVC = [[RootViewController alloc]init];
+//        
+//        self.window.rootViewController = rootVC;
+//    }else{
+//        loginViewController *login = [[loginViewController alloc]init];
+//        UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:login];
+//        self.window.rootViewController = nav;
+//    }
+    RootViewController *rootVC = [[RootViewController alloc]init];
+    
+    self.window.rootViewController = rootVC;
     [self.window makeKeyAndVisible];
    
         return YES;

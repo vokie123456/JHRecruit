@@ -32,15 +32,14 @@
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    //请求音视频权限
-    [self requestAuthorization];
+    
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
-    
+   
     
     self.session.delegate = self;
     self.session.preView = self.view;
@@ -65,7 +64,8 @@
     _stateLabel.textColor = [UIColor redColor];
     [self.view addSubview:_stateLabel];
     
-    
+    //请求音视频权限
+    [self requestAuthorization];
     
 }
 -(void)setBeautyView{
@@ -126,31 +126,32 @@
     
     AVAuthorizationStatus audioState = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeAudio];
     AVAuthorizationStatus videoState = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
-    
-    if (audioState == AVAuthorizationStatusNotDetermined) {
-        [AVCaptureDevice requestAccessForMediaType:AVMediaTypeAudio completionHandler:nil];
+    if (audioState == AVAuthorizationStatusAuthorized && videoState == AVAuthorizationStatusAuthorized) {
+        [self.session setRunning:true];
+        return;
+        
+        
     }
+    
+   
     
     if (videoState == AVAuthorizationStatusNotDetermined) {
-        [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:nil];
-    }
-    
-    if (audioState == AVAuthorizationStatusAuthorized || videoState == AVAuthorizationStatusAuthorized) {
-        [self.session setRunning:true];
-        
-    }else{
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"应用需要媒体设备权限" message:nil preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            [AVCaptureDevice requestAccessForMediaType:AVMediaTypeAudio completionHandler:nil];
-            
-            [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:nil];
+        [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted) {
+            if (audioState == AVAuthorizationStatusNotDetermined) {
+                [AVCaptureDevice requestAccessForMediaType:AVMediaTypeAudio completionHandler:^(BOOL granted) {
+                    
+                    if (granted) {
+                        dispatch_async(dispatch_get_main_queue(), ^{
+                            [self.session setRunning:true];
+                        });
+                    }
+                }];
+            }
             
         }];
-        
-        [alertController addAction:action];
-        [self presentViewController:alertController animated:true completion:nil];
-        
     }
+    
+   
 }
 
 -(void)tapGestureAction{
