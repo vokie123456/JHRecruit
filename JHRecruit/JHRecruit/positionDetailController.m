@@ -60,6 +60,7 @@
     MyLinearLayout *contentLayout = [MyLinearLayout linearLayoutWithOrientation:MyOrientation_Vert];
     contentLayout.myHorzMargin = 0;
     contentLayout.gravity = MyGravity_Horz_Fill;
+
     [scrollView addSubview:contentLayout];
     
     [self addHeaderLayout:contentLayout];
@@ -132,6 +133,7 @@
 -(void)addThePositionDetails:(MyLinearLayout*)contentLayout{
     MyLinearLayout *positionLayout = [MyLinearLayout linearLayoutWithOrientation:MyOrientation_Vert];
     positionLayout.myTop = 10;
+    positionLayout.myBottom = 50;
     positionLayout.padding = UIEdgeInsetsMake(10, 10, 10, 10);
     positionLayout.backgroundColor = [UIColor whiteColor];
     [contentLayout addSubview:positionLayout];
@@ -208,6 +210,7 @@
 -(void)tranformToInterViewController{
     interViewQuestionController *questionController = [[interViewQuestionController alloc]init];
     questionController.questionContent = @"1.请问您对我们公司的印象是怎么样的?\n2.你对这个职位有什么期望？";
+    
     
     [self.navigationController pushViewController:questionController animated:true];
 }

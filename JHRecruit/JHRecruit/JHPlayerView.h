@@ -10,6 +10,7 @@
 #import "MyLayout.h"
 #import <IJKMediaFramework/IJKMediaFramework.h>
 
+
 typedef enum _playerType{
     JHVideo = 0,
     JHLive
@@ -20,6 +21,7 @@ typedef enum _playerType{
     MyRelativeLayout *_rootView;
     MyRelativeLayout *_toolView;
     UIButton *_playBtn;
+   
     
     UISlider *_slider;
     UILabel *_currentLabel;
@@ -30,6 +32,7 @@ typedef enum _playerType{
     BOOL _toolHide;
     
     NSTimer *_progressTimer;
+    
     
 }
 

@@ -18,6 +18,13 @@
 
 @implementation interViewQuestionController
 
+-(UIImagePickerController *)imagePicker{
+    if (!_imagePicker) {
+        _imagePicker = [UIImagePickerController new];
+    }
+    return _imagePicker;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"面试题目";
@@ -27,6 +34,7 @@
     
     
     CGRect textSize = [_questionContent boundingRectWithSize:CGSizeMake(self.view.frame.size.width-30, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:18]} context:nil];
+   
     
     
     _questionLabel = [UILabel new];
@@ -46,7 +54,7 @@
     [startInterViewBtn addTarget:self action:@selector(startInterView) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:startInterViewBtn];
     
-    _imagePicker = [[UIImagePickerController alloc]init];
+   
     
     
 }
@@ -79,7 +87,7 @@
         return;
     }
     
-    _imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    self.imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
     _imagePicker.videoQuality = UIImagePickerControllerQualityTypeMedium;
     _imagePicker.mediaTypes = @[(NSString*)kUTTypeMovie];
     _imagePicker.delegate = self;

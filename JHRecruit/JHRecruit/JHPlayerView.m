@@ -8,7 +8,12 @@
 
 #import "JHPlayerView.h"
 #import "JHTool.h"
+
+
+
 @implementation JHPlayerView
+
+
 
 -(id)initWithUrl:(NSURL *)playUrl withPlayerType:(playerType)type
 {
@@ -55,8 +60,11 @@
     [_playBtn addTarget:self action:@selector(startPlay:) forControlEvents:UIControlEventTouchUpInside];
     _playBtn.myHeight = 25;
     _playBtn.myWidth = 25;
-    _playBtn.rightPos.equalTo(_toolView.rightPos).offset(10);
+    _playBtn.leftPos.equalTo(_toolView.leftPos).offset(10);
+    _playBtn.topPos.equalTo(_toolView.topPos).offset(10);
     [_toolView addSubview:_playBtn];
+    
+    
     
     _currentLabel = [UILabel new];
     _currentLabel.text = @"0:00";
@@ -84,7 +92,8 @@
     _slider.rightPos.equalTo(_durationLabel.leftPos).offset(10);
     _slider.topPos.equalTo(_playBtn.bottomPos);
     [_slider setThumbImage:[UIImage imageNamed:@"thumbImg"] forState:UIControlStateNormal];
-    _slider.tintColor = [UIColor blueColor];
+    _slider.tintColor = [JHTool thisAppTintColor];
+    
     
     [_slider addTarget:self action:@selector(touchDownSlider:) forControlEvents:UIControlEventTouchDown];
     [_slider addTarget:self action:@selector(valueChangeSlider:) forControlEvents:UIControlEventValueChanged];
@@ -110,6 +119,7 @@
         [self removeProgressTimer];
     }
 }
+
 
 -(void)hideToolView
 {
