@@ -72,9 +72,7 @@
     [super viewDidLoad];
     self.title = @"个人";
     self.view.backgroundColor = [JHTool thisAppBackgroundColor];
-    self.navigationController.navigationBar.barTintColor = [JHTool thisAppTintColor];
-      self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
-    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+  
    
 
     

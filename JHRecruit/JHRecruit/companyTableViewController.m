@@ -47,10 +47,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
      self.title = @"公司";
-    self.navigationController.navigationBar.barTintColor = [JHTool thisAppTintColor];
-    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
-    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
-    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"" style:UIBarButtonItemStylePlain target:self action:nil];
+    
     
     
     self.view.backgroundColor = [JHTool thisAppBackgroundColor];

@@ -11,7 +11,10 @@
 #import "companyTableViewController.h"
 #import "liveViewController.h"
 #import "settingViewController.h"
+#import "ArticleViewController.h"
+#import "JHNavigationController.h"
 #import "JHTool.h"
+
 
 
 
@@ -39,16 +42,21 @@
 
 
     persionalViewController *persional = [[persionalViewController alloc]init];
-    UINavigationController *nav1 = [[UINavigationController alloc]initWithRootViewController:persional];
+    JHNavigationController *persionalNav = [[JHNavigationController alloc]initWithRootViewController:persional];
+    
     companyTableViewController *company = [[companyTableViewController alloc]init];
-    UINavigationController *nav2 = [[UINavigationController alloc]initWithRootViewController:company];
+    JHNavigationController *companyNav = [[JHNavigationController alloc]initWithRootViewController:company];
     
-      liveViewController *live = [[liveViewController alloc]init];
-    UINavigationController *liveNav = [[UINavigationController alloc]initWithRootViewController:live];
+    liveViewController *live = [[liveViewController alloc]init];
+    JHNavigationController *liveNav = [[JHNavigationController alloc]initWithRootViewController:live];
+    
+    ArticleViewController *article = [ArticleViewController new];
+    JHNavigationController *articleNav = [[JHNavigationController alloc]initWithRootViewController:article];
+    
     settingViewController *setting = [[settingViewController alloc]init];
-    UINavigationController *settingNav = [[UINavigationController alloc]initWithRootViewController:setting];
+     JHNavigationController *settingNav = [[JHNavigationController alloc]initWithRootViewController:setting];
     
-    self.viewControllers = @[nav1,nav2, liveNav,settingNav];
+    self.viewControllers = @[persionalNav,companyNav, liveNav, articleNav,settingNav];
     
     [self setTabBar];
     
@@ -81,8 +89,13 @@
             
                                 break;
             case 3:
+                [self setItem:obj andImgName:@"article" andSlectImgName:@"article_hl" andTitle:@"社区"];
+                
+                break;
+                
+            case 4:
                 [self setItem:obj andImgName:@"setting" andSlectImgName:@"setting_hl" andTitle:@"我的"];
-                obj.view.backgroundColor = [UIColor greenColor];
+               
                 
             default:
                 break;

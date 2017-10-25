@@ -34,8 +34,6 @@
     [super viewDidLoad];
     
     self.title = @"直播";
-    self.navigationController.navigationBar.barTintColor = [JHTool thisAppTintColor];
-    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     
     MyFrameLayout *frameLayout = [[MyFrameLayout alloc]init];
     self.view = frameLayout;

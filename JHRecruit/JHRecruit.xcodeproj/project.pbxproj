@@ -35,6 +35,8 @@
 		F1840EC51EF426B000C7559C /* resumeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1840EC41EF426B000C7559C /* resumeViewController.m */; };
 		F18884AA1F5C31D200CE4709 /* workExperience.plist in Resources */ = {isa = PBXBuildFile; fileRef = F18884A91F5C31D200CE4709 /* workExperience.plist */; };
 		F19296241F21929200A67CB5 /* mainLiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F19296231F21929200A67CB5 /* mainLiveViewController.m */; };
+		F19B259B1FA045B800E95B4E /* ArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F19B259A1FA045B800E95B4E /* ArticleViewController.m */; };
+		F19B259F1FA04EEC00E95B4E /* JHNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F19B259E1FA04EEC00E95B4E /* JHNavigationController.m */; };
 		F19BC66A1F149B39001553C3 /* testMovie.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F19BC6691F149B39001553C3 /* testMovie.mp4 */; };
 		F19BC67A1F14AC18001553C3 /* JHPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F19BC6791F14AC18001553C3 /* JHPlayerView.m */; };
 		F19BC6821F14AE33001553C3 /* LiveModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F19BC67F1F14AE33001553C3 /* LiveModel.m */; };
@@ -145,6 +147,10 @@
 		F18884A91F5C31D200CE4709 /* workExperience.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = workExperience.plist; sourceTree = "<group>"; };
 		F19296221F21929200A67CB5 /* mainLiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mainLiveViewController.h; sourceTree = "<group>"; };
 		F19296231F21929200A67CB5 /* mainLiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mainLiveViewController.m; sourceTree = "<group>"; };
+		F19B25991FA045B800E95B4E /* ArticleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArticleViewController.h; sourceTree = "<group>"; };
+		F19B259A1FA045B800E95B4E /* ArticleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArticleViewController.m; sourceTree = "<group>"; };
+		F19B259D1FA04EEC00E95B4E /* JHNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JHNavigationController.h; sourceTree = "<group>"; };
+		F19B259E1FA04EEC00E95B4E /* JHNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JHNavigationController.m; sourceTree = "<group>"; };
 		F19BC6691F149B39001553C3 /* testMovie.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = testMovie.mp4; sourceTree = "<group>"; };
 		F19BC6781F14AC18001553C3 /* JHPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHPlayerView.h; sourceTree = "<group>"; };
 		F19BC6791F14AC18001553C3 /* JHPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHPlayerView.m; sourceTree = "<group>"; };
@@ -390,12 +396,14 @@
 		F17ED7E01EF2A56A0053A56E /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				F19B25981FA03F9300E95B4E /* article */,
 				F192961C1F218B7800A67CB5 /* startLiving */,
 				F1271F2E1F20498200959553 /* loginAndRegist */,
 				F17ED7E41EF2A5980053A56E /* Recruit */,
 				F17ED7E31EF2A58D0053A56E /* company */,
 				F17ED7E21EF2A5870053A56E /* Live */,
 				F17ED7E11EF2A5800053A56E /* Setting */,
+				F19B259C1FA04EBB00E95B4E /* Base */,
 			);
 			name = Class;
 			sourceTree = "<group>";
@@ -516,6 +524,29 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		F19B25981FA03F9300E95B4E /* article */ = {
+			isa = PBXGroup;
+			children = (
+				F19B25991FA045B800E95B4E /* ArticleViewController.h */,
+				F19B259A1FA045B800E95B4E /* ArticleViewController.m */,
+			);
+			name = article;
+			sourceTree = "<group>";
+		};
+		F19B259C1FA04EBB00E95B4E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F1BAEBBE1EF2A1F80069BABA /* AppDelegate.h */,
+				F1BAEBBF1EF2A1F80069BABA /* AppDelegate.m */,
+				F1271F321F207B5100959553 /* JHPrefixHeader.pch */,
+				F17ED8001EF2A63D0053A56E /* RootViewController.h */,
+				F17ED8011EF2A63D0053A56E /* RootViewController.m */,
+				F19B259D1FA04EEC00E95B4E /* JHNavigationController.h */,
+				F19B259E1FA04EEC00E95B4E /* JHNavigationController.m */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
 		F19BC67B1F14AE11001553C3 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -576,11 +607,6 @@
 				F1CCA0461F89FEF1001F7687 /* LIB */,
 				F17ED7DF1EF2A55C0053A56E /* Tool */,
 				F17ED7E01EF2A56A0053A56E /* Class */,
-				F1BAEBBE1EF2A1F80069BABA /* AppDelegate.h */,
-				F1BAEBBF1EF2A1F80069BABA /* AppDelegate.m */,
-				F1271F321F207B5100959553 /* JHPrefixHeader.pch */,
-				F17ED8001EF2A63D0053A56E /* RootViewController.h */,
-				F17ED8011EF2A63D0053A56E /* RootViewController.m */,
 				F19BC6691F149B39001553C3 /* testMovie.mp4 */,
 				F1BAEBC71EF2A1F80069BABA /* Assets.xcassets */,
 				F1BAEBCC1EF2A1F80069BABA /* Info.plist */,
@@ -861,6 +887,7 @@
 				F1E5995A1F52F81600590DEC /* companyStatusCell.m in Sources */,
 				F19BFD741F35A1BB00E7D753 /* JHTextField.m in Sources */,
 				F1E151BB1F691F6600BCE2DE /* positionDetailController.m in Sources */,
+				F19B259F1FA04EEC00E95B4E /* JHNavigationController.m in Sources */,
 				F19BC6891F14AE70001553C3 /* showingViewController.m in Sources */,
 				F19BFD711F359E1300E7D753 /* registViewController.m in Sources */,
 				F1708ABF1F5500440066DCC5 /* workPositionCell.m in Sources */,
@@ -873,6 +900,7 @@
 				F1D068381F31A96900FF52E2 /* barrageModel.m in Sources */,
 				F14165CC1F3852AF00E66ABA /* informationInputViewController.m in Sources */,
 				F19296241F21929200A67CB5 /* mainLiveViewController.m in Sources */,
+				F19B259B1FA045B800E95B4E /* ArticleViewController.m in Sources */,
 				F12533331F4BD85700C4D901 /* companyDetalsController.m in Sources */,
 				F1BAEBC01EF2A1F80069BABA /* AppDelegate.m in Sources */,
 				F19BC67A1F14AC18001553C3 /* JHPlayerView.m in Sources */,

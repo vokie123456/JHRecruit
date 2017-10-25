@@ -71,14 +71,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.navigationItem.title = @"蓝色土耳其";
-//    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:[[UIColor whiteColor] colorWithAlphaComponent:0]};
-    
-    self.navigationController.navigationBar.barTintColor = [JHTool thisAppTintColor];
-    
-//    [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
-//    self.navigationController.navigationBar.shadowImage = [UIImage new];
-    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+
+    self.title = @"我的";
 
     __weak typeof(self) weakSelf = self;
     [[NSNotificationCenter defaultCenter]addObserverForName:@"floatBtnShow" object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
