@@ -13,6 +13,8 @@
 		F12533401F4C205F00C4D901 /* HeaderLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = F125333F1F4C205F00C4D901 /* HeaderLineView.m */; };
 		F1271F311F2049A300959553 /* loginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1271F301F2049A300959553 /* loginViewController.m */; };
 		F14165CC1F3852AF00E66ABA /* informationInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F14165CB1F3852AF00E66ABA /* informationInputViewController.m */; };
+		F14676601FA0B90200E69C70 /* ArticalModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F146765F1FA0B90200E69C70 /* ArticalModel.m */; };
+		F14676631FA0B91800E69C70 /* ArticalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F14676621FA0B91800E69C70 /* ArticalCell.m */; };
 		F14E89101F3ABB5C00054379 /* JHPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F14E890F1F3ABB5C00054379 /* JHPickerView.m */; };
 		F14F78131F30B47500B7DD8D /* barrageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F14F78121F30B47500B7DD8D /* barrageViewController.m */; };
 		F1526D4F1F4331B300EEA011 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F1526D4E1F4331B300EEA011 /* UserManager.m */; };
@@ -106,6 +108,10 @@
 		F12DFE791F6E4D4A00A03221 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		F14165CA1F3852AF00E66ABA /* informationInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = informationInputViewController.h; sourceTree = "<group>"; };
 		F14165CB1F3852AF00E66ABA /* informationInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = informationInputViewController.m; sourceTree = "<group>"; };
+		F146765E1FA0B90200E69C70 /* ArticalModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArticalModel.h; sourceTree = "<group>"; };
+		F146765F1FA0B90200E69C70 /* ArticalModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArticalModel.m; sourceTree = "<group>"; };
+		F14676611FA0B91800E69C70 /* ArticalCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArticalCell.h; sourceTree = "<group>"; };
+		F14676621FA0B91800E69C70 /* ArticalCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArticalCell.m; sourceTree = "<group>"; };
 		F14E890E1F3ABB5C00054379 /* JHPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHPickerView.h; sourceTree = "<group>"; };
 		F14E890F1F3ABB5C00054379 /* JHPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHPickerView.m; sourceTree = "<group>"; };
 		F14F78111F30B47500B7DD8D /* barrageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = barrageViewController.h; sourceTree = "<group>"; };
@@ -285,6 +291,31 @@
 			children = (
 			);
 			name = "面试视频";
+			sourceTree = "<group>";
+		};
+		F14676581FA0B50000E69C70 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		F14676591FA0B50D00E69C70 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F14676611FA0B91800E69C70 /* ArticalCell.h */,
+				F14676621FA0B91800E69C70 /* ArticalCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		F146765A1FA0B51300E69C70 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F146765E1FA0B90200E69C70 /* ArticalModel.h */,
+				F146765F1FA0B90200E69C70 /* ArticalModel.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		F1526D481F432D4600EEA011 /* ColorAndFont */ = {
@@ -527,6 +558,9 @@
 		F19B25981FA03F9300E95B4E /* article */ = {
 			isa = PBXGroup;
 			children = (
+				F146765A1FA0B51300E69C70 /* Model */,
+				F14676591FA0B50D00E69C70 /* View */,
+				F14676581FA0B50000E69C70 /* Controller */,
 				F19B25991FA045B800E95B4E /* ArticleViewController.h */,
 				F19B259A1FA045B800E95B4E /* ArticleViewController.m */,
 			);
@@ -913,12 +947,14 @@
 				F19BC6821F14AE33001553C3 /* LiveModel.m in Sources */,
 				F1840EC51EF426B000C7559C /* resumeViewController.m in Sources */,
 				F12533401F4C205F00C4D901 /* HeaderLineView.m in Sources */,
+				F14676601FA0B90200E69C70 /* ArticalModel.m in Sources */,
 				F17ED7EA1EF2A5D20053A56E /* recruitDataModel.m in Sources */,
 				F17ED7F61EF2A5E60053A56E /* persionalTableViewCell.m in Sources */,
 				F1708AC31F550D8E0066DCC5 /* positionModel.m in Sources */,
 				F17ED7F91EF2A5F60053A56E /* settingViewController.m in Sources */,
 				F17ED8021EF2A63D0053A56E /* RootViewController.m in Sources */,
 				F1271F311F2049A300959553 /* loginViewController.m in Sources */,
+				F14676631FA0B91800E69C70 /* ArticalCell.m in Sources */,
 				F1526D4F1F4331B300EEA011 /* UserManager.m in Sources */,
 				F19BC6861F14AE5F001553C3 /* liveTableViewCell.m in Sources */,
 				F17ED7FC1EF2A6000053A56E /* liveViewController.m in Sources */,
