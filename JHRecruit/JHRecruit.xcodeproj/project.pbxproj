@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		15F0BD43EE744B44A8D1E47F /* Pods_JHRecruit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A301DF8192FAFBEF51F17C1 /* Pods_JHRecruit.framework */; };
+		F118DA9B1FA189E2008CC4A8 /* HtmlModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F118DA9A1FA189E2008CC4A8 /* HtmlModel.m */; };
+		F118DA9E1FA18B09008CC4A8 /* DetailsArticalController.m in Sources */ = {isa = PBXBuildFile; fileRef = F118DA9D1FA18B09008CC4A8 /* DetailsArticalController.m */; };
 		F12533331F4BD85700C4D901 /* companyDetalsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F12533321F4BD85700C4D901 /* companyDetalsController.m */; };
 		F125333B1F4C04DA00C4D901 /* companyDetailsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F125333A1F4C04DA00C4D901 /* companyDetailsCell.m */; };
 		F12533401F4C205F00C4D901 /* HeaderLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = F125333F1F4C205F00C4D901 /* HeaderLineView.m */; };
@@ -95,6 +97,10 @@
 /* Begin PBXFileReference section */
 		5A301DF8192FAFBEF51F17C1 /* Pods_JHRecruit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JHRecruit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		894607BB9038E6643970392F /* Pods-JHRecruit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JHRecruit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JHRecruit/Pods-JHRecruit.debug.xcconfig"; sourceTree = "<group>"; };
+		F118DA991FA189E2008CC4A8 /* HtmlModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HtmlModel.h; sourceTree = "<group>"; };
+		F118DA9A1FA189E2008CC4A8 /* HtmlModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HtmlModel.m; sourceTree = "<group>"; };
+		F118DA9C1FA18B09008CC4A8 /* DetailsArticalController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsArticalController.h; sourceTree = "<group>"; };
+		F118DA9D1FA18B09008CC4A8 /* DetailsArticalController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsArticalController.m; sourceTree = "<group>"; };
 		F12533311F4BD85700C4D901 /* companyDetalsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = companyDetalsController.h; sourceTree = "<group>"; };
 		F12533321F4BD85700C4D901 /* companyDetalsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = companyDetalsController.m; sourceTree = "<group>"; };
 		F12533391F4C04DA00C4D901 /* companyDetailsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = companyDetailsCell.h; sourceTree = "<group>"; };
@@ -296,6 +302,10 @@
 		F14676581FA0B50000E69C70 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F19B25991FA045B800E95B4E /* ArticleViewController.h */,
+				F19B259A1FA045B800E95B4E /* ArticleViewController.m */,
+				F118DA9C1FA18B09008CC4A8 /* DetailsArticalController.h */,
+				F118DA9D1FA18B09008CC4A8 /* DetailsArticalController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -314,6 +324,8 @@
 			children = (
 				F146765E1FA0B90200E69C70 /* ArticalModel.h */,
 				F146765F1FA0B90200E69C70 /* ArticalModel.m */,
+				F118DA991FA189E2008CC4A8 /* HtmlModel.h */,
+				F118DA9A1FA189E2008CC4A8 /* HtmlModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -561,8 +573,6 @@
 				F146765A1FA0B51300E69C70 /* Model */,
 				F14676591FA0B50D00E69C70 /* View */,
 				F14676581FA0B50000E69C70 /* Controller */,
-				F19B25991FA045B800E95B4E /* ArticleViewController.h */,
-				F19B259A1FA045B800E95B4E /* ArticleViewController.m */,
 			);
 			name = article;
 			sourceTree = "<group>";
@@ -922,6 +932,7 @@
 				F19BFD741F35A1BB00E7D753 /* JHTextField.m in Sources */,
 				F1E151BB1F691F6600BCE2DE /* positionDetailController.m in Sources */,
 				F19B259F1FA04EEC00E95B4E /* JHNavigationController.m in Sources */,
+				F118DA9B1FA189E2008CC4A8 /* HtmlModel.m in Sources */,
 				F19BC6891F14AE70001553C3 /* showingViewController.m in Sources */,
 				F19BFD711F359E1300E7D753 /* registViewController.m in Sources */,
 				F1708ABF1F5500440066DCC5 /* workPositionCell.m in Sources */,
@@ -935,6 +946,7 @@
 				F14165CC1F3852AF00E66ABA /* informationInputViewController.m in Sources */,
 				F19296241F21929200A67CB5 /* mainLiveViewController.m in Sources */,
 				F19B259B1FA045B800E95B4E /* ArticleViewController.m in Sources */,
+				F118DA9E1FA18B09008CC4A8 /* DetailsArticalController.m in Sources */,
 				F12533331F4BD85700C4D901 /* companyDetalsController.m in Sources */,
 				F1BAEBC01EF2A1F80069BABA /* AppDelegate.m in Sources */,
 				F19BC67A1F14AC18001553C3 /* JHPlayerView.m in Sources */,

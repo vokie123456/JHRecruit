@@ -26,6 +26,8 @@
     [super viewDidLoad];
     self.navigationBar.barTintColor = [JHTool thisAppTintColor];
     
+    self.navigationBar.translucent = false;
+    
     self.navigationBar.shadowImage = [UIImage new];
     
     self.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor]};
