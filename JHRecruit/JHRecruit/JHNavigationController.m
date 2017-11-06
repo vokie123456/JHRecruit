@@ -67,9 +67,9 @@
 }
 
 -(NSArray<UIViewController *> *)popToRootViewControllerAnimated:(BOOL)animated{
-    if ([self respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
-        [self.interactivePopGestureRecognizer setEnabled:false];
-    }
+//    if ([self respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+//        [self.interactivePopGestureRecognizer setEnabled:false];
+//    }
     return [self popToRootViewControllerAnimated:true];
 }
 

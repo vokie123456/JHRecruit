@@ -24,8 +24,9 @@
     NSString *img2 = [NSString stringWithFormat:@"<img src='%@' height='200' width='%f' />",@"http://www.jianlimoban.net/upload/2016-04/160426150472042.jpg",width-20];
     
     NSString *p4 = @"面试是一个短时交流的过程，这个过程中包涵首因效应的管理，晕轮效应的管理，如何做好面试管理对求职者至关重要。以下是面试过程中最忌讳的一些表现。";
+    NSString *p5 = @"面试中对自己经历及能力的表述应简明扼要，适可而止，千万不要像打开话匣子般没完没了地夸夸其谈，自吹自擂，甚至主次不分地“反客为主”。求职者要讲究实在，言简意赅，不可大包大揽地做太多的口头承诺，说得太多了容易引起考官的反感。有夸海口之嫌的话在求职面试场合，一定要慎言。";
     
-    htmlStr = [NSString stringWithFormat:@"<body style='background-color:#EBEBF3'> <h2>%@</h2> <p>%@</p> <p>%@</p>  %@<br/> <p>%@</p> %@<br/> <p>%@</p></body>",titleStr,p1,p2,img1,p3,img2,p4];
+    htmlStr = [NSString stringWithFormat:@"<body> <h2>%@</h2> <p>%@</p> <p>%@</p>  %@<br/> <p>%@</p> %@<br/> <p>%@</p> <p>%@</p> <br/><br/> <p align='right' style='color:LightGrey;'>编辑于  2017.06.12</p><br/><br/><br/><br/> </body>",titleStr,p1,p2,img1,p3,img2,p4,p5];
     
     return htmlStr;
 }

@@ -62,6 +62,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     DetailsArticalController *detail = [DetailsArticalController new];
+    detail.hidesBottomBarWhenPushed = true;
     [self.navigationController pushViewController:detail animated:true];
 }
 

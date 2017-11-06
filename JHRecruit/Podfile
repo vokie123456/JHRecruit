@@ -10,7 +10,7 @@ target 'JHRecruit' do
     pod 'Socket.IO-Client-Swift'
     pod 'SDCycleScrollView'
     pod 'SVProgressHUD'
-
+    pod 'BAButton' 
 
 
 end
