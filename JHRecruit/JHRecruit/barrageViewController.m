@@ -27,6 +27,31 @@
     [frameLayout addGestureRecognizer:tapGesture];
     
     
+    MyLinearLayout *interviewer = [MyLinearLayout linearLayoutWithOrientation:MyOrientation_Horz];
+    interviewer.wrapContentSize = true;
+    interviewer.myTop = 100;
+    interviewer.padding = UIEdgeInsetsMake(5, 5, 5, 10);
+
+    interviewer.backgroundImage = [UIImage imageNamed:@"bubble"];
+    [self.view addSubview:interviewer];
+    
+    UILabel *interviewerLabel = [UILabel new];
+    interviewerLabel.text = @"面试官：";
+    interviewerLabel.textColor = [UIColor whiteColor];
+    interviewerLabel.font = [JHTool font:16];
+    interviewerLabel.wrapContentSize = true;
+    interviewerLabel.myCenterY = 0;
+    
+    [interviewer addSubview:interviewerLabel];
+    
+    UIImageView *headerImgView = [UIImageView new];
+    headerImgView.image = [UIImage imageNamed:@"headerIcon1"];
+    headerImgView.mySize = CGSizeMake(30, 30);
+    headerImgView.clipsToBounds = true;
+    headerImgView.layer.cornerRadius = 15;
+    [interviewer addSubview:headerImgView];
+    
+    
     MyLinearLayout *toolView = [MyLinearLayout linearLayoutWithOrientation:MyOrientation_Horz];
     toolView.wrapContentHeight = true;
     toolView.myHorzMargin = 0;

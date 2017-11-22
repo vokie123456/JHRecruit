@@ -156,7 +156,7 @@
 
 -(void)tapGestureAction{
     
-    [UIView animateWithDuration:0.2 delay:0 usingSpringWithDamping:0.5 initialSpringVelocity:1 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+    [UIView animateWithDuration:0.38 delay:0 usingSpringWithDamping:0.5 initialSpringVelocity:1 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         self.beautyView.frame = CGRectMake(0, VIEW_HEIGHT, VIEW_WIDTH, 200);
     } completion:^(BOOL finished) {
         self.infoController.view.hidden = false;
@@ -247,7 +247,7 @@
 -(void)showBeautyView{
     self.infoController.view.hidden = true;
     self.barrageController.view.hidden = true;
-     [UIView animateWithDuration:0.2 delay:0 usingSpringWithDamping:0.5 initialSpringVelocity:1 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+     [UIView animateWithDuration:0.38 delay:0 usingSpringWithDamping:0.5 initialSpringVelocity:1 options:UIViewAnimationOptionCurveEaseInOut animations:^{
        self.beautyView.frame = CGRectMake(0, VIEW_HEIGHT-200, VIEW_WIDTH, 200);
     } completion:nil];
     

@@ -71,9 +71,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    self.title = @"我的";
-
     __weak typeof(self) weakSelf = self;
     [[NSNotificationCenter defaultCenter]addObserverForName:@"floatBtnShow" object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
         weakSelf.liveBtn.hidden = false;
@@ -83,6 +80,10 @@
         
    
    }
+
+-(void)viewWillAppear:(BOOL)animated{
+    [self.navigationController setNavigationBarHidden:true animated:true];
+}
 
 #pragma mark -- 布局代码
 -(void)addHeaderLayout:(MyLinearLayout *)contentLayout
