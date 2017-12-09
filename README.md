@@ -5,6 +5,9 @@
 http://pan.baidu.com/s/1kUGxoyF
 
 ## 界面预览
+![image](https://github.com/woxihejinghao/JHRecruit/blob/master/DemoImage/%E5%9B%BE%E7%89%8710.png)
+![image](https://github.com/woxihejinghao/JHRecruit/blob/master/DemoImage/%E5%9B%BE%E7%89%878.png)
+![image](https://github.com/woxihejinghao/JHRecruit/blob/master/DemoImage/%E5%9B%BE%E7%89%879.png)
 ![image](https://github.com/woxihejinghao/JHRecruit/blob/master/DemoImage/%E5%9B%BE%E7%89%87%201.png)
 ![image](https://github.com/woxihejinghao/JHRecruit/blob/master/DemoImage/%E5%9B%BE%E7%89%87%202.png)<br/><br/><br/><br/>
 ![image](https://github.com/woxihejinghao/JHRecruit/blob/master/DemoImage/%E5%9B%BE%E7%89%87%203.png)
