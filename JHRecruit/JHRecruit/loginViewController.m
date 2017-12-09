@@ -185,26 +185,27 @@
 
 -(void)loginClick
 {
-    self.view.userInteractionEnabled = false;
-    [SVProgressHUD showWithStatus:@"logining"];
-    [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
-    
-    NSString *uid = _userTextField.text;
-    NSString *pwd = _passwordTextField.text;
-    __weak typeof(self) weakSelf = self;
-    UserManager *manger = [UserManager shareManager];
-    [manger postLoginInfoWithUid:uid password:pwd success:^{
-        [SVProgressHUD dismiss];
-        [weakSelf skipToRootController];
-        
-    } fail:^{
-        [SVProgressHUD dismiss];
-        [SVProgressHUD showErrorWithStatus:@"登录失败"];
-        [SVProgressHUD dismissWithDelay:1.5 completion:^{
-            weakSelf.view.userInteractionEnabled = true;
-        }];
-
-    }];
+//    self.view.userInteractionEnabled = false;
+//    [SVProgressHUD showWithStatus:@"logining"];
+//    [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
+//
+//    NSString *uid = _userTextField.text;
+//    NSString *pwd = _passwordTextField.text;
+//    __weak typeof(self) weakSelf = self;
+//    UserManager *manger = [UserManager shareManager];
+//    [manger postLoginInfoWithUid:uid password:pwd success:^{
+//        [SVProgressHUD dismiss];
+//        [weakSelf skipToRootController];
+//
+//    } fail:^{
+//        [SVProgressHUD dismiss];
+//        [SVProgressHUD showErrorWithStatus:@"登录失败"];
+//        [SVProgressHUD dismissWithDelay:1.5 completion:^{
+//            weakSelf.view.userInteractionEnabled = true;
+//        }];
+//
+//    }];
+    [self skipToRootController];
 
 }
 -(void)skipToRootController{

@@ -71,6 +71,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    
+    
     __weak typeof(self) weakSelf = self;
     [[NSNotificationCenter defaultCenter]addObserverForName:@"floatBtnShow" object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
         weakSelf.liveBtn.hidden = false;

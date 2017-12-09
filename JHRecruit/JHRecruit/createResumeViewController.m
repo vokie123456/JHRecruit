@@ -115,46 +115,55 @@
     
    }
 -(void)navBarItemAction:(UIBarButtonItem*)item{
-    if (item.tag == 0) {
-        
-        UIWindow *window = [[UIApplication sharedApplication]keyWindow];
-        UINavigationController *oldNav = (UINavigationController *)window.rootViewController;
-        
-        RootViewController *root = [[RootViewController alloc]init];
-        [[UIApplication sharedApplication]keyWindow].rootViewController = root;
-        oldNav.viewControllers = [NSArray new];
-        oldNav = nil;
-        
-        
-    }else{
-        self.view.userInteractionEnabled = false;
-        [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
-        [SVProgressHUD showWithStatus:@"Loading"];
-        NSString *account = [[NSUserDefaults standardUserDefaults] valueForKey:@"userName"];
-
-        NSDictionary *infoDic = @{@"userName":account,@"name":_nameLabel.text,@"education":_educationLabel.text,@"target":_targetLabel.text,@"experience":_workLabel.text,@"wage":_wageLabel.text};
-        UserManager *manger = [UserManager shareManager];
-        [manger updateUserResumeWithDic:infoDic success:^{
-            [SVProgressHUD dismiss];
-            UIWindow *window = [[UIApplication sharedApplication]keyWindow];
-            UINavigationController *oldNav = (UINavigationController *)window.rootViewController;
-            
-            RootViewController *root = [[RootViewController alloc]init];
-            [[UIApplication sharedApplication]keyWindow].rootViewController = root;
-            oldNav.viewControllers = [NSArray new];
-            oldNav = nil;            
-            
-        } fail:^{
-            [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
-            [SVProgressHUD showErrorWithStatus:@"网络错误"];
-            [SVProgressHUD dismissWithDelay:1 completion:^{
-                self.view.userInteractionEnabled = true;
-            }];
-        }];
-        
-        
-        
-    }
+//    if (item.tag == 0) {
+//        
+//        UIWindow *window = [[UIApplication sharedApplication]keyWindow];
+//        UINavigationController *oldNav = (UINavigationController *)window.rootViewController;
+//        
+//        RootViewController *root = [[RootViewController alloc]init];
+//        [[UIApplication sharedApplication]keyWindow].rootViewController = root;
+//        oldNav.viewControllers = [NSArray new];
+//        oldNav = nil;
+//        
+//        
+//    }else{
+//        self.view.userInteractionEnabled = false;
+//        [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
+//        [SVProgressHUD showWithStatus:@"Loading"];
+//        NSString *account = [[NSUserDefaults standardUserDefaults] valueForKey:@"userName"];
+//
+//        NSDictionary *infoDic = @{@"userName":account,@"name":_nameLabel.text,@"education":_educationLabel.text,@"target":_targetLabel.text,@"experience":_workLabel.text,@"wage":_wageLabel.text};
+//        UserManager *manger = [UserManager shareManager];
+//        [manger updateUserResumeWithDic:infoDic success:^{
+//            [SVProgressHUD dismiss];
+//            UIWindow *window = [[UIApplication sharedApplication]keyWindow];
+//            UINavigationController *oldNav = (UINavigationController *)window.rootViewController;
+//            
+//            RootViewController *root = [[RootViewController alloc]init];
+//            [[UIApplication sharedApplication]keyWindow].rootViewController = root;
+//            oldNav.viewControllers = [NSArray new];
+//            oldNav = nil;            
+//            
+//        } fail:^{
+//            [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
+//            [SVProgressHUD showErrorWithStatus:@"网络错误"];
+//            [SVProgressHUD dismissWithDelay:1 completion:^{
+//                self.view.userInteractionEnabled = true;
+//            }];
+//        }];
+//        
+//        
+//        
+//    }
+    
+    
+    UIWindow *window = [[UIApplication sharedApplication]keyWindow];
+    UINavigationController *oldNav = (UINavigationController *)window.rootViewController;
+    
+    RootViewController *root = [[RootViewController alloc]init];
+    [[UIApplication sharedApplication]keyWindow].rootViewController = root;
+    oldNav.viewControllers = [NSArray new];
+    oldNav = nil;
 
 }
 

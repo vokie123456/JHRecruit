@@ -95,46 +95,47 @@
     
 }
 -(void)registAccount{
-    self.view.userInteractionEnabled = false;
+//    self.view.userInteractionEnabled = false;
+//
+//    if ([_userTextField.text isEqualToString:@""]||[_pwTextField.text isEqualToString:@""]||[_secondPW.text isEqualToString:@""]) {
+//        [SVProgressHUD showInfoWithStatus:@"请确认信息完整!"];
+//        [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
+//        [SVProgressHUD dismissWithDelay:1.5 completion:^{
+//            self.view.userInteractionEnabled = true;
+//        }];
+//        return;
+//    }
+//
+//    if (![_pwTextField.text isEqualToString:_secondPW.text]) {
+//        [SVProgressHUD showInfoWithStatus:@"请确认两次输入的密码相等!"];
+//        [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
+//        [SVProgressHUD dismissWithDelay:1.5 completion:^{
+//             self.view.userInteractionEnabled = true;
+//        }];
+//        return;
+//    }
+//
+//    [SVProgressHUD showWithStatus:@"loading"];
+//    [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
+//
+//
+//    UserManager *manager = [UserManager shareManager];
+//    [manager postRegistInfoWithUid:_userTextField.text password:_pwTextField.text success:^{
+//        [SVProgressHUD dismiss];
+//        createResumeViewController *resume = [[createResumeViewController alloc]init];
+//        [self.navigationController pushViewController:resume animated:true];
+//
+//
+//    } fail:^{
+//        [SVProgressHUD dismiss];
+//        [SVProgressHUD showErrorWithStatus:@"用户已存在!"];
+//        [SVProgressHUD dismissWithDelay:1.5 completion:^{
+//            self.view.userInteractionEnabled = true;
+//        }];
+//    }];
     
-    if ([_userTextField.text isEqualToString:@""]||[_pwTextField.text isEqualToString:@""]||[_secondPW.text isEqualToString:@""]) {
-        [SVProgressHUD showInfoWithStatus:@"请确认信息完整!"];
-        [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
-        [SVProgressHUD dismissWithDelay:1.5 completion:^{
-            self.view.userInteractionEnabled = true;
-        }];
-        return;
-    }
-    
-    if (![_pwTextField.text isEqualToString:_secondPW.text]) {
-        [SVProgressHUD showInfoWithStatus:@"请确认两次输入的密码相等!"];
-        [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
-        [SVProgressHUD dismissWithDelay:1.5 completion:^{
-             self.view.userInteractionEnabled = true;
-        }];
-        return;
-    }
-    
-    [SVProgressHUD showWithStatus:@"loading"];
-    [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
-    
-    
-    UserManager *manager = [UserManager shareManager];
-    [manager postRegistInfoWithUid:_userTextField.text password:_pwTextField.text success:^{
-        [SVProgressHUD dismiss];
-        createResumeViewController *resume = [[createResumeViewController alloc]init];
-        [self.navigationController pushViewController:resume animated:true];
-        
-        
-    } fail:^{
-        [SVProgressHUD dismiss];
-        [SVProgressHUD showErrorWithStatus:@"用户已存在!"];
-        [SVProgressHUD dismissWithDelay:1.5 completion:^{
-            self.view.userInteractionEnabled = true;
-        }];
-    }];
-    
-    
+    createResumeViewController *resume = [[createResumeViewController alloc]init];
+    [self.navigationController pushViewController:resume animated:true];
     
 }
 
